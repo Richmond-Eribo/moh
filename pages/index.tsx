@@ -3,11 +3,11 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
-import About from '../components/About';
-import Government from '../components/Government';
+
+import Features from '../components/Features';
 import Highlights from '../components/Hightlights';
-import Updates from '../components/Updates';
-import Pictures from '../components/Pictures';
+import News from '../components/News';
+
 import Footer from '../components/Footer';
 
 const Home: NextPage = () => {
@@ -15,11 +15,11 @@ const Home: NextPage = () => {
     <div className=''>
       <Navigation />
       <Hero />
-      <About />
-      <Government />
+      <Features />
+
       <Highlights />
-      <Updates />
-      <Pictures />
+      <News />
+
       <Footer />
     </div>
   );
