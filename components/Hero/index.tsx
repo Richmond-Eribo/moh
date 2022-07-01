@@ -1,4 +1,3 @@
-import hero from './Images/heroImage.png'
 import Image from 'next/image'
 
 const Hero = function () {
@@ -22,7 +21,9 @@ const Hero = function () {
           </button>
         </div>
         <div className='relative'>
-          <Image src={hero} height={1200} width={1700} alt='hero image' />
+          <div className='w-[842px] h-screen'>
+            <Image src='/Images/heroImage.png' layout='fill' alt='hero image' />
+          </div>
           <div className='absolute bottom-[40px] left-[40px] text-white'>
             <h3 className='font-bold text-xl capitalize'>quality </h3>
             <h3 className='font-bold text-xl capitalize'>healthcare</h3>

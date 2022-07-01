@@ -6,58 +6,58 @@ const features = [
     title: 'vision',
     content:
       'To free the citizens of Edo State from the heavy burden of communicable and non-communicable diseases and to significantly increase the life expectancy at birth to 70 years by 2020 and the quality of life of the people.',
-    image: './Images/vission.png',
+    image: '/Images/vission.png',
   },
   {
     id: 2,
     title: 'mission',
     content:
       'To develop and implement policies and programs that will strengthen Edo State health system and enable it deliver effective, efficient, affordable, quality and readily accessible health services that will allow the people to live healthy and very productive lives.',
-    image: './Images/mission.png',
+    image: '/Images/mission.png',
   },
   {
     id: 3,
     title: 'our values',
     content:
       'equity, excellence, commitment, quality (client satisfaction), teamwork, competence, due process (transparency and accountability), effectiveness, zero tolerance for waste and corruption, and integrity. Before we deal with the focal point of this brief, permit us to quickly also State the functions, organizational set up and the main policy/strategic thrusts of the Ministry of Health.',
-    image: './Images/our values.png',
+    image: '/Images/our values.png',
   },
 ]
 
 const overview = [
   {
     id: 1,
-    title: 'OFFICE OF THE HONOURABLE COMMISSIONER',
+    title: 'Office of The Honourable Commissioner',
     url: '/',
   },
   {
     id: 2,
-    title: 'OFFICE OF THE PERMANENT SECRETARY',
+    title: 'Office of The permanent Secretary',
     url: '/',
   },
   {
     id: 3,
-    title: 'DEPARTMENT OF PLANNING RESEARCH AND STATISTICS',
+    title: 'Department of Planning Research and Statistics ',
     url: '/',
   },
   {
     id: 4,
-    title: 'DEPARTMENT OF MEDICAL SERVICES',
+    title: 'Department of Medical Sciences',
     url: '/',
   },
   {
     id: 5,
-    title: 'DEPARTMENT OF NURSING SERVICES',
+    title: 'Department of Nursing Sciences',
     url: '/',
   },
   {
     id: 6,
-    title: 'DEPARTMENT OF MEDICAL LABORATORY SERVICES',
+    title: 'Department of Medical Laboratory Sciences',
     url: '/',
   },
   {
     id: 7,
-    title: 'DEPARTMENT OF ADMINISTRATION AND SUPPLY',
+    title: 'Department of Administration and supply',
     url: '/',
   },
 ]
@@ -102,13 +102,11 @@ const Features = function () {
                 key={item.title}
                 className='bg-white p-2 h-[7rem] text-center rounded'
               >
-                <h3 className='font-bold mb-4'>{item.title}</h3>
-                <a
-                  className='bg-[#005410] text-white py-2 px-4 rounded-sm capitalize'
-                  href={item.url}
-                >
+                <h3 className='font-bold mb-4 capitalize'>{item.title}</h3>
+
+                <button className='bg-[#005410] text-white py-2 px-4 rounded-sm capitalize'>
                   know more
-                </a>
+                </button>
               </div>
             )
           })}

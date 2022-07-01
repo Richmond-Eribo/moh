@@ -1,6 +1,6 @@
-import {NextServer} from 'next/dist/server/next'
 import Image from 'next/image'
-import man from '../Images/man.png'
+import Link from 'next/link'
+const man = './Images/man.png'
 
 const news = [
   {
@@ -41,17 +41,17 @@ const News = function () {
         {news.map(item => {
           return (
             <div key={item.id}>
-              <Image src={item.image} alt='man' />
+              {/* <Image src={item.image} alt='man' /> */}
               <h3 className='font-bold text-2xl text-black capitalize mb-5 mt-3'>
                 {item.title}
               </h3>
               <p className='mb-5'>{item.content}</p>
-              <a
-                className='bg-[#005410] text-white py-2 px-4 rounded-sm capitalize'
-                href={item.url}
-              >
-                view more
-              </a>
+
+              <Link href={item.url}>
+                <a className='bg-[#005410] text-white py-2 px-4 rounded-sm capitalize'>
+                  view more
+                </a>
+              </Link>
             </div>
           )
         })}
