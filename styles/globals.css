@@ -24,3 +24,9 @@
     font-size: 95%;
   }
 }
+
+@media (max-width: 24em) {
+  html {
+    font-size: 70%;
+  }
+}

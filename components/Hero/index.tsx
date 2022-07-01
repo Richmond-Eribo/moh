@@ -1,8 +1,8 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 const Hero = function () {
   return (
-    <section>
+    <section className='hidden lg:block'>
       <div className='flex items-center  gap-x-7 pl-[5rem]'>
         <div className='w-[36rem]'>
           <h3 className='font-bold capitalize text-4xl text-black mb-4'>
@@ -21,7 +21,7 @@ const Hero = function () {
           </button>
         </div>
         <div className='relative'>
-          <div className='w-[842px] h-screen'>
+          <div className=' w-[842px] h-screen'>
             <Image src='/Images/heroImage.png' layout='fill' alt='hero image' />
           </div>
           <div className='absolute bottom-[40px] left-[40px] text-white'>
@@ -36,6 +36,6 @@ const Hero = function () {
         </div>
       </div>
     </section>
-  )
-}
-export default Hero
+  );
+};
+export default Hero;

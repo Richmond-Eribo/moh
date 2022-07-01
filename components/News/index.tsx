@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import Link from 'next/link'
-const man = './Images/man.png'
+import Image from 'next/image';
+import Link from 'next/link';
+const man = './Images/man.png';
 
 const news = [
   {
@@ -29,7 +29,7 @@ const news = [
     image: man,
     url: '/',
   },
-]
+];
 
 const News = function () {
   return (
@@ -37,8 +37,8 @@ const News = function () {
       <h3 className='text-center font-bold text-4xl text-black mb-20 pt-14'>
         News
       </h3>
-      <div className='grid grid-cols-3 gap-x-14 pb-11 place-items-center '>
-        {news.map(item => {
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
+        {news.map((item) => {
           return (
             <div key={item.id}>
               {/* <Image src={item.image} alt='man' /> */}
@@ -53,7 +53,7 @@ const News = function () {
                 </a>
               </Link>
             </div>
-          )
+          );
         })}
       </div>
       <div className='text-center'>
@@ -62,7 +62,7 @@ const News = function () {
         </button>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default News
+export default News;
