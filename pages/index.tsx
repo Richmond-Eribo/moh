@@ -7,7 +7,6 @@ import {Footer, News, Features, Hero, Navigation, Highlights} from 'components'
 const Home: NextPage = () => {
   return (
     <div className=''>
-      <Navigation />
       <Hero />
       <Features />
 
