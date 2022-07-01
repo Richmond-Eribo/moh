@@ -6,7 +6,7 @@ const Highlights = function () {
         <div>emergenccy numbrs</div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Highlights;
+export default Highlights

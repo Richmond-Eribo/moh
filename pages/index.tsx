@@ -1,14 +1,8 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import Navigation from '../components/Navigation';
-import Hero from '../components/Hero';
+import type {NextPage} from 'next'
+import Head from 'next/head'
+import Image from 'next/image'
 
-import Features from '../components/Features';
-import Highlights from '../components/Hightlights';
-import News from '../components/News';
-
-import Footer from '../components/Footer';
+import {Footer, News, Features, Hero, Navigation, Highlights} from 'components'
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +16,7 @@ const Home: NextPage = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

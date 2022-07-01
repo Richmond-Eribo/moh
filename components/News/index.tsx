@@ -1,6 +1,6 @@
-import { NextServer } from 'next/dist/server/next';
-import Image from 'next/image';
-import man from '../Images/man.png';
+import {NextServer} from 'next/dist/server/next'
+import Image from 'next/image'
+import man from '../Images/man.png'
 
 const news = [
   {
@@ -29,7 +29,7 @@ const news = [
     image: man,
     url: '/',
   },
-];
+]
 
 const News = function () {
   return (
@@ -38,7 +38,7 @@ const News = function () {
         News
       </h3>
       <div className='grid grid-cols-3 gap-x-14 pb-11 place-items-center '>
-        {news.map((item) => {
+        {news.map(item => {
           return (
             <div key={item.id}>
               <Image src={item.image} alt='man' />
@@ -53,7 +53,7 @@ const News = function () {
                 view more
               </a>
             </div>
-          );
+          )
         })}
       </div>
       <div className='text-center'>
@@ -62,7 +62,7 @@ const News = function () {
         </button>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default News;
+export default News

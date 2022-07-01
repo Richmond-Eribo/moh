@@ -1,7 +1,4 @@
-import vission from '../Images/vission.png';
-import mission from '../Images/mission.png';
-import values from '../Images/our values.png';
-import Image from 'next/image';
+import Image from 'next/image'
 
 const features = [
   {
@@ -9,23 +6,23 @@ const features = [
     title: 'vision',
     content:
       'To free the citizens of Edo State from the heavy burden of communicable and non-communicable diseases and to significantly increase the life expectancy at birth to 70 years by 2020 and the quality of life of the people.',
-    image: vission,
+    image: './Images/vission.png',
   },
   {
     id: 2,
     title: 'mission',
     content:
       'To develop and implement policies and programs that will strengthen Edo State health system and enable it deliver effective, efficient, affordable, quality and readily accessible health services that will allow the people to live healthy and very productive lives.',
-    image: mission,
+    image: './Images/mission.png',
   },
   {
     id: 3,
     title: 'our values',
     content:
       'equity, excellence, commitment, quality (client satisfaction), teamwork, competence, due process (transparency and accountability), effectiveness, zero tolerance for waste and corruption, and integrity. Before we deal with the focal point of this brief, permit us to quickly also State the functions, organizational set up and the main policy/strategic thrusts of the Ministry of Health.',
-    image: values,
+    image: './Images/our values.png',
   },
-];
+]
 
 const overview = [
   {
@@ -63,7 +60,7 @@ const overview = [
     title: 'DEPARTMENT OF ADMINISTRATION AND SUPPLY',
     url: '/',
   },
-];
+]
 
 const Features = function () {
   return (
@@ -74,7 +71,7 @@ const Features = function () {
         </h3>
 
         <div className=' grid grid-cols-3 gap-x-10 place-items-center '>
-          {features.map((item) => {
+          {features.map(item => {
             return (
               <div key={item.id} className='bg-white h-[30rem] p-6 rounded-sm'>
                 <Image
@@ -89,7 +86,7 @@ const Features = function () {
                 </h3>
                 <p>{item.content}</p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -99,9 +96,12 @@ const Features = function () {
           An Overview of the Ministry of Health
         </h3>
         <div className='grid grid-cols-3 gap-6 '>
-          {overview.map((item) => {
+          {overview.map(item => {
             return (
-              <div className='bg-white p-2 h-[7rem] text-center rounded'>
+              <div
+                key={item.title}
+                className='bg-white p-2 h-[7rem] text-center rounded'
+              >
                 <h3 className='font-bold mb-4'>{item.title}</h3>
                 <a
                   className='bg-[#005410] text-white py-2 px-4 rounded-sm capitalize'
@@ -110,12 +110,12 @@ const Features = function () {
                   know more
                 </a>
               </div>
-            );
+            )
           })}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Features;
+export default Features

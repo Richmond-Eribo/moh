@@ -1,5 +1,5 @@
-import hero from '../Images/heroImage.png';
-import Image from 'next/image';
+import hero from './Images/heroImage.png'
+import Image from 'next/image'
 
 const Hero = function () {
   return (
@@ -35,6 +35,6 @@ const Hero = function () {
         </div>
       </div>
     </section>
-  );
-};
-export default Hero;
+  )
+}
+export default Hero

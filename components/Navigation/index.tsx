@@ -1,12 +1,11 @@
-import Logo from '../Images/logo.png';
-import Image from 'next/image';
+import Image from 'next/image'
 const Navigation = function () {
   return (
     <section>
       <nav className='flex justify-between items-center container text-[#685A5A]'>
         <div className='capitalize flex items-center justify-center gap-x-1'>
           <span>
-            <Image src={Logo} height={70} width={70} alt='logo ' />
+            <Image src='./Images/logo.png' height={70} width={70} alt='logo ' />
           </span>{' '}
           <div className='font-bold '>
             <h3> edo state</h3>
@@ -23,7 +22,7 @@ const Navigation = function () {
         </ul>
       </nav>
     </section>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
