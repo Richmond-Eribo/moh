@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/image'
 
 const features = [
   {
@@ -19,10 +19,10 @@ const features = [
     id: 3,
     title: 'our values',
     content:
-      'equity, excellence, commitment, quality (client satisfaction), teamwork, competence, due process (transparency and accountability), effectiveness, zero tolerance for waste and corruption, and integrity. Before we deal with the focal point of this brief, permit us to quickly also State the functions, organizational set up and the main policy/strategic thrusts of the Ministry of Health.',
+      'Equity, Excellence, Commitment, Quality (client satisfaction), Teamwork, Competence, due process (transparency and accountability), effectiveness, zero tolerance for waste and corruption, and integrity. ',
     image: '/Images/our values.png',
   },
-];
+]
 
 const overview = [
   {
@@ -60,22 +60,22 @@ const overview = [
     title: 'Department of Administration and supply',
     url: '/',
   },
-];
+]
 
 const Features = function () {
   return (
-    <section className='bg-gray-200 py-14'>
+    <section className='bg-gray-2001 py-14'>
       <div className='container '>
         <h3 className='text-center font-bold text-4xl text-black mb-20'>
           Strategy is our Philosophy
         </h3>
 
-        <div className=' grid grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
-          {features.map((item) => {
+        <div className=' grid lg:mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
+          {features.map(item => {
             return (
               <div
                 key={item.id}
-                className='bg-white lg:h-[30rem] p-6 rounded-sm'
+                className='bg-white lg:h-[25rem] shadow-md p-6 rounded-sm'
               >
                 <Image
                   src={item.image}
@@ -89,34 +89,36 @@ const Features = function () {
                 </h3>
                 <p>{item.content}</p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
 
-      <div className='container'>
-        <h3 className='text-center font-bold text-4xl text-black mb-20 pt-14'>
-          An Overview of the Ministry of Health
-        </h3>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
-          {overview.map((item) => {
-            return (
-              <div
-                key={item.title}
-                className='bg-white px-2 py-3  text-center rounded'
-              >
-                <h3 className='font-bold mb-4 capitalize'>{item.title}</h3>
+      <div className='bg-gray-200 py-3'>
+        <div className='container '>
+          <h3 className='text-center font-bold text-4xl text-black mb-20 pt-14'>
+            An Overview of the Ministry of Health
+          </h3>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
+            {overview.map(item => {
+              return (
+                <div
+                  key={item.title}
+                  className='bg-white px-2 py-3  text-center rounded'
+                >
+                  <h3 className='font-bold mb-4 capitalize'>{item.title}</h3>
 
-                <button className='bg-[#005410] text-white py-2 px-4 rounded-sm capitalize'>
-                  know more
-                </button>
-              </div>
-            );
-          })}
+                  <button className='bg-[#005410] text-white py-2 px-4 rounded-sm capitalize'>
+                    know more
+                  </button>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Features;
+export default Features

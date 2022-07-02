@@ -16,9 +16,9 @@ const HighlightImage = [
 
 const Highlights = function () {
   return (
-    <section className='container pb-7 pt-7'>
+    <section className='container pb-7 '>
       <div>
-        <h3 className='text-center font-bold text-4xl text-black mb-20 pt-14'>
+        <h3 className='text-center font-bold text-4xl text-black mb-20 '>
           Hightlights
         </h3>
       </div>

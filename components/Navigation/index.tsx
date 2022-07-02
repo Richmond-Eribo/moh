@@ -1,33 +1,36 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { useState } from 'react';
+import Image from 'next/image'
+import Link from 'next/link'
+import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
+import {useState} from 'react'
 const Navigation = function () {
-  const [status, setStatus] = useState(false);
+  const [status, setStatus] = useState(false)
   function handleChange() {
-    setStatus(!status);
+    setStatus(!status)
   }
 
   return (
-    <section>
-      <nav className='flex justify-between items-center container text-[#685A5A]'>
-        <div className='capitalize flex items-center justify-center gap-x-1'>
-          <span>
-            <Image src='/Images/logo.png' height={70} width={70} alt='logo ' />
-          </span>{' '}
-          <div className='font-bold '>
-            <h3> edo state</h3>
-            <h3> ministry of health</h3>
-          </div>
-        </div>
+    <section className=''>
+      <nav className='flex justify-between items-center mx-auto px-[1rem] py-2 lg:w-[90%]  text-[#685A5A]'>
+        <span className='hidden lg:block'>
+          <Image src='/Images/logo.png' height={70} width={295} alt='logo ' />
+        </span>
+        <span className='lg:hidden'>
+          <Image
+            src='/Images/logo.png'
+            height={70 / 1.3}
+            width={295 / 1.3}
+            alt='logo '
+          />
+        </span>
+
         <ul className='hidden lg:flex capitalize  gap-x-7'>
           {[
-            { name: 'home', url: '/' },
-            { name: 'about', url: '/AboutUs' },
-            { name: 'departments', url: '/Departments' },
-            { name: 'directors', url: '/Directors' },
-            { name: 'contact us', url: '/ContactUs' },
-          ].map((nav) => (
+            {name: 'home', url: '/'},
+            {name: 'about', url: '/AboutUs'},
+            {name: 'departments', url: '/Departments'},
+            {name: 'directors', url: '/Directors'},
+            {name: 'contact us', url: '/ContactUs'},
+          ].map(nav => (
             <Link key={nav.name} href={nav.url}>
               <a className='cursor-pointer hover:text-[#005410] duration-150 ease-in-out'>
                 {nav.name}
@@ -36,28 +39,36 @@ const Navigation = function () {
           ))}
         </ul>
         <button onClick={handleChange} className='lg:hidden'>
-          {status ? <AiOutlineClose /> : <AiOutlineMenu />}
+          {status ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
         </button>
       </nav>
-      {status && (
-        <ul className='container flex flex-col capitalize  gap-x-7'>
+      {
+        <ul
+          className={`lg:hidden duration-100 ease-in-out z-50 ${
+            status ? 'h-32 ' : 'invisible h-0 '
+          } container flex flex-col capitalize  gap-x-7`}
+        >
           {[
-            { name: 'home', url: '/' },
-            { name: 'about', url: '/AboutUs' },
-            { name: 'departments', url: '/Departments' },
-            { name: 'directors', url: '/Directors' },
-            { name: 'contact us', url: '/ContactUs' },
-          ].map((nav) => (
+            {name: 'home', url: '/'},
+            {name: 'about', url: '/AboutUs'},
+            {name: 'departments', url: '/Departments'},
+            {name: 'directors', url: '/Directors'},
+            {name: 'contact us', url: '/ContactUs'},
+          ].map(nav => (
             <Link key={nav.name} href={nav.url}>
-              <a className='cursor-pointer hover:text-[#005410] duration-150 ease-in-out'>
+              <a
+                className={`cursor-pointer hover:text-[#005410] ${
+                  status ? '' : 'hidden'
+                } duration-150 ease-in-out`}
+              >
                 {nav.name}
               </a>
             </Link>
           ))}
         </ul>
-      )}
+      }
     </section>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
