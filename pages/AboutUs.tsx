@@ -1,10 +1,10 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 const AboutUs = () => {
   return (
     <div className=''>
       <div className='bg-[#005410]'>
-        <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 px-8'>
+        <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
           about us
         </h1>
       </div>
@@ -17,7 +17,7 @@ const AboutUs = () => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

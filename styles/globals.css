@@ -30,3 +30,8 @@
     font-size: 70%;
   }
 }
+
+/* input,
+input[placeholder] {
+  text-align: center;
+} */
