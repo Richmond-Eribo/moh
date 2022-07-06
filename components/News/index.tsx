@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-const man = './Images/man.png';
+import Image from 'next/image'
+import Link from 'next/link'
+const man = './Images/man.png'
 
 const news = [
   {
@@ -29,7 +29,7 @@ const news = [
     image: man,
     url: '/',
   },
-];
+]
 
 const News = function () {
   return (
@@ -38,7 +38,7 @@ const News = function () {
         News
       </h3>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
-        {news.map((item) => {
+        {news.map(item => {
           return (
             <div key={item.id}>
               {/* <Image src={item.image} alt='man' /> */}
@@ -48,21 +48,21 @@ const News = function () {
               <p className='mb-5'>{item.content}</p>
 
               <Link href={item.url}>
-                <a className='bg-[#005410] text-white py-2 px-4 rounded-sm capitalize'>
+                <a className='bg-primary rounded-md text-white py-2 px-4  capitalize'>
                   view more
                 </a>
               </Link>
             </div>
-          );
+          )
         })}
       </div>
       <div className='text-center'>
-        <button className='underline underline-offset-4 text-lg font-bold text-[#005410] py-2 px-4 rounded-sm capitalize'>
+        <button className='underline w-32 underline-offset-4 text-lg font-bold text-[#005410] py-2 px-4 rounded-sm capitalize'>
           view more
         </button>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default News;
+export default News
