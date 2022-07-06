@@ -64,13 +64,13 @@ const overview = [
 
 const Features = function () {
   return (
-    <section className='bg-gray-2001 py-14'>
+    <section className='bg-gray-2001 py-14 '>
       <div className='container '>
         <h3 className='text-center font-bold text-4xl text-black mb-20'>
           Strategy is our Philosophy
         </h3>
 
-        <div className=' grid lg:mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
+        <div className=' grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
           {features.map(item => {
             return (
               <div
@@ -79,12 +79,11 @@ const Features = function () {
               >
                 <Image
                   src={item.image}
-                  height={100}
-                  width={100}
+                  height={90}
+                  width={90}
                   alt={item.title}
                 />
                 <h3 className='font-bold text-2xl text-black capitalize mb-5 mt-5'>
-                  {' '}
                   {item.title}
                 </h3>
                 <p>{item.content}</p>
@@ -94,12 +93,12 @@ const Features = function () {
         </div>
       </div>
 
-      <div className='bg-gray-200 py-3'>
+      <div className='bg-gray-200 py-3 '>
         <div className='container '>
           <h3 className='text-center font-bold text-4xl text-black mb-20 pt-14'>
             An Overview of the Ministry of Health
           </h3>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
             {overview.map(item => {
               return (
                 <div
@@ -108,7 +107,7 @@ const Features = function () {
                 >
                   <h3 className='font-bold mb-4 capitalize'>{item.title}</h3>
 
-                  <button className='bg-[#005410] text-white py-2 px-4 rounded-sm capitalize'>
+                  <button className='bg-[#005410] w-32 rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
                     know more
                   </button>
                 </div>

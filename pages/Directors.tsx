@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import Image from 'next/image'
 // const directorMan = './Images/directorman.jpeg';
 
-import directorMan from '../public/Images/directorman.jpeg';
-import directorWoman from '../public/Images/directorwoman.jpeg';
+import directorMan from '../public/Images/directorman.jpeg'
+import directorWoman from '../public/Images/directorwoman.jpeg'
 
 const directors = [
   {
@@ -52,7 +52,7 @@ const directors = [
     url: '/',
     image: directorMan,
   },
-];
+]
 
 const Directors = () => {
   return (
@@ -62,18 +62,20 @@ const Directors = () => {
           our directors
         </h1>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 container'>
-        {directors.map((director) => {
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 container'>
+        {directors.map(director => {
           return (
             <div
               key={director.id}
-              className='flex flex-col items-center gap-y-2 h-[30rem] p-5 bg-[#EFEFEF] text-center'
+              className='flex flex-col items-center gap-y-2 h-[20rem] p-5 bg-[#EFEFEF] text-center'
             >
               {' '}
               {/* <div className='  '> */}{' '}
               <Image
                 src={director.image}
-                className='rounded-full w-[3rem] h-[3rem]'
+                className='rounded-full w-[1rem] h-[1rem]'
+                height={150}
+                width={150}
                 alt='man'
               />
               {/* </div> */}
@@ -83,11 +85,11 @@ const Directors = () => {
                 view
               </button>
             </div>
-          );
+          )
         })}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Directors;
+export default Directors
