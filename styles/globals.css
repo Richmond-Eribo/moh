@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 1rem auto 0 auto;
+}
+
+@media (max-width: 68em) {
+  .container {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  html {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 24em) {
+  html {
+    font-size: 70%;
+  }
+}
+
+/* input,
+input[placeholder] {
+  text-align: center;
+} */

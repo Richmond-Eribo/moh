@@ -1,13 +1,28 @@
-import type {NextPage} from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+
+import {
+  Footer,
+  News,
+  Features,
+  Hero,
+  Navigation,
+  Highlights,
+} from 'components';
 
 const Home: NextPage = () => {
   return (
     <div className=''>
-      <a className='bg-red-500'>About us</a>
-    </div>
-  )
-}
+      <Hero />
+      <Features />
 
-export default Home
+      <Highlights />
+      <News />
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;
