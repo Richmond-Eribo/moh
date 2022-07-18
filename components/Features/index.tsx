@@ -1,28 +1,27 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 const features = [
   {
     id: 1,
     title: 'vision',
     content:
-      'To free the citizens of Edo State from the heavy burden of communicable and non-communicable diseases and to significantly increase the life expectancy at birth to 70 years by 2020 and the quality of life of the people.',
+      'Edo state will become a regional reference point for quality healthcare delivery, and the desired destination for innovation, education and research in healthcare.',
     image: '/Images/vission.png',
   },
   {
     id: 2,
     title: 'mission',
     content:
-      'To develop and implement policies and programs that will strengthen Edo State health system and enable it deliver effective, efficient, affordable, quality and readily accessible health services that will allow the people to live healthy and very productive lives.',
+      'Working in motivated, goal-oreiented teams in collaboration with other government sectors, the private sector, non-governmental organizations and other partners, to improve health.',
     image: '/Images/mission.png',
   },
   {
     id: 3,
-    title: 'our values',
-    content:
-      'Equity, Excellence, Commitment, Quality (client satisfaction), Teamwork, Competence, due process (transparency and accountability), effectiveness, zero tolerance for waste and corruption, and integrity. ',
+    title: 'core values',
+    content: 'Collaboration, integration, efficiency and sustainabitly.',
     image: '/Images/our values.png',
   },
-]
+];
 
 const overview = [
   {
@@ -60,7 +59,7 @@ const overview = [
     title: 'Department of Administration and supply',
     url: '/',
   },
-]
+];
 
 const Features = function () {
   return (
@@ -71,7 +70,7 @@ const Features = function () {
         </h3>
 
         <div className=' grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
-          {features.map(item => {
+          {features.map((item) => {
             return (
               <div
                 key={item.id}
@@ -88,7 +87,7 @@ const Features = function () {
                 </h3>
                 <p>{item.content}</p>
               </div>
-            )
+            );
           })}
         </div>
       </div>
@@ -99,7 +98,7 @@ const Features = function () {
             An Overview of the Ministry of Health
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
-            {overview.map(item => {
+            {overview.map((item) => {
               return (
                 <div
                   key={item.title}
@@ -111,13 +110,13 @@ const Features = function () {
                     know more
                   </button>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
