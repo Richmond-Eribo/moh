@@ -11,7 +11,7 @@ const Navigation = function () {
 
   return (
     <section className=''>
-      <nav className='flex justify-between items-center mx-auto px-[1rem]  py-2 lg:w-[90%]  text-[#685A5A]'>
+      <nav className=' items-center mx-auto px-[1rem]  py-2 lg:w-[90%]  text-[#685A5A]'>
         <span className='hidden lg:block'>
           <Link href='/'>
             <Image
@@ -33,8 +33,9 @@ const Navigation = function () {
         </span>
 
         {/* large screen navigation */}
-        <ul className='hidden lg:flex capitalize  gap-x-5 '>
+        <ul className='hidden lg:flex capitalize items-center justify-between text-lg'>
           {[
+            { name: 'home', url: '/' },
             { name: 'ministry of health', url: '/ministryOfHealth' },
             { name: 'primary health care', url: '/primaryHealthCare' },
 
@@ -48,13 +49,13 @@ const Navigation = function () {
               <div className='dropdown dropdown-hover'>
                 <a
                   tabindex='0'
-                  className='cursor-pointer  text-[0.9rem] font-bold hover:text-[#005410] duration-150 ease-in-out'
+                  className='cursor-pointer   font-bold hover:text-[#005410] duration-150 ease-in-out'
                 >
                   {nav.name}
                 </a>
                 <ul
                   tabindex='0'
-                  class='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52'
+                  class='dropdown-content menu p-2 shadow bg-base-100 rounded-box w-28'
                 >
                   <li>
                     <a>Item 1</a>
