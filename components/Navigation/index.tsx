@@ -12,7 +12,7 @@ const Navigation = function () {
 
   return (
     <section className=''>
-      <nav className=' items-center mx-auto px-[1rem]  py-2 lg:w-[90%]  text-[#685A5A]'>
+      <nav className=' items-center mx-auto px-[1rem]  pt-2 lg:w-[90%]  text-[#685A5A]'>
         <span className='hidden lg:flex items-center justify-between'>
           <Link href='/'>
             <Image
@@ -88,7 +88,7 @@ const Navigation = function () {
               <div className='dropdown dropdown-hover '>
                 <a
                   tabIndex={0}
-                  className='cursor-pointer capitalize  font-semibold hover:text-[#005410] duration-150 ease-in-out'
+                  className='cursor-pointer capitalize   hover:text-[#005410] duration-150 ease-in-out'
                 >
                   {nav.name}
                 </a>
