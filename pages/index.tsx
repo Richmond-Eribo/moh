@@ -3,14 +3,17 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import {News, Features, Hero, Navigation, Highlights} from 'components'
+import useGetOverview from 'hooks/useGetOverview'
 
 const Home: NextPage = () => {
+  const {data} = useGetOverview()
   return (
     <div className=''>
+      <>{data && console.log(data)}</>
       <Hero />
       <Features />
 
-      <Highlights />
+      {/* <Highlights /> */}
       <News />
     </div>
   )
