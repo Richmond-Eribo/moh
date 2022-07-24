@@ -37,27 +37,37 @@ const overview = [
   },
   {
     id: 3,
-    title: 'Department of Planning Research and Statistics ',
+    title: 'Directorates of Planning Research and Statistics ',
     url: '/',
   },
   {
     id: 4,
-    title: 'Department of Medical Sciences',
+    title: 'Directorates of Medical Sciences',
     url: '/',
   },
   {
     id: 5,
-    title: 'Department of Nursing Sciences',
+    title: 'Directorates of Nursing Sciences',
     url: '/',
   },
   {
     id: 6,
-    title: 'Department of Medical Laboratory Sciences',
+    title: 'Directorates of Medical Laboratory Sciences',
     url: '/',
   },
   {
     id: 7,
-    title: 'Department of Administration and supply',
+    title: 'Directorates of Administration and Supply',
+    url: '/',
+  },
+  {
+    id: 8,
+    title: 'Directorates of Pharmaceutical Services',
+    url: '/',
+  },
+  {
+    id: 9,
+    title: 'Directorates of Public Health',
     url: '/',
   },
 ]
