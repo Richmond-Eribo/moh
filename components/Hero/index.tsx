@@ -27,7 +27,9 @@ const Hero = function () {
             read more
           </button>
         </div>
+
         <SliderLarge />
+
         {/* for mobile */}
         <div className='lg:w-[36rem] lg:hidden w-full'>
           <div className='lg:hidden mb-2'>

@@ -1,12 +1,12 @@
-import type {NextPage} from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
 
-import {News, Features, Hero, Navigation, Highlights} from 'components'
-import useGetOverview from 'hooks/useGetOverview'
+import { News, Features, Hero, Navigation, Highlights } from 'components';
+import useGetOverview from 'hooks/useGetOverview';
 
 const Home: NextPage = () => {
-  const {data} = useGetOverview()
+  const { data } = useGetOverview();
   return (
     <div className=''>
       <>{data && console.log(data)}</>
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       {/* <Highlights /> */}
       <News />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

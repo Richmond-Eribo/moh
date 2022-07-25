@@ -3,6 +3,7 @@ import { IoMdRadioButtonOff } from 'react-icons/io';
 import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -24,22 +25,25 @@ const SliderLarge = () => {
           clickable: true,
         }}
         modules={[Autoplay, EffectFade, Pagination]}
-        className='mySwiper'
+        className='mySwiper hidden lg:block'
       >
         <SwiperSlide>
           <div>
-            <img
+            <Image
               src='/Images/heroImage.png'
-              className=' w-[65rem] hidden lg:block h-screen'
-              alt='hero image 1'
+              width={1000}
+              height={700}
+              className='hidden lg:block h-screen'
+              alt='hero image  1'
             />
+
             <div className='absolute bottom-[40px] left-[40px] text-white'>
               <h3 className='font-bold text-xl capitalize'>quality </h3>
               <h3 className='font-bold text-xl capitalize'>healthcare</h3>{' '}
               <p className='w-[24rem]'>
                 The new design of our healthcare system emphasizes the primary
-                // healthcare system so that you can have healthcare services
-                not // more than five kilometers from where you live
+                healthcare system so that you can have healthcare services not
+                more than five kilometers from where you live
               </p>
             </div>
           </div>
@@ -47,36 +51,41 @@ const SliderLarge = () => {
         <SwiperSlide>
           {' '}
           <div>
-            <img
+            <Image
               src='/Images/info - 005.png'
-              className=' w-[65rem] hidden lg:block h-screen'
-              alt='hero image 2'
+              width={1000}
+              height={700}
+              className='hidden lg:block h-screen'
+              alt='hero image  2'
             />
             <div className='absolute bottom-[40px] left-[40px] text-white'>
               <h3 className='font-bold text-xl capitalize'>quality </h3>
               <h3 className='font-bold text-xl capitalize'>healthcare</h3>{' '}
               <p className='w-[24rem]'>
-                // The new design of our healthcare system emphasizes the
-                primary // healthcare system so that you can have healthcare
-                services not // more than five kilometers from where you live //{' '}
+                The new design of our healthcare system emphasizes the primary
+                healthcare system so that you can have healthcare services not
+                more than five kilometers from where you live
               </p>{' '}
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div>
-            <img
+            <Image
               src='/Images/info - 006.png'
-              className=' w-[65rem] hidden lg:block h-screen'
-              alt='hero image 2'
+              width={1000}
+              height={700}
+              alt='hero image  3'
             />
             <div className='absolute bottom-[40px] left-[40px] text-white'>
-              <h3 className='font-bold text-xl capitalize'>quality </h3>
+              <h3 className='font-bold text-xl capitalize'>
+                dddddqdddduality{' '}
+              </h3>
               <h3 className='font-bold text-xl capitalize'>healthcare</h3>{' '}
               <p className='w-[24rem]'>
-                // The new design of our healthcare system emphasizes the
-                primary // healthcare system so that you can have healthcare
-                services not // more than five kilometers from where you live //{' '}
+                The new design of our healthcare system emphasizes the primary
+                healthcare system so that you can have healthcare services not
+                more than five kilometers from where you live{' '}
               </p>{' '}
             </div>
           </div>
