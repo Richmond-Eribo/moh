@@ -84,7 +84,7 @@ const Navigation = function () {
             {name: 'health insurance', url: '/primaryHealthCare'},
             {name: 'traditional medicine', url: '/traditionalMedicine'},
           ].map(nav => (
-            <Link key={nav.name} href={nav.url}>
+            <Link key={nav.name} href='/'>
               <div className='dropdown dropdown-hover '>
                 <a
                   tabIndex={0}

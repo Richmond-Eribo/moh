@@ -9,7 +9,10 @@ const Home: NextPage = () => {
   const { data } = useGetOverview();
   return (
     <div className=''>
-      <>{data && console.log(data)}</>
+      {/* <>{data && console.log(data)}</> */}
+      {/* this is the fields been returned. */}
+      <>{data && data.map(d => console.log(d.fields))}</>
+
       <Hero />
       <Features />
 
