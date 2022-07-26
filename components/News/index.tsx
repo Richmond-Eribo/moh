@@ -2,6 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 const man = './Images/man.png';
 import image from '../../public/Images/image 2.png';
+import mobile from '../../public/Images/mobile.png';
+// import registration from '../../public/Files/registration.txt';
+const registration = './Files/registration.doc';
 
 const news = [
   {
@@ -36,26 +39,52 @@ const News = function () {
   return (
     <section className='container pb-7 '>
       <div className='mb-6 '>
-        <div className=' relative  h-[19rem] w-[19rem] md:w-full md:h-[600px]'>
-          <div className='w-[19rem]   h-[19rem] lg:w-full lg:h-[600px]'>
+        {/* deskstop news */}
+        <div className='hidden md:block relative  h-[19rem] w-[19rem] md:w-full md:h-[600px]'>
+          <div className='lg:w-full lg:h-[600px]'>
             {' '}
             <Image
               src={image}
-              // width={1500}
-              // height={600}
               layout='fill'
               alt='application'
-              className='-rotate-90 md:rotate-0 rounded-3xl  '
+              className=' rounded-3xl  '
             />
           </div>
 
           <div className='absolute top-[4rem] left-[5rem]  md:top-[10rem] md:left-[3rem]'>
             <div className='text-center'>
-              <h3 className='font-semibold w-[7rem]  text-2xl md:text-5xl md:w-[25rem]  text-black mb-3 lg:mb-7'>
+              <h3 className='font-semibold w-[25rem]  text-5xl text-black mb-7'>
                 Application form for Private Health Institution
               </h3>
               <button className='  bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
-                Download
+                <a href={registration} download>
+                  Download{' '}
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* mobile news */}
+        <div className=' relative md:hidden '>
+          <div className='w-full h-[13rem]'>
+            {' '}
+            <Image
+              src={mobile}
+              layout='fill'
+              alt='application'
+              className=' rounded-3xl  '
+            />
+          </div>
+
+          <div className='absolute top-[2rem] left-[2rem]'>
+            <div className='text-center'>
+              <h3 className='font-semibold w-[10rem]  text-x   text-black mb-3 '>
+                Application form for Private Health Institution
+              </h3>
+              <button className='  bg-[#005410]  cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
+                <a href={registration} download>
+                  Download{' '}
+                </a>
               </button>
             </div>
           </div>

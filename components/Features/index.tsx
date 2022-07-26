@@ -1,5 +1,5 @@
-import OverviewModal from 'components/Modals/OverviewModal'
-import Image from 'next/image'
+import OverviewModal from 'components/Modals/OverviewModal';
+import Image from 'next/image';
 
 const features = [
   {
@@ -22,7 +22,7 @@ const features = [
     content: 'Collaboration, integration, efficiency and sustainabitly.',
     image: '/Images/our values.png',
   },
-]
+];
 
 const overview = [
   {
@@ -70,9 +70,15 @@ const overview = [
     title: 'Directorates of Public Health',
     url: '/',
   },
-]
+];
 
-const Features = function () {
+type Props = {
+  data: any;
+};
+
+const Features = function ({ data }: Props) {
+  //  console.log(data);
+
   return (
     <section className='bg-gray-2001 py-14 '>
       <div className='container '>
@@ -81,7 +87,7 @@ const Features = function () {
         </h3>
 
         <div className=' grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
-          {features.map(item => {
+          {features.slice(0, 9).map((item) => {
             return (
               <div
                 key={item.id}
@@ -98,7 +104,7 @@ const Features = function () {
                 </h3>
                 <p>{item.content}</p>
               </div>
-            )
+            );
           })}
         </div>
       </div>
@@ -109,26 +115,36 @@ const Features = function () {
             An Overview of the Ministry of Health
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
-            {overview.map(item => {
+            {overview.map((item) => {
               return (
                 <div
                   key={item.title}
                   className='bg-white px-2 py-3  text-center rounded'
                 >
-                  <h3 className='font-bold mb-4 capitalize'>{item.title}</h3>
+                  {data &&
+                    data.map((item: any) => {
+                      console.log(item);
+                      // const { fields } = item;
+                      // console.log(fields);
+                      // return (
+                      //   <h3 className='font-bold mb-4 capitalize'>
+                      //     {fields.title}
+                      //   </h3>
+                      // );
+                    })}
 
                   {/* <button className='bg-[#005410] w-32 rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
                     know more
                   </button> */}
                   <OverviewModal />
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;

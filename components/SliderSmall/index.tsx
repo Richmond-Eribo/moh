@@ -1,13 +1,13 @@
-import React from 'react'
-import {IoMdRadioButtonOff} from 'react-icons/io'
-import Image from 'next/image'
-import {useEffect, useState, useRef} from 'react'
-import {Swiper, SwiperSlide} from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-import 'swiper/css/effect-fade'
-import {Autoplay, EffectFade, Pagination, Navigation} from 'swiper'
+import React from 'react';
+import { IoMdRadioButtonOff } from 'react-icons/io';
+import Image from 'next/image';
+import { useEffect, useState, useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper';
 
 const SliderSmall = () => {
   return (
@@ -28,11 +28,14 @@ const SliderSmall = () => {
       >
         <SwiperSlide>
           <div>
-            <img
-              src='/Images/heroImage.png'
-              className='  h-screen'
-              alt='hero image 1'
-            />
+            <div className='w-full h-[27rem]'>
+              <Image
+                src='/Images/heroImage.png'
+                layout='fill'
+                alt='hero image 1'
+              />
+            </div>
+
             <div className='absolute bottom-[40px] left-[40px] text-white'>
               <h3 className='font-bold text-xl capitalize'>quality </h3>
               <h3 className='font-bold text-xl capitalize'>healthcare</h3>
@@ -46,11 +49,13 @@ const SliderSmall = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div>
-            <img
-              src='/Images/info - 005.png'
-              className='  h-screen'
-              alt='hero image 2'
-            />
+            <div className='w-full h-[27rem]'>
+              <Image
+                src='/Images/heroImage.png'
+                layout='fill'
+                alt='hero image 2'
+              />
+            </div>
             <div className='absolute bottom-[40px] left-[40px] text-white'>
               <h3 className='font-bold text-xl capitalize'>quality </h3>
               <h3 className='font-bold text-xl capitalize'>healthcare</h3>{' '}
@@ -64,11 +69,13 @@ const SliderSmall = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div>
-            <img
-              src='/Images/info - 006.png'
-              className=' h-screen'
-              alt='hero image 2'
-            />
+            <div className='w-full h-[27rem]'>
+              <Image
+                src='/Images/heroImage.png'
+                layout='fill'
+                alt='hero image 3'
+              />
+            </div>
             <div className='absolute bottom-[40px] left-[40px] text-white'>
               <h3 className='font-bold text-xl capitalize'>quality </h3>
               <h3 className='font-bold text-xl capitalize'>healthcare</h3>
@@ -82,6 +89,6 @@ const SliderSmall = () => {
         </SwiperSlide>
       </Swiper>
     </>
-  )
-}
-export default SliderSmall
+  );
+};
+export default SliderSmall;

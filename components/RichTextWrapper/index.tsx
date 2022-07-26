@@ -1,18 +1,18 @@
-import {RichTextContent} from 'contentful'
-import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
-import {BLOCKS, INLINES, MARKS} from '@contentful/rich-text-types'
-import {FC, ReactNode} from 'react'
-import Image from 'next/image'
+import { RichTextContent } from 'contentful';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
+import { FC, ReactNode } from 'react';
+import Image from 'next/image';
 
 type WrapperProps = {
-  RichText: RichTextContent
-}
+  RichText: RichTextContent;
+};
 
 type Props = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
-const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
+const RichTextWrapper: FC<WrapperProps> = ({ RichText }) => {
   const options = {
     renderMark: {
       [MARKS.BOLD]: (text: any) => <span className='font-bold'>{text} </span>,
@@ -29,7 +29,7 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
         <OrderedList>{children}</OrderedList>
       ),
       [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-        const {url} = node.data.target.fields.file
+        const { url } = node.data.target.fields.file;
 
         return (
           <Figure>
@@ -41,17 +41,22 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
               height={350}
             />
           </Figure>
-        )
+        );
       },
     },
-  }
-  return <div>{documentToReactComponents(RichText, options)}</div>
-}
+  };
+  // console.log(RichText);
+  // return <div>{documentToReactComponents(RichText, options)}</div>
+};
 
-export default RichTextWrapper
+export default RichTextWrapper;
 
-const Paragraph = ({children}: Props) => <p className=''>{children}</p>
-const Figure = ({children}: Props) => <p className='d'>{children} </p>
-const OrderedList = ({children}: Props) => <ol className='d'>{children}</ol>
-const UnOrderedList = ({children}: Props) => <ul className=''>{children} </ul>
-const HyperList = ({children}: Props) => <span className='s'>{children}</span>
+const Paragraph = ({ children }: Props) => <p className=''>{children}</p>;
+const Figure = ({ children }: Props) => <p className='d'>{children} </p>;
+const OrderedList = ({ children }: Props) => <ol className='d'>{children}</ol>;
+const UnOrderedList = ({ children }: Props) => (
+  <ul className=''>{children} </ul>
+);
+const HyperList = ({ children }: Props) => (
+  <span className='s'>{children}</span>
+);

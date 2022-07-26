@@ -11,10 +11,10 @@ const Home: NextPage = () => {
     <div className=''>
       {/* <>{data && console.log(data)}</> */}
       {/* this is the fields been returned. */}
-      <>{data && data.map(d => console.log(d.fields))}</>
+      {/* <>{data && data.map(d => console.log(d.fields))}</> */}
 
       <Hero />
-      <Features />
+      <Features data={data} />
 
       {/* <Highlights /> */}
       <News />
