@@ -1,6 +1,12 @@
-// const [modal, setModal] = useState(true)
+import {RichTextContent} from 'contentful'
 
-const OverviewModal = () => {
+// const [modal, setModal] = useState(true)
+type Props = {
+  title?: string
+  WriteUp?: RichTextContent
+}
+
+const OverviewModal = ({title, WriteUp}: Props) => {
   return (
     <>
       <label
