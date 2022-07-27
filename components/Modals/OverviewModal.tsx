@@ -25,7 +25,7 @@ const OverviewModal = ({title, WriteUp}: Props) => {
           >
             ✕
           </label>
-          <h3 className='text-lg text-left font-bold'>Ministry of Health</h3>
+          <h3 className='text-lg text-left font-bold'>{title}</h3>
           <div className='scrollbar snap-y overflow-y-scroll h-[500px] '>
             <p className='py-4 leading-7  text-left'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
