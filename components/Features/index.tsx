@@ -2,6 +2,7 @@ import OverviewModal from 'components/Modals/OverviewModal'
 import {Entry} from 'contentful'
 import {OverviewField} from 'interfaces/contentfulTypes'
 import Image from 'next/image'
+import {useState} from 'react'
 
 const features = [
   {
@@ -26,59 +27,13 @@ const features = [
   },
 ]
 
-const overview = [
-  {
-    id: 1,
-    title: 'Office of The Honourable Commissioner',
-    url: '/',
-  },
-  {
-    id: 2,
-    title: 'Office of The permanent Secretary',
-    url: '/',
-  },
-  {
-    id: 3,
-    title: 'Directorates of Planning Research and Statistics ',
-    url: '/',
-  },
-  {
-    id: 4,
-    title: 'Directorates of Medical Sciences',
-    url: '/',
-  },
-  {
-    id: 5,
-    title: 'Directorates of Nursing Sciences',
-    url: '/',
-  },
-  {
-    id: 6,
-    title: 'Directorates of Medical Laboratory Sciences',
-    url: '/',
-  },
-  {
-    id: 7,
-    title: 'Directorates of Administration and Supply',
-    url: '/',
-  },
-  {
-    id: 8,
-    title: 'Directorates of Pharmaceutical Services',
-    url: '/',
-  },
-  {
-    id: 9,
-    title: 'Directorates of Public Health',
-    url: '/',
-  },
-]
-
 type Props = {
   data: Entry<OverviewField>[]
 }
 
 const Features = function ({data}: Props) {
+  const [modalTitle, setModalTitle] = useState('')
+  const [modalWriteUp, setmodalWriteUp] = useState<any>()
   //  console.log(data);
 
   return (
@@ -128,10 +83,13 @@ const Features = function ({data}: Props) {
                   <h3 className='font-bold mb-4 capitalize'>{fields.title}</h3>
 
                   {/* the Know more button is here */}
-
                   <OverviewModal
+                    ModalTitle={modalTitle}
+                    SetModalTitle={setModalTitle}
                     WriteUp={fields.writeUp}
                     title={fields.title}
+                    ModalWriteUp={modalWriteUp}
+                    SetModalWriteUp={setmodalWriteUp}
                   />
                 </div>
               )

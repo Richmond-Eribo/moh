@@ -1,15 +1,32 @@
+import RichTextWrapper from 'components/RichTextWrapper'
 import {RichTextContent} from 'contentful'
+import React, {useState} from 'react'
 
 // const [modal, setModal] = useState(true)
 type Props = {
-  title?: string
-  WriteUp?: RichTextContent
+  title: string
+  WriteUp: RichTextContent
+  ModalTitle?: string
+  SetModalTitle: React.Dispatch<React.SetStateAction<string>>
+  ModalWriteUp: string
+  SetModalWriteUp: React.Dispatch<React.SetStateAction<any>>
 }
 
-const OverviewModal = ({title, WriteUp}: Props) => {
+const OverviewModal = ({
+  title,
+  WriteUp,
+  ModalTitle,
+  SetModalTitle,
+  ModalWriteUp,
+  SetModalWriteUp,
+}: Props) => {
   return (
     <>
       <label
+        onClick={() => {
+          SetModalTitle(title)
+          SetModalWriteUp(WriteUp)
+        }}
         htmlFor='my-modal-3'
         className=' modal-button bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'
       >
@@ -25,9 +42,10 @@ const OverviewModal = ({title, WriteUp}: Props) => {
           >
             ✕
           </label>
-          <h3 className='text-lg text-left font-bold'>{title}</h3>
+          <h3 className='text-lg text-left font-bold'>{ModalTitle}</h3>
           <div className='scrollbar snap-y overflow-y-scroll h-[500px] '>
             <p className='py-4 leading-7  text-left'>
+              <RichTextWrapper RichText={ModalWriteUp} />
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
               harum repudiandae reprehenderit quo et delectus modi perferendis
               odit dolor inventore est, repellendus dolore amet incidunt
