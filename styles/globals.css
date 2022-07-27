@@ -7,6 +7,10 @@
 * {
   font-family: 'Poppins', sans-serif;
 }
+/* body {
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+} */
 
 .container {
   max-width: 75rem;

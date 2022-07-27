@@ -8,7 +8,7 @@ const DemoModal = () => {
         modal ? ' lg:left-[40%] left-[15%]' : 'lg:left-[120%] left-[120%]'
       }  `}
     >
-      <div className='relative bg-secondary w-80 py-10 rounded-md p-5'>
+      <div className=' bg-secondary w-80 py-10 rounded-md p-5'>
         <div
           onClick={() => setModal(false)}
           className='btn btn-sm btn-circle bg-secondary  absolute text-white right-3 top-3'
