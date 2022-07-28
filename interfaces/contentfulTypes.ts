@@ -7,4 +7,12 @@ export interface OverviewField {
   description: string
 }
 
+export interface NewsField {
+  title: string
+  writeUp: any
+  thumbnail: Asset
+  slug: string
+  date: Date
+}
+
 export interface ContentfulRichText extends Document {}
