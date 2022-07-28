@@ -46,33 +46,6 @@ const OverviewModal = ({
           <div className='scrollbar snap-y overflow-y-scroll h-[500px] '>
             <p className='py-4 leading-7  text-left'>
               <RichTextWrapper RichText={ModalWriteUp} />
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              harum repudiandae reprehenderit quo et delectus modi perferendis
-              odit dolor inventore est, repellendus dolore amet incidunt
-              possimus eos eius beatae! Voluptas. Perferendis omnis architecto
-              blanditiis, ab dolorem incidunt ipsam. Nemo illum, magnam dolorum
-              aut architecto assumenda nam! Facere similique pariatur tenetur
-              necessitatibus totam assumenda aliquid praesentium, aperiam
-              cumque? Rerum, beatae molestias? Tenetur omnis quis earum deleniti
-              ipsa sunt eveniet voluptatibus accusantium cumque, praesentium,
-              autem temporibus officiis? Velit, animi voluptatem, modi officiis
-              earum perferendis expedita numquam aliquid laborum quaerat
-              voluptatibus nostrum repudiandae. Ut veritatis consequatur fugit
-              ipsa doloremque eveniet officiis debitis deleniti, harum, enim,
-              dolores exercitationem molestiae! Error nam placeat inventore
-              cupiditate vero praesentium earum delectus vitae quibusdam,
-              tempora aperiam quia dolores? Harum excepturi repellendus nostrum
-              numquam reprehenderit officiis repudiandae quis voluptatibus
-              facere dolorem exercitationem praesentium, reiciendis, veritatis
-              iure error aliquam non cum tempora? Accusamus aliquid, iusto eius
-              doloremque similique sed. Rerum! Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Doloribus a magni cum qui, dicta
-              voluptatem ut nostrum placeat tenetur? Deserunt maxime laborum,
-              unde odit asperiores quos quae adipisci accusantium vitae. Lorem
-              ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
-              voluptatibus veniam dolores illo ipsum eum, sequi quas earum
-              assumenda saepe in modi, qui molestiae, consequatur temporibus
-              totam obcaecati? Laudantium, vitae.
             </p>
           </div>
         </div>
