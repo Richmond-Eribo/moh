@@ -109,7 +109,7 @@ const News = function ({newsData}: Props) {
             return (
               <div
                 key={fields.title}
-                className=' h-[40rem] w-[25rem] shadow-xl rounded-b-3xl'
+                className=' h-[30rem] w-[25rem] overflow-clip  shadow-xl rounded-lg'
               >
                 {/* You need to work on the height properly, I will sent you a link */}
                 <div className='w-full '>
@@ -120,17 +120,17 @@ const News = function ({newsData}: Props) {
                     alt='application'
                     height={500}
                     width={700}
-                    className=' rounded-t-3xl  '
+                    className='  '
                   />
                 </div>
-                <div className='p-1'>
-                  <h3 className='font-bold text-2xl text-black h-[7rem] capitalize mb-5 mt-3'>
+                <div className='px-4'>
+                  <h3 className='font-bold text-xl text-black h-[7rem] capitalize mb-5 mt-3'>
                     {fields.title}
                   </h3>
-                  <p className='mb-5 h-[8rem]'>{writeUp}</p>
+                  {/* <p className='mb-5 h-[8rem]'>{writeUp}</p> */}
                   <Link href='/SingleNews/SingleNews'>
-                    <a className='bg-primary rounded-md text-white py-2 px-4  capitalize'>
-                      view more
+                    <a className='bg-primary rounded-md text-white py-2 px-5  capitalize'>
+                      view
                     </a>
                   </Link>
                 </div>
