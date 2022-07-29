@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-const man = './Images/man.png';
-import image from '../../public/Images/image 2.png';
-import mobile from '../../public/Images/mobile.png';
+import Image from 'next/image'
+import Link from 'next/link'
+const man = './Images/man.png'
+import image from '../../public/Images/image 2.png'
+import mobile from '../../public/Images/mobile.png'
 // import registration from '../../public/Files/registration.txt';
-const registration = './Files/registration.doc';
+const registration = './Files/registration.doc'
 
 const news = [
   {
@@ -33,19 +33,19 @@ const news = [
     image: man,
     url: '/',
   },
-];
+]
 type Props = {
-  newsData: any;
-};
+  newsData: any
+}
 
-const News = function ({ newsData }: Props) {
+const News = function ({newsData}: Props) {
   // console.log(newsData);
 
   return (
     <section className='container pb-7 '>
-      <div className='lg:mb-20 lg:mt-10  '>
+      <div className='mb-20 lg:mt-10  '>
         {/* deskstop news */}
-        <div className='hidden md:block relative  h-[19rem] w-[19rem] md:w-full md:h-[600px]'>
+        <div className='hidden lg:block relative  h-[19rem] w-[19rem] md:w-full md:h-[600px]'>
           <div className='lg:w-full lg:h-[600px]'>
             <Image
               src={image}
@@ -60,7 +60,7 @@ const News = function ({ newsData }: Props) {
               <h3 className='font-semibold w-[25rem]  text-5xl text-black mb-7'>
                 Application form for Private Health Institution
               </h3>
-              <button className='  bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
+              <button className='bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
                 <a href={registration} download>
                   Download
                 </a>
@@ -69,7 +69,7 @@ const News = function ({ newsData }: Props) {
           </div>
         </div>
         {/* mobile news */}
-        <div className=' relative md:hidden '>
+        <div className=' relative lg:hidden '>
           <div className='w-full h-[13rem]'>
             <Image
               src={mobile}
@@ -79,40 +79,47 @@ const News = function ({ newsData }: Props) {
             />
           </div>
 
-          <div className='absolute top-[2rem] left-[2rem]'>
-            <div className='text-center'>
-              <h3 className='font-semibold w-[10rem]  text-x   text-black mb-3 '>
+          <div className='absolute top-[2rem] left-[2rem] '>
+            <div className='text-left9+'>
+              <h3 className='font-semibold w-[10rem]   text-black mb-3 '>
                 Application form for Private Health Institution
               </h3>
-              <button className='  bg-[#005410]  cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
-                <a href={registration} download>
-                  Download
-                </a>
-              </button>
+              {/* <button > */}
+              <a
+                className='  bg-[#005410]  cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'
+                href={registration}
+                download
+              >
+                Download
+              </a>
+              {/* </button> */}
             </div>
           </div>
         </div>
       </div>
 
       <div className='grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
+        <h3 className='text-center font-bold text-4xl text-black mb-10'>
+          Latest News
+        </h3>
         {newsData &&
           newsData.map((item: any) => {
-            const { fields } = item;
+            const {fields} = item
 
-            const slug = fields.slug;
+            const slug = fields.slug
 
-            const imageUrl = fields.thumbnail.fields.file.url;
+            const imageUrl = fields.thumbnail.fields.file.url
             //  console.log(imageUrl);
             const {
-              writeUp: { content },
-            } = fields;
+              writeUp: {content},
+            } = fields
 
             //  const writeUp = content[0].content[0].value
 
             return (
               <div
                 key={fields.title}
-                className=' h-[30rem] w-[25rem] overflow-clip  shadow-xl rounded-lg'
+                className=' h-[28rem] w-[23rem] overflow-clip  shadow-xl rounded-lg'
               >
                 {/* You need to work on the height properly, I will sent you a link */}
                 <div className='w-full '>
@@ -127,18 +134,18 @@ const News = function ({ newsData }: Props) {
                   />
                 </div>
                 <div className='px-4'>
-                  <h3 className='font-bold text-xl text-black h-[7rem] capitalize mb-5 mt-3'>
+                  <h3 className='font-bold text-xl text-black h-[6rem] capitalize mb-5 mt-3'>
                     {fields.title}
                   </h3>
                   {/* <p className='mb-5 h-[8rem]'>{writeUp}</p> */}
                   <Link href={`/SingleNews/${slug}`}>
                     <a className='bg-primary rounded-md text-white py-2 px-5  capitalize'>
-                      view
+                      Read Post
                     </a>
                   </Link>
                 </div>
               </div>
-            );
+            )
           })}
       </div>
       <div className='text-center'>
@@ -149,7 +156,7 @@ const News = function ({ newsData }: Props) {
         </Link>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default News;
+export default News
