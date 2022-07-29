@@ -1,50 +1,69 @@
-import {getNews, getSingleNews} from 'hooks/useGetNews'
-import {GetStaticPaths, GetStaticProps} from 'next'
-import React from 'react'
+import { getNews, getSingleNews } from 'hooks/useGetNews';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import React from 'react';
+import Image from 'next/image';
 
 type Props = {
-  [key: string]: any
-}
+  [key: string]: any;
+};
 
-const SingleNews = ({News}: Props) => {
+const SingleNews = ({ News }: Props) => {
+  const imageUrl = News.thumbnail.fields.file.url;
+
+  //console.log(News.writeUp);
+  const { content } = News.writeUp;
+
+  //console.log(imageUrl);
   return (
     <section>
       {/* this is a single news post */}
-      <>{console.log('single news post:', News)}</>
+      <div className='c'>
+        <div className='bg-[#005410]'>
+          <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
+            News titlte
+          </h1>
+        </div>
+        <div>
+          <div className='text-center mt-10'>
+            <Image src={`https:${imageUrl}`} height={400} width={400} />
+          </div>
+          <div className='container'>
+            {content.map((item: any) => {
+              const { content } = item;
 
-      <div className='bg-[#005410]'>
-        <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
-          News titlte
-        </h1>
+              return content.length > 0 && <p>{content[0].value}</p>;
+            })}
+          </div>
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SingleNews
+export default SingleNews;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const News = await getNews(0, 1000)
+  const News = await getNews(0, 1000);
 
-  const paths = News.map(news => {
+  const paths = News.map((news) => {
     return {
       params: {
         slug: news.fields.slug,
       },
-    }
-  })
+    };
+  });
   return {
     paths,
     fallback: false,
-  }
-}
+  };
+};
 
-export const getStaticProps: GetStaticProps = async ({params}) => {
-  const News = await getSingleNews(params!.slug!)
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const News = await getSingleNews(params!.slug!);
 
   return {
     props: {
       News: News.fields,
     },
-  }
-}
+  };
+};
