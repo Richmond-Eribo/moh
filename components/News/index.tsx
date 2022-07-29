@@ -1,10 +1,10 @@
-import Image from 'next/image'
-import Link from 'next/link'
-const man = './Images/man.png'
-import image from '../../public/Images/image 2.png'
-import mobile from '../../public/Images/mobile.png'
+import Image from 'next/image';
+import Link from 'next/link';
+const man = './Images/man.png';
+import image from '../../public/Images/image 2.png';
+import mobile from '../../public/Images/mobile.png';
 // import registration from '../../public/Files/registration.txt';
-const registration = './Files/registration.doc'
+const registration = './Files/registration.doc';
 
 const news = [
   {
@@ -33,12 +33,12 @@ const news = [
     image: man,
     url: '/',
   },
-]
+];
 type Props = {
-  newsData: any
-}
+  newsData: any;
+};
 
-const News = function ({newsData}: Props) {
+const News = function ({ newsData }: Props) {
   // console.log(newsData);
 
   return (
@@ -97,40 +97,45 @@ const News = function ({newsData}: Props) {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
         {newsData &&
           newsData.map((item: any) => {
-            const {fields} = item
-            const imageUrl = fields.thumbnail.fields.file.url
-            console.log(imageUrl)
+            const { fields } = item;
+            const imageUrl = fields.thumbnail.fields.file.url;
+            console.log(imageUrl);
             const {
-              writeUp: {content},
-            } = fields
+              writeUp: { content },
+            } = fields;
 
-            const writeUp = content[0].content[0].value
+            const writeUp = content[0].content[0].value;
 
             return (
-              <div key={fields.title}>
+              <div
+                key={fields.title}
+                className=' h-[40rem] w-[25rem] shadow-xl rounded-b-3xl'
+              >
                 {/* You need to work on the height properly, I will sent you a link */}
-                {/* <div className='w-[12rem] h-[13rem]'>
+                <div className='w-full '>
                   <Image
                     src={`https:${imageUrl}`}
                     // src='/Images/directorman.jpeg'
-                    // layout='fill'
+                    //layout='fill'
                     alt='application'
-                    height={200}
-                    width={200}
-                    className=' rounded-3xl  '
+                    height={500}
+                    width={700}
+                    className=' rounded-t-3xl  '
                   />
-                </div> */}
-                <h3 className='font-bold text-2xl text-black capitalize mb-5 mt-3'>
-                  {fields.title}
-                </h3>
-                <p className='mb-5'>{writeUp}</p>
-                <Link href='/SingleNews/SingleNews'>
-                  <a className='bg-primary rounded-md text-white py-2 px-4  capitalize'>
-                    view more
-                  </a>
-                </Link>
+                </div>
+                <div className='p-1'>
+                  <h3 className='font-bold text-2xl text-black h-[7rem] capitalize mb-5 mt-3'>
+                    {fields.title}
+                  </h3>
+                  <p className='mb-5 h-[8rem]'>{writeUp}</p>
+                  <Link href='/SingleNews/SingleNews'>
+                    <a className='bg-primary rounded-md text-white py-2 px-4  capitalize'>
+                      view more
+                    </a>
+                  </Link>
+                </div>
               </div>
-            )
+            );
           })}
       </div>
       <div className='text-center'>
@@ -139,7 +144,7 @@ const News = function ({newsData}: Props) {
         </button>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default News
+export default News;
