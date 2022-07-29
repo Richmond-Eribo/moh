@@ -43,7 +43,7 @@ const News = function ({newsData}: Props) {
 
   return (
     <section className='container pb-7 '>
-      <div className='mb-6 '>
+      <div className='lg:mb-20 lg:mt-10  '>
         {/* deskstop news */}
         <div className='hidden md:block relative  h-[19rem] w-[19rem] md:w-full md:h-[600px]'>
           <div className='lg:w-full lg:h-[600px]'>
@@ -94,7 +94,7 @@ const News = function ({newsData}: Props) {
         </div>
       </div>
 
-      <div className='grid mt-10 lg:mt-32 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
+      <div className='grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
         {newsData &&
           newsData.map((item: any) => {
             const {fields} = item
@@ -139,9 +139,11 @@ const News = function ({newsData}: Props) {
           })}
       </div>
       <div className='text-center'>
-        <button className='underline w-32 underline-offset-4 text-lg font-bold text-[#005410] py-2 px-4 rounded-sm capitalize'>
-          view more
-        </button>
+        <Link href='/News'>
+          <button className='underline w-32 underline-offset-4 text-lg font-bold text-[#005410] py-2 px-4 rounded-sm capitalize'>
+            view more
+          </button>
+        </Link>
       </div>
     </section>
   )
