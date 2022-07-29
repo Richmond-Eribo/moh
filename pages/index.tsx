@@ -1,16 +1,17 @@
-import type {NextPage} from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
 
-import {News, Features, Hero, Navigation, Highlights} from 'components'
-import useGetOverview from 'hooks/useGetOverview'
-import useGetNews from 'hooks/useGetNews'
+import { News, Features, Hero, Navigation, Highlights } from 'components';
+import useGetOverview from 'hooks/useGetOverview';
+import useGetNews from 'hooks/useGetNews';
 
 const Home: NextPage = () => {
-  const {data} = useGetOverview()
+  const { data } = useGetOverview();
 
   // you can console.log NewsFromContentful.data
-  const NewsFromContentful = useGetNews()
+  const NewsFromContentful = useGetNews();
+  // console.log(NewsFromContentful.data);
   return (
     <div className=''>
       {/* <>{data && console.log(data)}</> */}
@@ -21,9 +22,9 @@ const Home: NextPage = () => {
       <Features data={data!} />
 
       {/* <Highlights /> */}
-      <News />
+      <News newsData={NewsFromContentful.data} />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

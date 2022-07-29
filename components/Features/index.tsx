@@ -1,8 +1,8 @@
-import OverviewModal from 'components/Modals/OverviewModal'
-import {Entry} from 'contentful'
-import {OverviewField} from 'interfaces/contentfulTypes'
-import Image from 'next/image'
-import {useState} from 'react'
+import OverviewModal from 'components/Modals/OverviewModal';
+import { Entry } from 'contentful';
+import { OverviewField } from 'interfaces/contentfulTypes';
+import Image from 'next/image';
+import { useState } from 'react';
 
 const features = [
   {
@@ -25,15 +25,15 @@ const features = [
     content: 'Collaboration, integration, efficiency and sustainabitly.',
     image: '/Images/our values.png',
   },
-]
+];
 
 type Props = {
-  data: Entry<OverviewField>[]
-}
+  data: Entry<OverviewField>[];
+};
 
-const Features = function ({data}: Props) {
-  const [modalTitle, setModalTitle] = useState('')
-  const [modalWriteUp, setmodalWriteUp] = useState<any>()
+const Features = function ({ data }: Props) {
+  const [modalTitle, setModalTitle] = useState('');
+  const [modalWriteUp, setmodalWriteUp] = useState<any>();
   //  console.log(data);
 
   return (
@@ -44,7 +44,7 @@ const Features = function ({data}: Props) {
         </h3>
 
         <div className=' grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
-          {features.slice(0, 9).map(item => {
+          {features.slice(0, 9).map((item) => {
             return (
               <div
                 key={item.id}
@@ -61,7 +61,7 @@ const Features = function ({data}: Props) {
                 </h3>
                 <p>{item.content}</p>
               </div>
-            )
+            );
           })}
         </div>
       </div>
@@ -72,33 +72,36 @@ const Features = function ({data}: Props) {
             An Overview of the Ministry of Health
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
-            {data.map(item => {
-              const {fields} = item
+            {data &&
+              data.map((item) => {
+                const { fields } = item;
 
-              return (
-                <div
-                  key={fields.title}
-                  className='bg-white px-2 py-3  text-center rounded'
-                >
-                  <h3 className='font-bold mb-4 capitalize'>{fields.title}</h3>
+                return (
+                  <div
+                    key={fields.title}
+                    className='bg-white px-2 py-3  text-center rounded'
+                  >
+                    <h3 className='font-bold mb-4 capitalize'>
+                      {fields.title}
+                    </h3>
 
-                  {/* the Know more button is here */}
-                  <OverviewModal
-                    ModalTitle={modalTitle}
-                    SetModalTitle={setModalTitle}
-                    WriteUp={fields.writeUp}
-                    title={fields.title}
-                    ModalWriteUp={modalWriteUp}
-                    SetModalWriteUp={setmodalWriteUp}
-                  />
-                </div>
-              )
-            })}
+                    {/* the Know more button is here */}
+                    <OverviewModal
+                      ModalTitle={modalTitle}
+                      SetModalTitle={setModalTitle}
+                      WriteUp={fields.writeUp}
+                      title={fields.title}
+                      ModalWriteUp={modalWriteUp}
+                      SetModalWriteUp={setmodalWriteUp}
+                    />
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;

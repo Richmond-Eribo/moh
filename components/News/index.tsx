@@ -34,8 +34,13 @@ const news = [
     url: '/',
   },
 ];
+type Props = {
+  newsData: any;
+};
 
-const News = function () {
+const News = function ({ newsData }: Props) {
+  // console.log(newsData);
+
   return (
     <section className='container pb-7 '>
       <div className='mb-6 '>
@@ -92,23 +97,30 @@ const News = function () {
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
-        {news.map((item) => {
-          return (
-            <div key={item.id}>
-              {/* <Image src={item.image} alt='man' /> */}
-              <h3 className='font-bold text-2xl text-black capitalize mb-5 mt-3'>
-                {item.title}
-              </h3>
-              <p className='mb-5'>{item.content}</p>
+        {newsData &&
+          newsData.map((item: any) => {
+            const { fields } = item;
+            console.log(fields);
+            const {
+              writeUp: { content },
+            } = fields;
 
-              <Link href={item.url}>
-                <a className='bg-primary rounded-md text-white py-2 px-4  capitalize'>
-                  view more
-                </a>
-              </Link>
-            </div>
-          );
-        })}
+            const writeUp = content[0].content[0].value;
+
+            return (
+              <div key={fields.title}>
+                <h3 className='font-bold text-2xl text-black capitalize mb-5 mt-3'>
+                  {fields.title}
+                </h3>
+                <p className='mb-5'>{writeUp}</p>
+                <Link href='/SingleNews/SingleNews'>
+                  <a className='bg-primary rounded-md text-white py-2 px-4  capitalize'>
+                    view more
+                  </a>
+                </Link>
+              </div>
+            );
+          })}
       </div>
       <div className='text-center'>
         <button className='underline w-32 underline-offset-4 text-lg font-bold text-[#005410] py-2 px-4 rounded-sm capitalize'>
