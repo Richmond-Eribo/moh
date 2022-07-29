@@ -1,9 +1,9 @@
-import useGetNews from 'hooks/useGetNews';
-import Image from 'next/image';
-import Link from 'next/link';
+import useGetNews from 'hooks/useGetNews'
+import Image from 'next/image'
+import Link from 'next/link'
 const News = () => {
-  const NewsFromContentful = useGetNews();
-  console.log(NewsFromContentful);
+  const NewsFromContentful = useGetNews()
+  console.log(NewsFromContentful)
   return (
     // <div>
     //   <>{console.log(NewsFromContentful?.data)}</>
@@ -18,22 +18,21 @@ const News = () => {
       <div className='grid container mt-10 lg:mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
         {NewsFromContentful.data &&
           NewsFromContentful.data.map((item: any) => {
-            const { fields } = item;
-            const slug = fields.slug;
-            const imageUrl = fields.thumbnail.fields.file.url;
+            const {fields} = item
+            const slug = fields.slug
+            const imageUrl = fields.thumbnail.fields.file.url
 
             const {
-              writeUp: { content },
-            } = fields;
+              writeUp: {content},
+            } = fields
 
-            const writeUp = content[0].content[0].value;
+            const writeUp = content[0].content[0].value
 
             return (
               <div
                 key={fields.title}
                 className=' h-[30rem] w-[25rem] overflow-clip  shadow-xl rounded-lg'
               >
-                {/* You need to work on the height properly, I will sent you a link */}
                 <div className='w-full '>
                   <Image
                     src={`https:${imageUrl}`}
@@ -52,12 +51,12 @@ const News = () => {
                   {/* <p className='mb-5 h-[8rem]'>{writeUp}</p> */}
                   <Link href={`/SingleNews/${slug}`}>
                     <a className='bg-primary rounded-md text-white py-2 px-5  capitalize'>
-                      view
+                      Read Post
                     </a>
                   </Link>
                 </div>
               </div>
-            );
+            )
           })}
       </div>
       {/* <div className='text-center'>
@@ -66,7 +65,7 @@ const News = () => {
         </button>
       </div> */}
     </section>
-  );
-};
+  )
+}
 
-export default News;
+export default News

@@ -46,17 +46,14 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
     },
   }
   // console.log(RichText);
-  return (
-    <div>
-      {documentToReactComponents(RichText, options)}
-      {/* <p>this is the overview NextPage</p> */}
-    </div>
-  )
+  return <>{documentToReactComponents(RichText, options)}</>
 }
 
 export default RichTextWrapper
 
-const Paragraph = ({children}: Props) => <p className=''>{children}</p>
+const Paragraph = ({children}: Props) => (
+  <p className='mb-4 text-lg font-medium'>{children}</p>
+)
 const Figure = ({children}: Props) => <p className='d'>{children} </p>
 const OrderedList = ({children}: Props) => <ol className='d'>{children}</ol>
 const UnOrderedList = ({children}: Props) => <ul className=''>{children} </ul>
