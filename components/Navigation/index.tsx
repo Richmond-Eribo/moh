@@ -154,7 +154,7 @@ const Navigation = function () {
             },
             {name: 'health insurance', url: '/primaryHealthCare'},
             {name: 'traditional medicine', url: '/traditionalMedicine'},
-            {name: 'news', url: '/news'},
+            {name: 'news', url: '/News'},
             {name: 'about', url: '/AboutUs'},
           ].map(nav => (
             <div key={nav.name} className={` ${status ? '' : 'hidden'} `}>
