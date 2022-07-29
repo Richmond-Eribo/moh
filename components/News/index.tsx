@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import Link from 'next/link';
-const man = './Images/man.png';
-import image from '../../public/Images/image 2.png';
-import mobile from '../../public/Images/mobile.png';
+import Image from 'next/image'
+import Link from 'next/link'
+const man = './Images/man.png'
+import image from '../../public/Images/image 2.png'
+import mobile from '../../public/Images/mobile.png'
 // import registration from '../../public/Files/registration.txt';
-const registration = './Files/registration.doc';
+const registration = './Files/registration.doc'
 
 const news = [
   {
@@ -33,12 +33,12 @@ const news = [
     image: man,
     url: '/',
   },
-];
+]
 type Props = {
-  newsData: any;
-};
+  newsData: any
+}
 
-const News = function ({ newsData }: Props) {
+const News = function ({newsData}: Props) {
   // console.log(newsData);
 
   return (
@@ -47,7 +47,6 @@ const News = function ({ newsData }: Props) {
         {/* deskstop news */}
         <div className='hidden md:block relative  h-[19rem] w-[19rem] md:w-full md:h-[600px]'>
           <div className='lg:w-full lg:h-[600px]'>
-            {' '}
             <Image
               src={image}
               layout='fill'
@@ -63,7 +62,7 @@ const News = function ({ newsData }: Props) {
               </h3>
               <button className='  bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
                 <a href={registration} download>
-                  Download{' '}
+                  Download
                 </a>
               </button>
             </div>
@@ -72,7 +71,6 @@ const News = function ({ newsData }: Props) {
         {/* mobile news */}
         <div className=' relative md:hidden '>
           <div className='w-full h-[13rem]'>
-            {' '}
             <Image
               src={mobile}
               layout='fill'
@@ -88,7 +86,7 @@ const News = function ({ newsData }: Props) {
               </h3>
               <button className='  bg-[#005410]  cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
                 <a href={registration} download>
-                  Download{' '}
+                  Download
                 </a>
               </button>
             </div>
@@ -99,24 +97,26 @@ const News = function ({ newsData }: Props) {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
         {newsData &&
           newsData.map((item: any) => {
-            const { fields } = item;
-            const imageUrl = fields.thumbnail.fields.file.url;
-            console.log(imageUrl);
+            const {fields} = item
+            const imageUrl = fields.thumbnail.fields.file.url
+            console.log(imageUrl)
             const {
-              writeUp: { content },
-            } = fields;
+              writeUp: {content},
+            } = fields
 
-            const writeUp = content[0].content[0].value;
+            const writeUp = content[0].content[0].value
 
             return (
               <div key={fields.title}>
-                {/* <div className='w-full h-[13rem]'>
-                  {' '}
+                {/* You need to work on the height properly, I will sent you a link */}
+                {/* <div className='w-[12rem] h-[13rem]'>
                   <Image
                     src={`https:${imageUrl}`}
-                    // src={imageUrl}
-                    layout='fill'
+                    // src='/Images/directorman.jpeg'
+                    // layout='fill'
                     alt='application'
+                    height={200}
+                    width={200}
                     className=' rounded-3xl  '
                   />
                 </div> */}
@@ -130,7 +130,7 @@ const News = function ({ newsData }: Props) {
                   </a>
                 </Link>
               </div>
-            );
+            )
           })}
       </div>
       <div className='text-center'>
@@ -139,7 +139,7 @@ const News = function ({ newsData }: Props) {
         </button>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default News;
+export default News
