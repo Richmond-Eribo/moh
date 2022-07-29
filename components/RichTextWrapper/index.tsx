@@ -49,7 +49,7 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
   return (
     <div>
       {documentToReactComponents(RichText, options)}
-      <p>this is the overview NextPage</p>
+      {/* <p>this is the overview NextPage</p> */}
     </div>
   )
 }
