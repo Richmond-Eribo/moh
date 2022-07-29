@@ -100,7 +100,8 @@ const News = function ({ newsData }: Props) {
         {newsData &&
           newsData.map((item: any) => {
             const { fields } = item;
-            console.log(fields);
+            const imageUrl = fields.thumbnail.fields.file.url;
+            console.log(imageUrl);
             const {
               writeUp: { content },
             } = fields;
@@ -109,6 +110,16 @@ const News = function ({ newsData }: Props) {
 
             return (
               <div key={fields.title}>
+                {/* <div className='w-full h-[13rem]'>
+                  {' '}
+                  <Image
+                    src={`https:${imageUrl}`}
+                    // src={imageUrl}
+                    layout='fill'
+                    alt='application'
+                    className=' rounded-3xl  '
+                  />
+                </div> */}
                 <h3 className='font-bold text-2xl text-black capitalize mb-5 mt-3'>
                   {fields.title}
                 </h3>
