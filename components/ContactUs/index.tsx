@@ -1,12 +1,10 @@
 const ContactUs = () => {
   return (
-    <section>
-      <div className='bg-[#005410]'>
-        <h1 className='text-[#fff] container font-semibold text-3xl uppercase py-8'>
-          contact us
-        </h1>
-      </div>
-      <div className='flex  flex-col lg:flex-row container  justify-between py-10'>
+    <section className='mt-20'>
+      <h1 className='text-[#fff]  container font-semibold text-xl capitalize'>
+        contact us
+      </h1>
+      <div className='flex  flex-col lg:flex-row container  justify-between '>
         <form className='flex flex-col w-full lg:w-[40%]  capitalize'>
           <div className='col-span-2'>
             <input
