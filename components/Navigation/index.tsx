@@ -1,13 +1,13 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
-import React, {useState} from 'react'
-import CollapseNav from './CollapseNav'
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import React, { useState } from 'react';
+import CollapseNav from './CollapseNav';
 const Navigation = function () {
-  const [status, setStatus] = useState(false)
+  const [status, setStatus] = useState(false);
   function handleChange() {
-    setStatus(!status)
+    setStatus(!status);
   }
 
   return (
@@ -25,11 +25,11 @@ const Navigation = function () {
           </Link>
           <ul className='hidden lg:flex  items-center py-5 gap-x-7 justify-between text-lg'>
             {[
-              {name: 'home', url: '/'},
+              { name: 'home', url: '/' },
 
-              {name: 'news', url: '/news'},
-              {name: 'about', url: '/AboutUs'},
-            ].map(nav => (
+              { name: 'news', url: '/News' },
+              { name: 'about', url: '/AboutUs' },
+            ].map((nav) => (
               <Link key={nav.name} href={nav.url}>
                 <a className='font-semibold capitalize hover:text-[#005410] duration-150 ease-in-out'>
                   {nav.name}
@@ -39,12 +39,14 @@ const Navigation = function () {
           </ul>
         </span>
         <span className='flex items-center justify-between lg:hidden'>
-          <Image
-            src='/Images/logo.png'
-            height={70 / 1.3}
-            width={295 / 1.3}
-            alt='logo '
-          />
+          <Link href='/'>
+            <Image
+              src='/Images/logo.png'
+              height={70 / 1.3}
+              width={295 / 1.3}
+              alt='logo '
+            />
+          </Link>
           <button onClick={handleChange} className='lg:hidden'>
             {status ? (
               <AiOutlineClose size={25} />
@@ -81,9 +83,9 @@ const Navigation = function () {
               item3: 'Sickle cell centre',
               item4: ' Integrated services',
             },
-            {name: 'health insurance', url: '/primaryHealthCare'},
-            {name: 'traditional medicine', url: '/traditionalMedicine'},
-          ].map(nav => (
+            { name: 'health insurance', url: '/primaryHealthCare' },
+            { name: 'traditional medicine', url: '/traditionalMedicine' },
+          ].map((nav) => (
             <Link key={nav.name} href='/'>
               <div className='dropdown dropdown-hover '>
                 <a
@@ -152,11 +154,11 @@ const Navigation = function () {
                 ' Integrated services',
               ],
             },
-            {name: 'health insurance', url: '/primaryHealthCare'},
-            {name: 'traditional medicine', url: '/traditionalMedicine'},
-            {name: 'news', url: '/news'},
-            {name: 'about', url: '/AboutUs'},
-          ].map(nav => (
+            { name: 'health insurance', url: '/primaryHealthCare' },
+            { name: 'traditional medicine', url: '/traditionalMedicine' },
+            { name: 'news', url: '/News' },
+            { name: 'about', url: '/AboutUs' },
+          ].map((nav) => (
             <div key={nav.name} className={` ${status ? '' : 'hidden'} `}>
               <CollapseNav title={nav.name} url={nav.url} items={nav.items} />
             </div>
@@ -164,7 +166,7 @@ const Navigation = function () {
         </ul>
       }
     </section>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

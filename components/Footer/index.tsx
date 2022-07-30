@@ -1,3 +1,4 @@
+import ContactUs from 'components/ContactUs'
 import {FaRegAddressCard, FaPhoneAlt, FaMailBulk} from 'react-icons/fa'
 
 const Footer = function () {
@@ -11,9 +12,7 @@ const Footer = function () {
               The Ministry of health is responsible for health policy
               formulation and implementation in the state. The Ministry is under
               the leadership of an Honourable commission who oversees all the
-              activities in the health sector and is supported by the Permanent
-              Secretary, who is the accounting and reporting officer of the
-              Ministry.
+              activities in the health sector.
             </p>
           </div>
           {/* <div className=' lg:w-[35rem]'>
@@ -44,6 +43,7 @@ const Footer = function () {
             </ul>
           </div>
         </div>
+        <ContactUs />
         <p className='text-center text-gray-400 text-sm mt-5 lg:mt-10'>
           Copyright – Ministry of Health, Edo State Government
         </p>
