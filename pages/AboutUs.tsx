@@ -8,18 +8,9 @@ const AboutUs = () => {
           about us
         </h1>
       </div>
-      <div className=''>
-        <Image
-          src='/Images/image 1.jpg'
-          height={775}
-          width={1440}
-          alt='about'
-        />
-      </div>
-
-      <article className='px-4 lg:px-10 mb-10'>
-        <p className='font-bold'>More info </p>
-        <p className=''>
+      <article className='px-4 lg:px-20 mt-10 mb-10'>
+        {/* <p className='font-bold'>More info </p> */}
+        <p className='mb-4 text-lg '>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, nemo
           omnis iusto iste sint quaerat alias laboriosam. Autem iste nesciunt
           labore fugiat. Incidunt autem tenetur ad odio pariatur unde impedit.
@@ -39,6 +30,14 @@ const AboutUs = () => {
           laudantium in?
         </p>
       </article>
+      <div className='px-4 lg:px-20'>
+        <Image
+          src='/Images/image 1.jpg'
+          height={775}
+          width={1440}
+          alt='about'
+        />
+      </div>
     </div>
   )
 }
