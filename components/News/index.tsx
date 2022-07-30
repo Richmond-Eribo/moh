@@ -69,8 +69,8 @@ const News = function ({newsData}: Props) {
         </div>
       </div>
 
-      <div className=''>
-        <div className='h-[10rem] mx-auto lg:h-[35rem] lg:w-[40rem]   overflow-clip'>
+      <div className='mb-10'>
+        <div className='h-[20rem] mx-auto lg:h-[35rem] lg:w-[40rem]   overflow-clip'>
           <Image
             src='/Qoutes/GodwinObaseki.png'
             // layout='fill'
