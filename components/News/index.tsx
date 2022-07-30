@@ -1,39 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-const man = './Images/man.png'
-import image from '../../public/Images/image 2.png'
-import mobile from '../../public/Images/mobile.png'
+// const man = './Images/man.png'
+// import mobile from '../../public'
 // import registration from '../../public/Files/registration.txt';
 const registration = './Files/registration.doc'
 
-const news = [
-  {
-    id: 1,
-    title: 'Planning Research and Statistics',
-    content:
-      'lorem30Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-    image: man,
-    url: '/',
-  },
-
-  {
-    id: 2,
-    title: 'Planning Research and Statistics',
-    content:
-      'lorem30Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-    image: man,
-    url: '/',
-  },
-
-  {
-    id: 3,
-    title: 'Planning Research and Statistics',
-    content:
-      'lorem30Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-    image: man,
-    url: '/',
-  },
-]
 type Props = {
   newsData: any
 }
@@ -48,7 +19,7 @@ const News = function ({newsData}: Props) {
         <div className='hidden lg:block relative  h-[19rem] w-[19rem] md:w-full md:h-[600px]'>
           <div className='lg:w-full lg:h-[600px]'>
             <Image
-              src={image}
+              src='/Images/image 2.png'
               layout='fill'
               alt='application'
               className=' rounded-3xl  '
@@ -56,8 +27,8 @@ const News = function ({newsData}: Props) {
           </div>
 
           <div className='absolute top-[4rem] left-[5rem]  md:top-[10rem] md:left-[3rem]'>
-            <div className='text-center'>
-              <h3 className='font-semibold w-[25rem]  text-5xl text-black mb-7'>
+            <div className='text-left'>
+              <h3 className='font-semibold leading-snug w-[30rem]   text-5xl text-black mb-7'>
                 Application form for Private Health Institution
               </h3>
               <button className='bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
@@ -72,7 +43,7 @@ const News = function ({newsData}: Props) {
         <div className=' relative lg:hidden '>
           <div className='w-full h-[13rem]'>
             <Image
-              src={mobile}
+              src='/Images/mobile.png'
               layout='fill'
               alt='application'
               className=' rounded-3xl  '
@@ -80,7 +51,7 @@ const News = function ({newsData}: Props) {
           </div>
 
           <div className='absolute top-[2rem] left-[2rem] '>
-            <div className='text-left9+'>
+            <div className='text-left'>
               <h3 className='font-semibold w-[10rem]   text-black mb-3 '>
                 Application form for Private Health Institution
               </h3>
@@ -96,6 +67,28 @@ const News = function ({newsData}: Props) {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className=''>
+        <div className='h-[10rem] mx-auto lg:h-[35rem] lg:w-[40rem]   overflow-clip'>
+          <Image
+            src='/Qoutes/GodwinObaseki.png'
+            // layout='fill'
+            width={591 * 2}
+            height={391 * 2}
+            alt='obaseki portrait'
+          />
+        </div>
+        {/* <div className=' h-[25rem]  bg-teal-200  overflow-clip'>
+          <Image
+            src='/Qoutes/GodwinObaseki.png'
+            // layout='fill'
+            width={591 / 1.2}
+            height={391 / 1.2}
+            alt='obaseki portrait'
+          />
+        </div> */}
+        <p></p>
       </div>
 
       <div className='grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
