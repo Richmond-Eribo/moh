@@ -52,9 +52,13 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
 export default RichTextWrapper
 
 const Paragraph = ({children}: Props) => (
-  <p className='mb-4 text-lg font-medium'>{children}</p>
+  <p className='mb-4 text-lg '>{children}</p>
 )
 const Figure = ({children}: Props) => <p className='d'>{children} </p>
-const OrderedList = ({children}: Props) => <ol className='d'>{children}</ol>
-const UnOrderedList = ({children}: Props) => <ul className=''>{children} </ul>
+const OrderedList = ({children}: Props) => (
+  <ol className='list-decimal'>{children}</ol>
+)
+const UnOrderedList = ({children}: Props) => (
+  <ul className='list-disc'>{children} </ul>
+)
 const HyperList = ({children}: Props) => <span className='s'>{children}</span>
