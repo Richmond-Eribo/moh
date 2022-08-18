@@ -13,7 +13,7 @@ const Resources = () => {
         <h3 className=' font-bold text-4xl text-black mb-5'>
           Ministry of Health Resources
         </h3>
-        <div className=' border py-5 border-black mb-10 rounded-lg'>
+        <div className=' border py-4 border-black mb-10 rounded-lg'>
           <div className='flex mb-5 text-xl px-4 justify-between items-center'>
             <h3>
               Display{' '}
@@ -74,6 +74,20 @@ const Resources = () => {
             <a className='  bg-[#005410]  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 '>
               DOWNLOAD
             </a>
+          </div>
+          <div className='flex  border-t pt-4 text-lg px-4 justify-between items-center'>
+            <h3>Showing 1 to 2 of 2 downloads</h3>
+            <div className='flex items-center gap-1'>
+              <button className='   text-center cursor-pointer rounded-md text-[#005410] border  py-2 px-4 lg:px-4 '>
+                Previous
+              </button>
+              <button className='   text-center cursor-pointer rounded-md text-[#005410] border  py-2 px-4 lg:px-4 '>
+                1
+              </button>
+              <button className='   text-center cursor-pointer rounded-md text-[#005410] border  py-2 px-4 lg:px-4 '>
+                Next
+              </button>
+            </div>
           </div>
         </div>
       </div>
