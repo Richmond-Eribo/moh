@@ -14,7 +14,7 @@ const Resources = () => {
           Ministry of Health Resources
         </h3>
         <div className=' border py-4 border-black mb-10 rounded-lg'>
-          <div className='flex mb-5 text-xl px-4 justify-between items-center'>
+          <div className='flex flex-col lg:flex-row mb-5 text-xl px-4 justify-between items-center'>
             <h3>
               Display{' '}
               <select
@@ -29,7 +29,7 @@ const Resources = () => {
               </select>
               downloads per page
             </h3>
-            <span>
+            <span className='mt-5 lg:mt-0'>
               Search:{' '}
               <input
                 type='text'
@@ -37,14 +37,14 @@ const Resources = () => {
               />
             </span>
           </div>
-          <div className='grid grid-cols-5 px-4 text-sm font-bold bg-[#e9ecef] py-4 gap-7  items-center justify-between'>
+          <div className='hidden lg:grid grid-cols-5 px-4 text-sm font-bold bg-[#e9ecef] py-4 gap-7  items-center justify-between'>
             <h3 className='col-span-2'>Title</h3>
             <h3>Categories</h3>
             <h3>Update Date</h3>
             <h3>Download</h3>
           </div>
-          <div className='grid grid-cols-5 border gap-7 px-4  items-center  py-4 justify-between'>
-            <div className='col-span-2 text-[#36597C]  font-semibold hover:underline cursor-pointer'>
+          <div className='grid-col-1 grid lg:grid-cols-5 border gap-7 px-4  items-center  py-4 justify-between'>
+            <div className='lg:col-span-2 text-[#36597C]  font-semibold hover:underline cursor-pointer'>
               <div className='flex gap-2 items-center'>
                 <Image src={pdf} width={60} height={60} />
                 <h3>
@@ -53,14 +53,14 @@ const Resources = () => {
                 </h3>
               </div>
             </div>
-            <h3>Catergories</h3>
+            <h3>Categories</h3>
             <h3>June 7, 2022</h3>
-            <a className='  bg-[#005410] text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'>
+            <a className='  bg-[#005410]  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'>
               DOWNLOAD
             </a>
           </div>
-          <div className='grid grid-cols-5 gap-7 px-4  items-center justify-between  py-4'>
-            <div className='col-span-2 text-[#36597C]  font-semibold hover:underline cursor-pointer'>
+          <div className='grid-col-1 grid lg:grid-cols-5 border gap-7 px-4  items-center  py-4 justify-between'>
+            <div className='lg:col-span-2 text-[#36597C]  font-semibold hover:underline cursor-pointer'>
               <div className='flex gap-2 items-center'>
                 <Image src={pdf} width={60} height={60} />
                 <h3>
@@ -69,14 +69,14 @@ const Resources = () => {
                 </h3>
               </div>
             </div>
-            <h3>Catergories</h3>
+            <h3>Categories</h3>
             <h3>September 4, 2020</h3>
             <a className='  bg-[#005410]  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 '>
               DOWNLOAD
             </a>
           </div>
-          <div className='flex  border-t pt-4 text-lg px-4 justify-between items-center'>
-            <h3>Showing 1 to 2 of 2 downloads</h3>
+          <div className='flex flex-col lg:flex-row  border-t pt-4 text-lg px-4 justify-between items-center'>
+            <h3 className='mb-2 lg:mb-0'>Showing 1 to 2 of 2 downloads</h3>
             <div className='flex items-center gap-1'>
               <button className='   text-center cursor-pointer rounded-md text-[#005410] border  py-2 px-4 lg:px-4 '>
                 Previous
