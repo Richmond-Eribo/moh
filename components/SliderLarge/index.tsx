@@ -1,14 +1,35 @@
-import React from 'react';
-import { IoMdRadioButtonOff } from 'react-icons/io';
-import Image from 'next/image';
-import { useEffect, useState, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React from 'react'
+import {IoMdRadioButtonOff} from 'react-icons/io'
+import Image from 'next/image'
+import {useEffect, useState, useRef} from 'react'
+import {Swiper, SwiperSlide} from 'swiper/react'
 
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-fade';
-import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper';
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import 'swiper/css/effect-fade'
+import {Autoplay, EffectFade, Pagination, Navigation} from 'swiper'
+
+const sliderImages = [
+  // {
+  //   url: '/Images/heroImage.png',
+  //   heading: 'Quality healthCare',
+  //   subtext:
+  //     'The new design of our healthcare system emphasizes the primary healthcare system so that you can have healthcare services not more than five kilometers from where you live',
+  // },
+  {
+    url: '/heroSliderImages/1.jpg',
+    heading: 'Quality healthCare',
+    subtext:
+      'The new design of our healthcare system emphasizes the primary healthcare system so that you can have healthcare services not more than five kilometers from where you live',
+  },
+  {
+    url: '/heroSliderImages/2.jpg',
+    heading: 'Quality healthCare',
+    subtext:
+      'The new design of our healthcare system emphasizes the primary healthcare system so that you can have healthcare services not more than five kilometers from where you live',
+  },
+]
 
 const SliderLarge = () => {
   return (
@@ -27,74 +48,35 @@ const SliderLarge = () => {
         modules={[Autoplay, EffectFade, Pagination]}
         className='mySwiper hidden lg:block'
       >
-        <SwiperSlide>
-          <div>
-            <Image
-              src='/Images/heroImage.png'
-              width={1000}
-              height={700}
-              className='hidden lg:block h-screen'
-              alt='hero image  1'
-            />
+        {sliderImages.map(sliderImage => (
+          <SwiperSlide key={sliderImage.heading}>
+            <div>
+              <Image
+                // src='/Images/heroImage.png'
+                src={sliderImage.url}
+                width={1000}
+                height={800}
+                className='hidden lg:block h-screen'
+                alt='hero image  1'
+              />
 
-            <div className='absolute bottom-[40px] left-[40px] text-white'>
-              <h3 className='font-bold text-xl capitalize'>quality </h3>
-              <h3 className='font-bold text-xl capitalize'>healthcare</h3>{' '}
-              <p className='w-[24rem]'>
-                The new design of our healthcare system emphasizes the primary
-                healthcare system so that you can have healthcare services not
-                more than five kilometers from where you live
-              </p>
+              <div className='absolute bottom-[40px] left-[40px] text-white'>
+                <h3 className='font-bold text-xl capitalize'>quality </h3>
+                <h3 className='font-bold text-xl capitalize'>healthcare</h3>
+                <p className='w-[24rem]'>
+                  The new design of our healthcare system emphasizes the primary
+                  healthcare system so that you can have healthcare services not
+                  more than five kilometers from where you live
+                </p>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          {' '}
-          <div>
-            <Image
-              src='/Images/info - 005.png'
-              width={1000}
-              height={700}
-              className='hidden lg:block h-screen'
-              alt='hero image  2'
-            />
-            <div className='absolute bottom-[40px] left-[40px] text-white'>
-              <h3 className='font-bold text-xl capitalize'>quality </h3>
-              <h3 className='font-bold text-xl capitalize'>healthcare</h3>{' '}
-              <p className='w-[24rem]'>
-                The new design of our healthcare system emphasizes the primary
-                healthcare system so that you can have healthcare services not
-                more than five kilometers from where you live
-              </p>{' '}
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <Image
-              src='/Images/info - 006.png'
-              width={1000}
-              height={700}
-              alt='hero image  3'
-            />
-            <div className='absolute bottom-[40px] left-[40px] text-white'>
-              <h3 className='font-bold text-xl capitalize'>
-                dddddqdddduality{' '}
-              </h3>
-              <h3 className='font-bold text-xl capitalize'>healthcare</h3>{' '}
-              <p className='w-[24rem]'>
-                The new design of our healthcare system emphasizes the primary
-                healthcare system so that you can have healthcare services not
-                more than five kilometers from where you live{' '}
-              </p>{' '}
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
-  );
-};
-export default SliderLarge;
+  )
+}
+export default SliderLarge
 
 // const Slider = () => {
 //   const [heroImageNum, setHeroImageNum] = useState(1);
