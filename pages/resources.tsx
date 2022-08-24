@@ -1,9 +1,17 @@
-import Image from 'next/image';
-import pdf from '../public/Images/pdf image.png';
+import {MetaTagsWrapper} from 'components'
+import useGetDocuments from 'hooks/useGetDocuments'
+import Image from 'next/image'
+import {useState} from 'react'
+import {resourcesPageMetaTags} from 'utils/metaTags'
+import pdf from '../public/Images/pdf image.png'
 
 const Resources = () => {
+  const [skipQuery, setSkipQuery] = useState(0)
+  const {data} = useGetDocuments(skipQuery)
   return (
     <div className=''>
+      <MetaTagsWrapper tags={resourcesPageMetaTags} />
+      {/* <>{console.log(data)}</> */}
       <div className='bg-[#005410]'>
         <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
           Resources
@@ -14,16 +22,16 @@ const Resources = () => {
           Ministry of Health Resources
         </h3>
         <div className=' border py-4 border-black mb-10 rounded-lg'>
-          <div className='flex flex-col lg:flex-row mb-5 text-xl px-4 justify-between items-center'>
+          {/* <div className='flex flex-col lg:flex-row mb-5 text-xl px-4 justify-between items-center'>
             <h3>
               Display{' '}
               <select
                 id='numbers'
                 className='mr-2 text-lg p-2 border border-black rounded-sm'
               >
-                <option value='20'>20</option>
                 <option value='10'>10</option>
                 <option value='15'>15</option>
+                <option value='20'>20</option>
                 <option value='50'>50</option>
                 <option value='all'>all</option>
               </select>
@@ -36,36 +44,46 @@ const Resources = () => {
                 className='border-black border-b p-2 text-lg'
               />
             </span>
-          </div>
+          </div> */}
           <div className='hidden lg:grid grid-cols-5 px-4 text-sm font-bold bg-[#e9ecef] py-4 gap-7  items-center justify-between'>
-            <h3 className='col-span-2'>Title</h3>
-            <h3>Categories</h3>
+            <h3 className='col-span-3'>Title</h3>
+            {/* <h3>Categories</h3> */}
             <h3>Update Date</h3>
             <h3>Download</h3>
           </div>
-          <div className='grid-col-1 grid lg:grid-cols-5 border gap-7 px-4  items-center  py-4 justify-between'>
-            <div className='lg:col-span-2 text-[#36597C]  font-semibold hover:underline cursor-pointer'>
-              <div className='flex gap-2 items-center'>
-                <Image src={pdf} width={60} height={60} />
-                <h3>
-                  IMPROVED HEALTH SERVICE DELIVERY: THREE YEARS OF PURPOSEFUL
-                  GOVERNANCE IN OYO STATE{' '}
-                </h3>
+          {data &&
+            data.map((data, index) => (
+              <div
+                key={index}
+                className='grid-col-1 grid lg:grid-cols-5 border gap-7 px-4  items-center  py-4 justify-between'
+              >
+                <div className='lg:col-span-3 text-[#36597C]  font-semibold hover:underline cursor-pointer'>
+                  <div className='flex gap-2 items-center '>
+                    <Image src={pdf} width={30} height={30} alt='pdf image' />
+                    <h3 className='capitalize '>
+                      {data.fields.documentName?.fields.title}
+                    </h3>
+                  </div>
+                </div>
+                {/* <h3>Categories</h3> */}
+                <h3>June 7, 2022</h3>
+                <a
+                  download={data.fields.documentName?.fields.title}
+                  href={`https:${data.fields.documentName?.fields.file.url}`}
+                  className='  bg-[#005410]  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'
+                >
+                  DOWNLOAD
+                </a>
               </div>
-            </div>
-            <h3>Categories</h3>
-            <h3>June 7, 2022</h3>
-            <a className='  bg-[#005410]  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'>
-              DOWNLOAD
-            </a>
-          </div>
-          <div className='grid-col-1 grid lg:grid-cols-5 border gap-7 px-4  items-center  py-4 justify-between'>
+            ))}
+
+          {/* <div className='grid-col-1 grid lg:grid-cols-5 border gap-7 px-4  items-center  py-4 justify-between'>
             <div className='lg:col-span-2 text-[#36597C]  font-semibold hover:underline cursor-pointer'>
               <div className='flex gap-2 items-center'>
-                <Image src={pdf} width={60} height={60} />
+                <Image src={pdf} width={60} height={60} alt='pdf image' />
                 <h3>
                   IMPROVED HEALTH SERVICE DELIVERY: THREE YEARS OF PURPOSEFUL
-                  GOVERNANCE IN OYO STATE{' '}
+                  GOVERNANCE IN OYO STATE
                 </h3>
               </div>
             </div>
@@ -88,11 +106,11 @@ const Resources = () => {
                 Next
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Resources;
+export default Resources
