@@ -1,6 +1,5 @@
 import Image from 'next/image'
 // const directorMan = './Images/directorman.jpeg';
-
 import directorMan from '../public/Images/directorman.jpeg'
 import directorWoman from '../public/Images/directorwoman.jpeg'
 
@@ -54,6 +53,7 @@ const directors = [
   },
 ]
 
+// This page is not in use
 const Directors = () => {
   return (
     <section>

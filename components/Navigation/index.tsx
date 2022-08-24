@@ -88,7 +88,7 @@ const Navigation = function () {
             {name: 'traditional medicine', url: '/traditionalMedicine'},
           ].map(nav => (
             <Link key={nav.name} href='/'>
-              <div className='dropdown dropdown-hover '>
+              <div className='dropdown dropdown-hover  '>
                 <a
                   tabIndex={0}
                   className='cursor-pointer capitalize   hover:text-[#005410] duration-150 ease-in-out'
@@ -97,7 +97,7 @@ const Navigation = function () {
                 </a>
                 <ul
                   tabIndex={0}
-                  className='dropdown-content text-sm menu p-2 shadow bg-base-100 rounded-sm w-44'
+                  className='dropdown-content text-sm menu p-2 shadow bg-base-100 rounded-sm w-64'
                 >
                   <li>
                     <a>{nav.item}</a>

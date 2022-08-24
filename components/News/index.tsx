@@ -41,7 +41,7 @@ const News = function ({newsData}: Props) {
         </div>
         {/* mobile news */}
         <div className=' relative lg:hidden '>
-          <div className='w-full h-[13rem]'>
+          <div className='w-full h-[13rem] md:h-[20rem] lg:[13rem]'>
             <Image
               src='/Images/mobile.png'
               layout='fill'
@@ -69,8 +69,8 @@ const News = function ({newsData}: Props) {
         </div>
       </div>
 
-      <div className='mb-10'>
-        <div className='h-[20rem] mx-auto lg:h-[35rem] lg:w-[40rem]   overflow-clip'>
+      <div className='mb-10 md:mb-20 lg:mb-10'>
+        <div className='h-[20rem] mx-auto md:h-[35rem] lg:w-[40rem]   overflow-clip'>
           <Image
             src='/Qoutes/GodwinObaseki.png'
             // layout='fill'
@@ -79,16 +79,6 @@ const News = function ({newsData}: Props) {
             alt='obaseki portrait'
           />
         </div>
-        {/* <div className=' h-[25rem]  bg-teal-200  overflow-clip'>
-          <Image
-            src='/Qoutes/GodwinObaseki.png'
-            // layout='fill'
-            width={591 / 1.2}
-            height={391 / 1.2}
-            alt='obaseki portrait'
-          />
-        </div> */}
-        <p></p>
       </div>
 
       <div className='grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
@@ -98,14 +88,11 @@ const News = function ({newsData}: Props) {
         {newsData &&
           newsData.map((item: any) => {
             const {fields} = item
-
             const slug = fields.slug
-
-            const imageUrl = fields.thumbnail.fields.file.url
-            //  console.log(imageUrl);
-            const {
-              writeUp: {content},
-            } = fields
+            const imageUrl = fields.thumbnail?.fields.file.url
+            // const {
+            //   writeUp: {content},
+            // } = fields
 
             //  const writeUp = content[0].content[0].value
 

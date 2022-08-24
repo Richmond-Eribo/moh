@@ -1,8 +1,11 @@
+import {MetaTagsWrapper} from 'components'
 import Image from 'next/image'
+import {AboutPageMetaTags} from 'utils/metaTags'
 
 const AboutUs = () => {
   return (
     <div className=''>
+      <MetaTagsWrapper tags={AboutPageMetaTags} />
       <div className='bg-[#005410]'>
         <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
           about us
