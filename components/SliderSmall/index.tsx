@@ -9,6 +9,21 @@ import 'swiper/css/navigation'
 import 'swiper/css/effect-fade'
 import {Autoplay, EffectFade, Pagination, Navigation} from 'swiper'
 
+const sliderImages = [
+  {
+    url: '/heroSliderImages/1.jpg',
+    heading: 'Quality healthCare',
+    subtext:
+      'The new design of our healthcare system emphasizes the primary healthcare system so that you can have healthcare services not more than five kilometers from where you live',
+  },
+  {
+    url: '/heroSliderImages/2.jpg',
+    heading: 'Quality healthCare',
+    subtext:
+      'The new design of our healthcare system emphasizes the primary healthcare system so that you can have healthcare services not more than five kilometers from where you live',
+  },
+]
+
 const SliderSmall = () => {
   return (
     <>
@@ -26,70 +41,31 @@ const SliderSmall = () => {
         modules={[Autoplay, EffectFade, Pagination]}
         className='mySwiper'
       >
-        <SwiperSlide>
-          <div>
-            <div className='w-full h-[27rem]'>
-              <Image
-                src='/Images/heroImage.png'
-                layout='fill'
-                alt='hero image 1'
-              />
-            </div>
+        {sliderImages.map(sliderImage => (
+          <SwiperSlide key={sliderImage.url}>
+            <div>
+              <div className='w-full h-[27rem] relative'>
+                <Image
+                  src={sliderImage.url}
+                  layout='fill'
+                  alt='hero image 1'
+                  objectFit='cover'
+                />
+              </div>
 
-            <div className='absolute bottom-[40px] left-[40px] text-white'>
-              <h3 className='font-bold text-xl text-left capitalize'>
-                quality <br /> healthcare
-              </h3>
-              {/* <p className='w-[24rem]'>
+              <div className='absolute bottom-[40px] left-[40px] text-white'>
+                <h3 className='font-bold text-xl text-left capitalize'>
+                  quality <br /> healthcare
+                </h3>
+                {/* <p className='w-[24rem]'>
                 The new design of our healthcare system emphasizes the primary
                 healthcare system so that you can have healthcare services not
                 more than five kilometers from where you live
               </p> */}
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <div className='w-full h-[27rem]'>
-              <Image
-                src='/Images/heroImage.png'
-                layout='fill'
-                alt='hero image 2'
-              />
-            </div>
-            <div className='absolute bottom-[40px] left-[40px] text-white'>
-              <h3 className='font-bold text-xl text-left capitalize'>
-                quality <br /> healthcare
-              </h3>
-              {/* <p className='w-[24rem]'>
-                The new design of our healthcare system emphasizes the primary
-                healthcare system so that you can have healthcare services not
-                more than five kilometers from where you live
-              </p> */}
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div>
-            <div className='w-full h-[27rem]'>
-              <Image
-                src='/Images/heroImage.png'
-                layout='fill'
-                alt='hero image 3'
-              />
-            </div>
-            <div className='absolute bottom-[40px] left-[40px] text-white'>
-              <h3 className='font-bold text-xl text-left capitalize'>
-                quality <br /> healthcare
-              </h3>
-              {/* <p className='w-[24rem]'>
-                The new design of our healthcare system emphasizes the primary
-                healthcare system so that you can have healthcare services not
-                more than five kilometers from where you live
-              </p> */}
-            </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   )

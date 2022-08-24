@@ -10,13 +10,13 @@ import 'swiper/css/navigation'
 import 'swiper/css/effect-fade'
 import {Autoplay, EffectFade, Pagination, Navigation} from 'swiper'
 
+// {
+//   url: '/Images/heroImage.png',
+//   heading: 'Quality healthCare',
+//   subtext:
+//     'The new design of our healthcare system emphasizes the primary healthcare system so that you can have healthcare services not more than five kilometers from where you live',
+// },
 const sliderImages = [
-  // {
-  //   url: '/Images/heroImage.png',
-  //   heading: 'Quality healthCare',
-  //   subtext:
-  //     'The new design of our healthcare system emphasizes the primary healthcare system so that you can have healthcare services not more than five kilometers from where you live',
-  // },
   {
     url: '/heroSliderImages/1.jpg',
     heading: 'Quality healthCare',
@@ -49,7 +49,7 @@ const SliderLarge = () => {
         className='mySwiper hidden lg:block'
       >
         {sliderImages.map(sliderImage => (
-          <SwiperSlide key={sliderImage.heading}>
+          <SwiperSlide key={sliderImage.url}>
             <div>
               <Image
                 // src='/Images/heroImage.png'
