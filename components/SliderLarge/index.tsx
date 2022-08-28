@@ -63,11 +63,11 @@ const SliderLarge = () => {
               <div className='absolute bottom-[40px] left-[40px] text-white'>
                 <h3 className='font-bold text-xl capitalize'>quality </h3>
                 <h3 className='font-bold text-xl capitalize'>healthcare</h3>
-                <p className='w-[24rem]'>
+                {/* <p className='w-[24rem]'>
                   The new design of our healthcare system emphasizes the primary
                   healthcare system so that you can have healthcare services not
                   more than five kilometers from where you live
-                </p>
+                </p> */}
               </div>
             </div>
           </SwiperSlide>
