@@ -4,21 +4,23 @@ type Props = {
   title: string
   items?: string[]
   url: string
+  status: boolean
+  setStatus: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const CollapseNav = ({title, items, url}: Props) => {
+const CollapseNav = ({title, items, url, setStatus, status}: Props) => {
   return (
     <div>
       {/* checks if items is true */}
       {!items ? (
-        // <Link href={url}>
-        <div className='collapse'>
-          <a className='collapse-title cursor-pointer text-xl my-4 font-semibold hover:text-[#005410] duration-150 ease-in-out'>
-            {title}
-          </a>
+        <div className='collapse' onClick={() => setStatus(!status)}>
+          <Link href={url}>
+            <a className='collapse-title cursor-pointer text-xl my-4 font-semibold hover:text-[#005410] duration-150 ease-in-out'>
+              {title}
+            </a>
+          </Link>
         </div>
       ) : (
-        // </Link>
         <div
           tabIndex={0}
           className='collapse collapse-arrow  bg-base-100 rounded-box'
