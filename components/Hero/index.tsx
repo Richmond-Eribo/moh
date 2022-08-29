@@ -45,9 +45,11 @@ const Hero = function () {
             leadership of an Honourable commission who oversees all the
             activities in the health sector.
           </p>
-          <button className='bg-[#005410] text-white w-32  py-3 px-4 rounded-md capitalize'>
-            read more
-          </button>
+          <Link href='/AboutUs'>
+            <button className='bg-[#005410] text-white w-32  py-3 px-4 rounded-md capitalize'>
+              read more
+            </button>
+          </Link>
         </div>
       </div>
     </section>
