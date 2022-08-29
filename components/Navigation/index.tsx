@@ -155,14 +155,28 @@ const Navigation = function () {
                 ' Integrated services',
               ],
             },
-            {name: 'health insurance', url: '/primaryHealthCare'},
-            {name: 'traditional medicine', url: '/traditionalMedicine'},
+            {
+              name: 'health insurance',
+              // url: '/primaryHealthCare',
+              url: '/',
+            },
+            {
+              name: 'traditional medicine',
+              //  url: '/traditionalMedicine',
+              url: '/',
+            },
             {name: 'news', url: '/News'},
             {name: 'about', url: '/AboutUs'},
             {name: 'resources', url: '/resources'},
           ].map(nav => (
             <div key={nav.name} className={` ${status ? '' : 'hidden'} `}>
-              <CollapseNav title={nav.name} url={nav.url} items={nav.items} />
+              <CollapseNav
+                setStatus={setStatus}
+                status={status}
+                title={nav.name}
+                url={nav.url}
+                items={nav.items}
+              />
             </div>
           ))}
         </ul>
