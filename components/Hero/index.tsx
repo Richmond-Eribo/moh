@@ -16,10 +16,10 @@ const Hero = function () {
             edo state ministry of health
           </h3>
           <p className='mb-4'>
-            The Ministry of health is responsible for health policy formulation
-            and implementation in the state. The Ministry is under the
-            leadership of an Honourable commission who oversees all the
-            activities in the health sector
+            The Ministry of Health is responsible for regulation of health
+            services as well as for health policy formulation and implementation
+            in the state. The Ministry is under the leadership of an Honourable
+            commissioner who oversees all the activities in the health sector.
           </p>
 
           <Link href='/AboutUs'>
@@ -40,10 +40,10 @@ const Hero = function () {
             edo state ministry of health
           </h3>
           <p className='mb-4'>
-            The Ministry of Health is responsible for health policy formulation
-            and implementation in the state. The Ministry is under the
-            leadership of an Honourable commission who oversees all the
-            activities in the health sector.
+            The Ministry of Health is responsible for regulation of health
+            services as well as for health policy formulation and implementation
+            in the state. The Ministry is under the leadership of an Honourable
+            commissioner who oversees all the activities in the health sector.
           </p>
           <Link href='/AboutUs'>
             <button className='bg-[#005410] text-white w-32  py-3 px-4 rounded-md capitalize'>
