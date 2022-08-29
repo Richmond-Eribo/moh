@@ -14,5 +14,8 @@ export interface NewsField {
   slug: string
   date: Date
 }
+export interface ResourceDocument {
+  documentName: Asset
+}
 
 export interface ContentfulRichText extends Document {}

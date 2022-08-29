@@ -18,18 +18,27 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
       [MARKS.BOLD]: (text: any) => <span className='font-bold'>{text} </span>,
       [MARKS.ITALIC]: (text: any) => <span className='italic'>{text}</span>,
     },
+    renderInlines: {
+      [INLINES.ENTRY_HYPERLINK]: (node: any, children: ReactNode) => (
+        <HyperLink>{children} </HyperLink>
+      ),
+    },
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node: any, children: ReactNode) => (
-        <Paragraph>{children} </Paragraph>
+        <Paragraph>{children}</Paragraph>
       ),
       [BLOCKS.UL_LIST]: (node: any, children: ReactNode) => (
-        <UnOrderedList>{children}</UnOrderedList>
+        <OrderedList>{children}</OrderedList>
       ),
       [BLOCKS.OL_LIST]: (node: any, children: ReactNode) => (
         <OrderedList>{children}</OrderedList>
       ),
+      [BLOCKS.HEADING_3]: (node: any, children: ReactNode) => (
+        <HeadingThree>{children}</HeadingThree>
+      ),
       [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
         const {url} = node.data.target.fields.file
+        const {height, width} = node.data.target.fields.file.details.image
 
         return (
           <Figure>
@@ -37,8 +46,8 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
               className='mb-4'
               src={'https:' + url}
               alt='Image'
-              width={350}
-              height={350}
+              width={width}
+              height={height}
             />
           </Figure>
         )
@@ -51,6 +60,9 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
 
 export default RichTextWrapper
 
+const HyperLink = ({children}: Props) => (
+  <a className='text-blue-500'>{children} </a>
+)
 const Paragraph = ({children}: Props) => (
   <p className='mb-4 text-lg '>{children}</p>
 )
@@ -59,6 +71,9 @@ const OrderedList = ({children}: Props) => (
   <ol className='list-decimal'>{children}</ol>
 )
 const UnOrderedList = ({children}: Props) => (
-  <ul className='list-disc'>{children} </ul>
+  <ul className='list-disc'>{children}</ul>
+)
+const HeadingThree = ({children}: Props) => (
+  <h3 className='text-lg capitalize underline font-bold'>{children} </h3>
 )
 const HyperList = ({children}: Props) => <span className='s'>{children}</span>

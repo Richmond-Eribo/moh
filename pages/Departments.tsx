@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+// This page is not in use
 const Departments = () => {
   return (
     <div>

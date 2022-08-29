@@ -4,6 +4,7 @@ import {IoMdRadioButtonOff} from 'react-icons/io'
 import {Fade} from 'react-awesome-reveal'
 import SliderLarge from 'components/SliderLarge'
 import SliderSmall from 'components/SliderSmall'
+import Link from 'next/link'
 
 const Hero = function () {
   return (
@@ -19,13 +20,13 @@ const Hero = function () {
             and implementation in the state. The Ministry is under the
             leadership of an Honourable commission who oversees all the
             activities in the health sector
-            {/* and is supported by the Permanent
-            Secretary, who is the accounting and reporting officer of the
-            Ministry. */}
           </p>
-          <button className='bg-[#005410] text-white w-32  py-3 px-4 rounded-md capitalize'>
-            read more
-          </button>
+
+          <Link href='/AboutUs'>
+            <button className='bg-[#005410] text-white w-32  py-3 px-4 rounded-md capitalize'>
+              read more
+            </button>
+          </Link>
         </div>
 
         <SliderLarge />
