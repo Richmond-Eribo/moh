@@ -9,6 +9,7 @@ import {
   Navigation,
   Highlights,
   MetaTagsWrapper,
+  Application,
 } from 'components'
 import useGetOverview from 'hooks/useGetOverview'
 import useGetNews from 'hooks/useGetNews'
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
       <Hero />
       <Features data={data!} />
       {/* <Highlights /> */}
+      i<Application />
       <News newsData={NewsFromContentful.data} />
     </div>
   )
