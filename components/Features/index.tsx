@@ -1,8 +1,9 @@
-import OverviewModal from 'components/Modals/OverviewModal'
-import {Entry} from 'contentful'
-import {OverviewField} from 'interfaces/contentfulTypes'
-import Image from 'next/image'
-import {useState} from 'react'
+import OverviewModal from 'components/Modals/OverviewModal';
+import { Entry } from 'contentful';
+import { OverviewField } from 'interfaces/contentfulTypes';
+import Image from 'next/image';
+import { useState } from 'react';
+import { Slide } from 'react-awesome-reveal';
 
 const features = [
   {
@@ -25,15 +26,15 @@ const features = [
     content: 'Collaboration, integration, efficiency and sustainabitly.',
     image: '/Images/our values.png',
   },
-]
+];
 
 type Props = {
-  data: Entry<OverviewField>[]
-}
+  data: Entry<OverviewField>[];
+};
 
-const Features = function ({data}: Props) {
-  const [modalTitle, setModalTitle] = useState('')
-  const [modalWriteUp, setmodalWriteUp] = useState<any>()
+const Features = function ({ data }: Props) {
+  const [modalTitle, setModalTitle] = useState('');
+  const [modalWriteUp, setmodalWriteUp] = useState<any>();
   //  console.log(data);
 
   return (
@@ -44,24 +45,23 @@ const Features = function ({data}: Props) {
         </h3>
 
         <div className=' grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
-          {features.slice(0, 9).map(item => {
+          {features.slice(0, 9).map((item) => {
             return (
-              <div
-                key={item.id}
-                className='bg-white lg:h-[25rem] shadow-lg p-6 rounded-sm'
-              >
-                <Image
-                  src={item.image}
-                  height={80}
-                  width={90}
-                  alt={item.title}
-                />
-                <h3 className='font-bold text-2xl text-black capitalize mb-5 mt-5'>
-                  {item.title}
-                </h3>
-                <p>{item.content}</p>
-              </div>
-            )
+              <Slide key={item.id} direction='up' triggerOnce duration={1500}>
+                <div className='bg-white lg:h-[25rem] shadow-lg p-6 rounded-sm'>
+                  <Image
+                    src={item.image}
+                    height={80}
+                    width={90}
+                    alt={item.title}
+                  />
+                  <h3 className='font-bold text-2xl text-black capitalize mb-5 mt-5'>
+                    {item.title}
+                  </h3>
+                  <p>{item.content}</p>
+                </div>
+              </Slide>
+            );
           })}
         </div>
       </div>
@@ -73,8 +73,8 @@ const Features = function ({data}: Props) {
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
             {data &&
-              data.map(item => {
-                const {fields} = item
+              data.map((item) => {
+                const { fields } = item;
 
                 return (
                   <div
@@ -95,13 +95,13 @@ const Features = function ({data}: Props) {
                       SetModalWriteUp={setmodalWriteUp}
                     />
                   </div>
-                )
+                );
               })}
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Features
+export default Features;
