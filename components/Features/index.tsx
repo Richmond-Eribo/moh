@@ -47,7 +47,13 @@ const Features = function ({ data }: Props) {
         <div className=' grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
           {features.slice(0, 9).map((item) => {
             return (
-              <Slide key={item.id} direction='up' triggerOnce duration={1500}>
+              <Slide
+                key={item.id}
+                direction='up'
+                triggerOnce
+                duration={1500}
+                delay={500}
+              >
                 <div className='bg-white lg:h-[25rem] shadow-lg p-6 rounded-sm'>
                   <Image
                     src={item.image}
