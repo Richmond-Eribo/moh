@@ -1,6 +1,7 @@
-import Image from 'next/image'
+import Image from 'next/image';
+import { Slide } from 'react-awesome-reveal';
 
-const registration = './Files/registration.doc'
+const registration = './Files/registration.doc';
 
 const index = () => {
   return (
@@ -18,16 +19,18 @@ const index = () => {
           </div>
 
           <div className='absolute top-[4rem] left-[5rem]  md:top-[10rem] md:left-[3rem]'>
-            <div className='text-left'>
-              <h3 className='font-semibold leading-snug w-[30rem]   text-5xl text-black mb-7'>
-                Application form for Private Health Institution
-              </h3>
-              <button className='bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
-                <a href={registration} download>
-                  Download
-                </a>
-              </button>
-            </div>
+            <Slide direction='left' duration={1000} triggerOnce delay={300}>
+              <div className='text-left'>
+                <h3 className='font-semibold leading-snug w-[30rem]   text-5xl text-black mb-7'>
+                  Application form for Private Health Institution
+                </h3>
+                <button className='bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
+                  <a href={registration} download>
+                    Download
+                  </a>
+                </button>
+              </div>
+            </Slide>
           </div>
         </div>
         {/* mobile news */}
@@ -72,7 +75,7 @@ const index = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;

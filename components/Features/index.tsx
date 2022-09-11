@@ -78,31 +78,33 @@ const Features = function ({ data }: Props) {
             An Overview of the Ministry of Health
           </h3>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
-            {data &&
-              data.map((item) => {
-                const { fields } = item;
+            <Slide direction='up' duration={1500} triggerOnce>
+              {data &&
+                data.map((item) => {
+                  const { fields } = item;
 
-                return (
-                  <div
-                    key={fields.title}
-                    className='bg-white px-2 py-3  text-center rounded'
-                  >
-                    <h3 className='font-bold mb-4 capitalize'>
-                      {fields.title}
-                    </h3>
+                  return (
+                    <div
+                      key={fields.title}
+                      className='bg-white px-2 py-3  text-center rounded'
+                    >
+                      <h3 className='font-bold mb-4 capitalize'>
+                        {fields.title}
+                      </h3>
 
-                    {/* the Know more button is here */}
-                    <OverviewModal
-                      ModalTitle={modalTitle}
-                      SetModalTitle={setModalTitle}
-                      WriteUp={fields.writeUp}
-                      title={fields.title}
-                      ModalWriteUp={modalWriteUp}
-                      SetModalWriteUp={setmodalWriteUp}
-                    />
-                  </div>
-                );
-              })}
+                      {/* the Know more button is here */}
+                      <OverviewModal
+                        ModalTitle={modalTitle}
+                        SetModalTitle={setModalTitle}
+                        WriteUp={fields.writeUp}
+                        title={fields.title}
+                        ModalWriteUp={modalWriteUp}
+                        SetModalWriteUp={setmodalWriteUp}
+                      />
+                    </div>
+                  );
+                })}
+            </Slide>
           </div>
         </div>
       </div>
