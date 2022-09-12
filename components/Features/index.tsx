@@ -57,8 +57,8 @@ const Features = function ({ data }: Props) {
                 <div className='bg-white lg:h-[25rem] shadow-lg p-6 rounded-sm'>
                   <Image
                     src={item.image}
-                    height={80}
-                    width={90}
+                    height={50}
+                    width={50}
                     alt={item.title}
                   />
                   <h3 className='font-bold text-2xl text-black capitalize mb-5 mt-5'>
