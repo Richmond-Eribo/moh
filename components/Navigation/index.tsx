@@ -77,7 +77,7 @@ const Navigation = function () {
             },
 
             {
-              name: 'specialist care',
+              name: 'hospitals management',
               url: '/specialistCare',
               item: 'Hospitals ',
               item2: 'Essential Drugs Programme',
@@ -146,7 +146,7 @@ const Navigation = function () {
             },
 
             {
-              name: 'specialist care',
+              name: 'hospital management',
               url: '/specialistCare',
               items: [
                 'Hospitals ',
