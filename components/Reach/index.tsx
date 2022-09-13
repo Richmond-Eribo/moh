@@ -11,7 +11,7 @@ interface Props {
 const Reach = ({ setIsOpen }: Props) => {
   return (
     <section className='z-50 w-[24rem]  lg:w-[23rem] flex flex-col'>
-      <main className=' bg-white lg:bg-opacity-50  p-4    rounded-lg mb-3'>
+      <main className=' bg-white lg:bg-opacity-70  p-4    rounded-lg mb-3'>
         <h3 className='text-center font-bold text-xl mb-4'>You can reach us</h3>
         <form className='flex flex-col text-lg '>
           <input
@@ -64,7 +64,7 @@ const Reach = ({ setIsOpen }: Props) => {
             <span>09034812675</span>
           </a>
         </div>
-        <div className='text-end lg:hidden'>
+        <div className='text-end '>
           <button
             className='bg-red-700 text-white px-4 py-1 rounded-sm'
             onClick={() => setIsOpen(false)}
@@ -73,9 +73,9 @@ const Reach = ({ setIsOpen }: Props) => {
           </button>
         </div>
       </main>
-      <div className='self-end bg-white hidden lg:block rounded-sm p-2 '>
+      {/* <div className='self-end bg-white hidden lg:block rounded-sm p-2 '>
         <Image src={contact} alt='contact-icon ' width={55} height={38} />
-      </div>
+      </div> */}
     </section>
   );
 };

@@ -7,10 +7,10 @@ const HelpLine = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <section className='container lg:hidden'>
+    <section className='container '>
       {isOpen || (
-        <div
-          className=' bg-white flex items-center justify-center p-1 rounded-full  fixed bottom-0  right-4 '
+        <button
+          className=' bg-white flex items-center justify-center p-1 lg:p-3 rounded-full  fixed bottom-0  right-4 '
           onClick={() => setIsOpen(true)}
         >
           <Image
@@ -20,7 +20,7 @@ const HelpLine = () => {
             height={35}
             className='rounded-full'
           />
-        </div>
+        </button>
       )}
 
       <div className='fixed bottom-0  right-4'>

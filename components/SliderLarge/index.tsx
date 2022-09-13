@@ -58,9 +58,9 @@ const SliderLarge = () => {
                 <p className=' text-lg capitalize'>{sliderImage.subtext}</p>
               </div>
 
-              <div className='hidden lg:block absolute bottom-[1rem] right-4'>
+              {/* <div className='hidden lg:block absolute bottom-[1rem] right-4'>
                 <Reach setIsOpen={false} />
-              </div>
+              </div> */}
             </div>
           </SwiperSlide>
         ))}
