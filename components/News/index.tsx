@@ -13,27 +13,22 @@ const News = function ({ newsData }: Props) {
   // console.log(newsData);
 
   return (
-    <section className='container pb-7 '>
+    <section className='container pb-7 relative -z-50 '>
       <h3 className='text-center font-bold text-4xl text-black mb-10'>
         Latest News
       </h3>
       <Slide direction='left' triggerOnce duration={2000}>
-        <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
+        <div className='grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
           {newsData &&
             newsData.map((item: any) => {
               const { fields } = item;
               const slug = fields.slug;
               const imageUrl = fields.thumbnail?.fields.file.url;
-              // const {
-              //   writeUp: {content},
-              // } = fields
-
-              //  const writeUp = content[0].content[0].value
 
               return (
                 <div
                   key={fields.title}
-                  className=' h-[28rem] w-[23rem] overflow-clip  shadow-xl rounded-lg'
+                  className=' h-[28rem] w-[23rem]   overflow-clip  shadow-xl rounded-lg'
                 >
                   {/* You need to work on the height properly, I will sent you a link */}
                   <div className='w-full '>
