@@ -1,13 +1,13 @@
-import React from 'react'
-import {IoMdRadioButtonOff} from 'react-icons/io'
-import Image from 'next/image'
-import {useEffect, useState, useRef} from 'react'
-import {Swiper, SwiperSlide} from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-import 'swiper/css/effect-fade'
-import {Autoplay, EffectFade, Pagination, Navigation} from 'swiper'
+import React from 'react';
+import { IoMdRadioButtonOff } from 'react-icons/io';
+import Image from 'next/image';
+import { useEffect, useState, useRef } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
+import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper';
 
 const sliderImages = [
   {
@@ -22,7 +22,7 @@ const sliderImages = [
     subtext:
       'The new design of our healthcare system emphasizes the primary healthcare system so that you can have healthcare services not more than five kilometers from where you live',
   },
-]
+];
 
 const SliderSmall = () => {
   return (
@@ -39,12 +39,12 @@ const SliderSmall = () => {
           clickable: true,
         }}
         modules={[Autoplay, EffectFade, Pagination]}
-        className='mySwiper'
+        className='mySwiper '
       >
-        {sliderImages.map(sliderImage => (
+        {sliderImages.map((sliderImage) => (
           <SwiperSlide key={sliderImage.url}>
             <div>
-              <div className='w-full h-[27rem] relative'>
+              <div className='w-full h-[27rem] relative  '>
                 <Image
                   src={sliderImage.url}
                   layout='fill'
@@ -68,6 +68,6 @@ const SliderSmall = () => {
         ))}
       </Swiper>
     </>
-  )
-}
-export default SliderSmall
+  );
+};
+export default SliderSmall;
