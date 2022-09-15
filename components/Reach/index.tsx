@@ -45,10 +45,10 @@ const Reach = ({ setIsOpen }: Props) => {
           </button>
         </form>
         <h3 className='text-center my-3'>OR</h3>
-        <div className='flex items-center gap-3 justify-center mb-3'>
+        <div className='flex items-center font-semibold gap-3 justify-center mb-3'>
           <a
             href='tel:090-348-126-75'
-            className='bg-[#fff] px-3 py-2 flex gap-1 items-center'
+            className='bg-[#fff]  px-3 py-2 flex gap-1 items-center'
           >
             {' '}
             <Image src={phone} alt='phone' width={22} height={22} />
