@@ -26,7 +26,7 @@ const Home: NextPage = () => {
       <Hero />
       <Features data={data!} />
       {/* <Highlights /> */}
-      i<Application />
+      <Application />
       <Resources />
       <HelpLine />
       <News newsData={NewsFromContentful.data} />

@@ -11,7 +11,7 @@ interface Props {
 const Reach = ({ setIsOpen }: Props) => {
   return (
     <section className='z-50 w-[24rem]  lg:w-[23rem] flex flex-col'>
-      <main className=' bg-white lg:bg-opacity-70  p-4    rounded-lg mb-3'>
+      <main className=' bg-gray-200 p-4 rounded-md mb-3 shadow-lg'>
         <h3 className='text-center font-bold text-xl mb-4'>You can reach us</h3>
         <form className='flex flex-col text-lg '>
           <input
@@ -19,7 +19,7 @@ const Reach = ({ setIsOpen }: Props) => {
             type='name'
             required
             placeholder='Name'
-            className=' mb-7 px-3 rounded h-8'
+            className=' mb-2 px-3 text-sm rounded h-8 focus:outline-secondary'
           />
 
           <input
@@ -27,7 +27,7 @@ const Reach = ({ setIsOpen }: Props) => {
             type='email'
             required
             placeholder='Email'
-            className='mb-7 px-3 rounded h-8'
+            className='mb-2 px-3 rounded h-8 text-sm'
           />
 
           <textarea
@@ -35,7 +35,7 @@ const Reach = ({ setIsOpen }: Props) => {
             name='message'
             required
             placeholder='Message'
-            className=' mb-7 px-3 rounded h-[4rem]'
+            className=' mb-7 px-3 rounded h-[4rem] text-sm'
           />
           <button
             type='submit'

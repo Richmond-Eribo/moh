@@ -1,10 +1,10 @@
-import SliderLarge from 'components/SliderLarge';
-import SliderSmall from 'components/SliderSmall';
-import Link from 'next/link';
+import SliderLarge from "components/SliderLarge"
+import SliderSmall from "components/SliderSmall"
+import Link from "next/link"
 
 const Hero = function () {
   return (
-    <section className='relative -z-50 lg:block mb-10  lg:mt-0 lg:mb-0 px-4'>
+    <section className='relative lg:block mb-10  lg:mt-0 lg:mb-0 px-4'>
       <div className='flex flex-col text-center lg:text-left lg:flex-row items-center  gap-x-[3rem] lg:pl-[5rem]'>
         {/* for laptop */}
         <div className='lg:w-[60rem] hidden lg:block w-full'>
@@ -19,7 +19,7 @@ const Hero = function () {
           </p>
 
           <Link href='/AboutUs'>
-            <button className='bg-[#005410] text-white w-32  py-3 px-4 rounded-md capitalize'>
+            <button className='bg-[#005410] cursor-pointer  text-white w-32  py-3 px-4 rounded-md capitalize'>
               read more
             </button>
           </Link>
@@ -42,13 +42,13 @@ const Hero = function () {
             commissioner who oversees all the activities in the health sector.
           </p>
           <Link href='/AboutUs'>
-            <button className='bg-[#005410] text-white w-32  py-3 px-4 rounded-md capitalize'>
+            <button className='bg-[#005410] cursor-pointer text-white w-32  py-3 px-4 rounded-md capitalize'>
               read more
             </button>
           </Link>
         </div>
       </div>
     </section>
-  );
-};
-export default Hero;
+  )
+}
+export default Hero
