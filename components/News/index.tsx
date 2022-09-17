@@ -1,133 +1,63 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
+import { Slide } from 'react-awesome-reveal';
 // const man = './Images/man.png'
 // import mobile from '../../public'
 // import registration from '../../public/Files/registration.txt';
-const registration = './Files/registration.doc'
 
 type Props = {
-  newsData: any
-}
+  newsData: any;
+};
 
-const News = function ({newsData}: Props) {
+const News = function ({ newsData }: Props) {
   // console.log(newsData);
 
   return (
-    <section className='container pb-7 '>
-      <div className='mb-20 lg:mt-10  '>
-        {/* deskstop news */}
-        <div className='hidden lg:block relative  h-[19rem] w-[19rem] md:w-full md:h-[600px]'>
-          <div className='lg:w-full lg:h-[600px]'>
-            <Image
-              src='/Images/image 2.png'
-              layout='fill'
-              alt='application'
-              className=' rounded-3xl  '
-            />
-          </div>
+    <section className='container pb-7 relative -z-50 '>
+      <h3 className='text-center font-bold text-4xl text-black mb-10'>
+        Latest News
+      </h3>
+      <Slide direction='left' triggerOnce duration={2000}>
+        <div className='grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
+          {newsData &&
+            newsData.map((item: any) => {
+              const { fields } = item;
+              const slug = fields.slug;
+              const imageUrl = fields.thumbnail?.fields.file.url;
 
-          <div className='absolute top-[4rem] left-[5rem]  md:top-[10rem] md:left-[3rem]'>
-            <div className='text-left'>
-              <h3 className='font-semibold leading-snug w-[30rem]   text-5xl text-black mb-7'>
-                Application form for Private Health Institution
-              </h3>
-              <button className='bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'>
-                <a href={registration} download>
-                  Download
-                </a>
-              </button>
-            </div>
-          </div>
-        </div>
-        {/* mobile news */}
-        <div className=' relative lg:hidden '>
-          <div className='w-full h-[13rem] md:h-[20rem] lg:[13rem]'>
-            <Image
-              src='/Images/mobile.png'
-              layout='fill'
-              alt='application'
-              className=' rounded-3xl  '
-            />
-          </div>
-
-          <div className='absolute top-[2rem] left-[2rem] '>
-            <div className='text-left'>
-              <h3 className='font-semibold w-[10rem]   text-black mb-3 '>
-                Application form for Private Health Institution
-              </h3>
-              {/* <button > */}
-              <a
-                className='  bg-[#005410]  cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'
-                href={registration}
-                download
-              >
-                Download
-              </a>
-              {/* </button> */}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className='mb-10 md:mb-20 lg:mb-10'>
-        <div className='h-[20rem] mx-auto md:h-[35rem] lg:w-[40rem]   overflow-clip'>
-          <Image
-            src='/Qoutes/GodwinObaseki.png'
-            // layout='fill'
-            width={591 * 2}
-            height={391 * 2}
-            alt='obaseki portrait'
-          />
-        </div>
-      </div>
-
-      <div className='grid   grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
-        <h3 className='text-center font-bold text-4xl text-black mb-10'>
-          Latest News
-        </h3>
-        {newsData &&
-          newsData.map((item: any) => {
-            const {fields} = item
-            const slug = fields.slug
-            const imageUrl = fields.thumbnail?.fields.file.url
-            // const {
-            //   writeUp: {content},
-            // } = fields
-
-            //  const writeUp = content[0].content[0].value
-
-            return (
-              <div
-                key={fields.title}
-                className=' h-[28rem] w-[23rem] overflow-clip  shadow-xl rounded-lg'
-              >
-                {/* You need to work on the height properly, I will sent you a link */}
-                <div className='w-full '>
-                  <Image
-                    src={`https:${imageUrl}`}
-                    // src='/Images/directorman.jpeg'
-                    //layout='fill'
-                    alt='application'
-                    height={500}
-                    width={700}
-                    className='  '
-                  />
+              return (
+                <div
+                  key={fields.title}
+                  className=' h-[28rem] w-[23rem]   overflow-clip  shadow-xl rounded-lg'
+                >
+                  {/* You need to work on the height properly, I will sent you a link */}
+                  <div className='w-full '>
+                    <Image
+                      src={`https:${imageUrl}`}
+                      // src='/Images/directorman.jpeg'
+                      //layout='fill'
+                      alt='application'
+                      height={500}
+                      width={700}
+                      className='  '
+                    />
+                  </div>
+                  <div className='px-4'>
+                    <h3 className='font-bold overflow-clip text-xl text-black h-[5.7rem] capitalize mb-5 mt-3'>
+                      {fields.title}
+                    </h3>
+                    {/* <p className='mb-5 h-[8rem]'>{writeUp}</p> */}
+                    <Link href={`/SingleNews/${slug}`}>
+                      <a className='bg-primary rounded-md text-white py-2 px-5  capitalize'>
+                        Read Post
+                      </a>
+                    </Link>
+                  </div>
                 </div>
-                <div className='px-4'>
-                  <h3 className='font-bold text-xl text-black h-[6rem] capitalize mb-5 mt-3'>
-                    {fields.title}
-                  </h3>
-                  {/* <p className='mb-5 h-[8rem]'>{writeUp}</p> */}
-                  <Link href={`/SingleNews/${slug}`}>
-                    <a className='bg-primary rounded-md text-white py-2 px-5  capitalize'>
-                      Read Post
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            )
-          })}
-      </div>
+              );
+            })}
+        </div>
+      </Slide>
       <div className='text-center'>
         <Link href='/News'>
           <button className='underline w-32 underline-offset-4 text-lg font-bold text-[#005410] py-2 px-4 rounded-sm capitalize'>
@@ -136,7 +66,7 @@ const News = function ({newsData}: Props) {
         </Link>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default News
+export default News;
