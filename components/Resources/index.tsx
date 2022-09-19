@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react"
+import Link from "next/link"
 
 const Resources = () => {
   return (
     <section className='resource-bg py-[6rem] lg:py-[12rem] mb-20'>
       <div className='text-center container text-white '>
         <h3 className=' font-bold text-3xl lg:text-5xl mb-10'>
-          Ministry of Resources
+          Ministry Resources
         </h3>
         <p className='mb-10  lg:w-[30rem] mx-auto text-lg'>
           Get information on the various registration process and the minimum
@@ -19,7 +19,7 @@ const Resources = () => {
         </Link>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Resources;
+export default Resources
