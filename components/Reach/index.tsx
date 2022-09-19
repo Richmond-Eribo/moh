@@ -1,11 +1,11 @@
-import React from 'react';
-import phone from '../../public/Images/phone.png';
-import whatsapp from '../../public/Images/whatsapp.png';
-import Image from 'next/image';
-import contact from '../../public/Images/contact.png';
+import React from "react"
+import phone from "../../public/Images/phone.png"
+import whatsapp from "../../public/Images/whatsapp.png"
+import Image from "next/image"
+import contact from "../../public/Images/contact.png"
 
 interface Props {
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>> | any;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>> | any
 }
 
 const Reach = ({ setIsOpen }: Props) => {
@@ -50,7 +50,7 @@ const Reach = ({ setIsOpen }: Props) => {
             href='tel:090-348-126-75'
             className='bg-[#fff]  px-3 py-2 flex gap-1 items-center'
           >
-            {' '}
+            {" "}
             <Image src={phone} alt='phone' width={22} height={22} />
             <span>09034812675</span>
           </a>
@@ -59,7 +59,7 @@ const Reach = ({ setIsOpen }: Props) => {
             href='https://api.whatsapp.com/send?phone=09034812675'
             className='bg-[#fff] px-3 py-2 flex gap-1 items-center'
           >
-            {' '}
+            {" "}
             <Image src={whatsapp} alt='whatsapp' width={22} height={22} />
             <span>09034812675</span>
           </a>
@@ -77,6 +77,6 @@ const Reach = ({ setIsOpen }: Props) => {
         <Image src={contact} alt='contact-icon ' width={55} height={38} />
       </div> */}
     </section>
-  );
-};
-export default Reach;
+  )
+}
+export default Reach

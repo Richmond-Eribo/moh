@@ -1,16 +1,16 @@
-import RichTextWrapper from "components/RichTextWrapper";
-import { RichTextContent } from "contentful";
-import React, { useState } from "react";
+import RichTextWrapper from "components/RichTextWrapper"
+import { RichTextContent } from "contentful"
+import React, { useState } from "react"
 
 // const [modal, setModal] = useState(true)
 type Props = {
-  title: string;
-  WriteUp: RichTextContent;
-  ModalTitle?: string;
-  SetModalTitle: React.Dispatch<React.SetStateAction<string>>;
-  ModalWriteUp: string;
-  SetModalWriteUp: React.Dispatch<React.SetStateAction<any>>;
-};
+  title: string
+  WriteUp: RichTextContent
+  ModalTitle?: string
+  SetModalTitle: React.Dispatch<React.SetStateAction<string>>
+  ModalWriteUp: string
+  SetModalWriteUp: React.Dispatch<React.SetStateAction<any>>
+}
 
 const OverviewModal = ({
   title,
@@ -24,27 +24,27 @@ const OverviewModal = ({
     <>
       <label
         onClick={() => {
-          SetModalTitle(title);
-          SetModalWriteUp(WriteUp);
+          SetModalTitle(title)
+          SetModalWriteUp(WriteUp)
         }}
-        htmlFor="my-modal-3"
-        className=" modal-button bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize"
+        htmlFor='my-modal-3'
+        className=' modal-button bg-[#005410] w-32 cursor-pointer rounded-md text-white py-2 px-2 lg:px-4 capitalize'
       >
         Know More
       </label>
 
-      <input type="checkbox" id="my-modal-3" className="modal-toggle" />
-      <div className="modal">
-        <div className="modal-box relative">
+      <input type='checkbox' id='my-modal-3' className='modal-toggle' />
+      <div className='modal rounded-md'>
+        <div className='modal-box relative'>
           <label
-            htmlFor="my-modal-3"
-            className="btn  btn-sm btn-circle bg-primary absolute right-2 top-2"
+            htmlFor='my-modal-3'
+            className='btn  btn-sm btn-circle bg-primary absolute right-2 top-2'
           >
             ✕
           </label>
-          <h3 className="text-lg text-left font-bold">{ModalTitle}</h3>
-          <div className="scrollbar snap-y overflow-y-scroll h-[500px] ">
-            <p className="py-4 leading-7  text-left">
+          <h3 className='text-lg text-left font-bold'>{ModalTitle}</h3>
+          <div className='scrollbar snap-y overflow-y-scroll h-[500px] '>
+            <p className='py-4 leading-7  text-left'>
               <RichTextWrapper RichText={ModalWriteUp} />
             </p>
           </div>
@@ -77,7 +77,7 @@ const OverviewModal = ({
         `}
       </style>
     </>
-  );
-};
+  )
+}
 
-export default OverviewModal;
+export default OverviewModal

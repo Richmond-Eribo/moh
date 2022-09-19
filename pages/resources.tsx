@@ -1,17 +1,17 @@
-import {MetaTagsWrapper} from 'components'
-import useGetDocuments from 'hooks/useGetDocuments'
-import Image from 'next/image'
-import {useState} from 'react'
-import {resourcesPageMetaTags} from 'utils/metaTags'
-import pdf from '../public/Images/pdf image.png'
+import { MetaTagsWrapper, RegistrationModal } from "components"
+import useGetDocuments from "hooks/useGetDocuments"
+import Image from "next/image"
+import { useState } from "react"
+import { resourcesPageMetaTags } from "utils/metaTags"
+import pdf from "../public/Images/pdf image.png"
 
 const Resources = () => {
   const [skipQuery, setSkipQuery] = useState(0)
-  const {data} = useGetDocuments(skipQuery)
+  const { data } = useGetDocuments(skipQuery)
+  const [documentTitle, setDocumentTitle] = useState("")
   return (
     <div className=''>
       <MetaTagsWrapper tags={resourcesPageMetaTags} />
-      {/* <>{console.log(data)}</> */}
       <div className='bg-[#005410]'>
         <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
           Resources
@@ -49,7 +49,7 @@ const Resources = () => {
             <h3 className='col-span-3'>Title</h3>
             {/* <h3>Categories</h3> */}
             <h3>Update Date</h3>
-            <h3>Download</h3>
+            <h3>Download Form</h3>
           </div>
           {data &&
             data.map((data, index) => (
@@ -67,13 +67,11 @@ const Resources = () => {
                 </div>
                 {/* <h3>Categories</h3> */}
                 <h3>June 7, 2022</h3>
-                <a
-                  download={data.fields.documentName?.fields.title}
-                  href={`https:${data.fields.documentName?.fields.file.url}`}
-                  className='  bg-[#005410]  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'
-                >
-                  DOWNLOAD
-                </a>
+                <RegistrationModal
+                  SetDocumentTitle={setDocumentTitle}
+                  DocumentTitle={documentTitle}
+                  DownloadLink={data.fields.documentName?.fields.file.url}
+                />
               </div>
             ))}
 

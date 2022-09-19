@@ -1,9 +1,9 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image"
+import Link from "next/link"
 
-import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
-import React, {useState} from 'react'
-import CollapseNav from './CollapseNav'
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
+import React, { useState } from "react"
+import CollapseNav from "./CollapseNav"
 const Navigation = function () {
   const [status, setStatus] = useState(false)
   function handleChange() {
@@ -25,12 +25,12 @@ const Navigation = function () {
           </Link>
           <ul className='hidden lg:flex  items-center py-5 gap-x-7 justify-between text-lg'>
             {[
-              {name: 'home', url: '/'},
+              { name: "home", url: "/" },
 
-              {name: 'news', url: '/News'},
-              {name: 'about', url: '/AboutUs'},
-              {name: 'resources', url: '/resources'},
-            ].map(nav => (
+              { name: "news", url: "/News" },
+              { name: "about", url: "/AboutUs" },
+              { name: "resources", url: "/resources" },
+            ].map((nav) => (
               <Link key={nav.name} href={nav.url}>
                 <a className='font-semibold capitalize hover:text-[#005410] duration-150 ease-in-out'>
                   {nav.name}
@@ -62,39 +62,47 @@ const Navigation = function () {
           {[
             // { name: 'home', url: '/' },
             {
-              name: 'ministry of health',
-              url: '/ministryOfHealth',
-              item: 'Public health',
-              item2: 'Regulation and monitoring',
-              item3: 'Health planning, policy, research and statistics',
+              name: "ministry of health",
+              // url: "/ministryOfHealth",
+              item: "Public health",
+              item2: "Regulation and monitoring",
+              item3: "Health planning, policy, research and statistics",
             },
             {
-              name: 'primary health care',
-              url: '/primaryHealthCare',
-              item: 'Diseases Control and Immunization',
-              item2: 'Community and Family Health Services',
-              item3: 'Planning, monitoring and evaluation',
+              name: "primary health care",
+              // url: "/primaryHealthCare",
+              item: "Diseases Control and Immunization",
+              item2: "Community and Family Health Services",
+              item3: "Planning, monitoring and evaluation",
             },
 
             {
-              name: 'hospitals management',
-              url: '/specialistCare',
-              item: 'Hospitals ',
-              item2: 'Essential Drugs Programme',
-              item3: 'Sickle cell centre',
-              item4: ' Integrated services',
+              name: "hospitals management",
+              url: "https://www.edohmb.org",
+              // item: "Hospitals ",
+              // item2: "Essential Drugs Programme",
+              // item3: "Sickle cell centre",
+              // item4: " Integrated services",
             },
-            {name: 'health insurance', url: '/primaryHealthCare'},
-            {name: 'traditional medicine', url: '/traditionalMedicine'},
-          ].map(nav => (
-            <Link key={nav.name} href='/'>
-              <div className='dropdown dropdown-hover  '>
-                <a
-                  tabIndex={0}
-                  className='cursor-pointer capitalize   hover:text-[#005410] duration-150 ease-in-out'
-                >
-                  {nav.name}
-                </a>
+            { name: "health insurance", url: "https://edhic@edostate.gov.ng" },
+            {
+              name: "traditional medicine",
+              // url: "/traditionalMedicine"
+            },
+          ].map((nav) => (
+            // <Link key={nav.name} href={nav.url ? "www.edohmb.org" : "/"}>
+            <div
+              key={nav.name}
+              className={`${nav.item && "dropdown dropdown-hover "}`}
+            >
+              <a
+                href={nav.url ? nav.url : "#"}
+                tabIndex={0}
+                className='cursor-pointer capitalize   hover:text-[#005410] duration-150 ease-in-out'
+              >
+                {nav.name}
+              </a>
+              {nav.item && (
                 <ul
                   tabIndex={0}
                   className='dropdown-content text-sm menu p-2 shadow bg-base-100 rounded-sm w-64'
@@ -108,12 +116,13 @@ const Navigation = function () {
                   <li>
                     <a>{nav.item3}</a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a>{nav.item4}</a>
-                  </li>
+                  </li> */}
                 </ul>
-              </div>
-            </Link>
+              )}
+            </div>
+            // </Link>
           ))}
         </ul>
       </nav>
@@ -122,54 +131,54 @@ const Navigation = function () {
       {
         <ul
           className={`lg:hidden duration-100 ease-in-out mb-2 z-50 ${
-            status ? 'h-screen ' : 'invisible h-0 '
+            status ? "h-screen " : "invisible h-0 "
           } container flex flex-col capitalize  gap-x-7`}
         >
           {[
             {
-              name: 'ministry of health',
-              url: '/ministryOfHealth',
+              name: "ministry of health",
+              url: "/ministryOfHealth",
               items: [
-                'Public health',
-                'Regulation and monitoring',
-                'Health planning, policy, research and statistics',
+                "Public health",
+                "Regulation and monitoring",
+                "Health planning, policy, research and statistics",
               ],
             },
             {
-              name: 'primary health care',
-              url: '/primaryHealthCare',
+              name: "primary health care",
+              url: "/primaryHealthCare",
               items: [
-                'Diseases Control and Immunization',
-                'Community and Family Health Services',
-                'Planning, monitoring and evaluation',
+                "Diseases Control and Immunization",
+                "Community and Family Health Services",
+                "Planning, monitoring and evaluation",
               ],
             },
 
             {
-              name: 'hospital management',
-              url: '/specialistCare',
+              name: "hospital management",
+              url: "/specialistCare",
               items: [
-                'Hospitals ',
-                'Essential Drugs Programme',
-                'Sickle cell centre',
-                ' Integrated services',
+                "Hospitals ",
+                "Essential Drugs Programme",
+                "Sickle cell centre",
+                " Integrated services",
               ],
             },
             {
-              name: 'health insurance',
+              name: "health insurance",
               // url: '/primaryHealthCare',
-              url: '/',
+              url: "/",
             },
             {
-              name: 'traditional medicine',
+              name: "traditional medicine",
               //  url: '/traditionalMedicine',
-              url: '/',
+              url: "/",
             },
-            {name: 'news', url: '/News'},
-            {name: 'about', url: '/AboutUs'},
-            {name: 'resources', url: '/resources'},
-          ].map(nav => (
-            <div key={nav.name} className={` ${status ? '' : 'hidden'} `}>
+            { name: "news", url: "/News" },
+            { name: "about", url: "/AboutUs" },
+            { name: "resources", url: "/resources" },
+          ].map((nav) => (
+            <div key={nav.name} className={` ${status ? "" : "hidden"} `}>
               <CollapseNav
                 setStatus={setStatus}
                 status={status}
