@@ -1,8 +1,8 @@
-import {ContentfulClientApi, createClient} from 'contentful'
+import { ContentfulClientApi, createClient } from "contentful"
 
 const client: ContentfulClientApi = createClient({
-  space: 't36aeaw5fast',
-  accessToken: 'f1ov8W6_49hnTk-WMmiUrsADY7fxrgulh9iWQJOMXnI',
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID!,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
 })
 
-export {client}
+export { client }
