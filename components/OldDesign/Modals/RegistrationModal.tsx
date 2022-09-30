@@ -1,4 +1,4 @@
-import RichTextWrapper from "components/RichTextWrapper"
+import RichTextWrapper from "components/OldDesign/RichTextWrapper"
 import { RichTextContent } from "contentful"
 import React, { useState } from "react"
 

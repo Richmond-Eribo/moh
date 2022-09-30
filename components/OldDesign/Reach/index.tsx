@@ -1,8 +1,5 @@
 import React from "react"
-import phone from "../../public/Images/phone.png"
-import whatsapp from "../../public/Images/whatsapp.png"
 import Image from "next/image"
-import contact from "../../public/Images/contact.png"
 
 interface Props {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>> | any
@@ -51,7 +48,7 @@ const Reach = ({ setIsOpen }: Props) => {
             className='bg-[#fff]  px-3 py-2 flex gap-1 items-center'
           >
             {" "}
-            <Image src={phone} alt='phone' width={22} height={22} />
+            <Image src='/Images/phone.png' alt='phone' width={22} height={22} />
             <span>09034812675</span>
           </a>
 
@@ -60,7 +57,12 @@ const Reach = ({ setIsOpen }: Props) => {
             className='bg-[#fff] px-3 py-2 flex gap-1 items-center'
           >
             {" "}
-            <Image src={whatsapp} alt='whatsapp' width={22} height={22} />
+            <Image
+              src='/Images/whatsapp.png'
+              alt='whatsapp'
+              width={22}
+              height={22}
+            />
             <span>09034812675</span>
           </a>
         </div>

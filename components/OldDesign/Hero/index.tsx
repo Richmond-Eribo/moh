@@ -1,5 +1,5 @@
-import SliderLarge from "components/SliderLarge"
-import SliderSmall from "components/SliderSmall"
+import SliderLarge from "components/OldDesign/SliderLarge"
+import SliderSmall from "components/OldDesign/SliderSmall"
 import Link from "next/link"
 
 const Hero = function () {

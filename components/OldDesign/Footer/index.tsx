@@ -1,5 +1,5 @@
-import ContactUs from 'components/ContactUs'
-import {FaRegAddressCard, FaPhoneAlt, FaMailBulk} from 'react-icons/fa'
+import ContactUs from "components/OldDesign/ContactUs"
+import { FaRegAddressCard, FaPhoneAlt, FaMailBulk } from "react-icons/fa"
 
 const Footer = function () {
   return (

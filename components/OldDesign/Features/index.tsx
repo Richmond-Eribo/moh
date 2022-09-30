@@ -1,9 +1,9 @@
-import OverviewModal from "components/Modals/OverviewModal";
-import { Entry } from "contentful";
-import { OverviewField } from "interfaces/contentfulTypes";
-import Image from "next/image";
-import { useState } from "react";
-import { Slide } from "react-awesome-reveal";
+import OverviewModal from "components/OldDesign/Modals/OverviewModal"
+import { Entry } from "contentful"
+import { OverviewField } from "interfaces/contentfulTypes"
+import Image from "next/image"
+import { useState } from "react"
+import { Slide } from "react-awesome-reveal"
 
 const features = [
   {
@@ -26,67 +26,67 @@ const features = [
     content: "Collaboration, integration, efficiency and sustainabitly.",
     image: "/Images/our values.png",
   },
-];
+]
 
 type Props = {
-  data: Entry<OverviewField>[];
-};
+  data: Entry<OverviewField>[]
+}
 
 const Features = function ({ data }: Props) {
-  const [modalTitle, setModalTitle] = useState("");
-  const [modalWriteUp, setmodalWriteUp] = useState<any>();
+  const [modalTitle, setModalTitle] = useState("")
+  const [modalWriteUp, setmodalWriteUp] = useState<any>()
   //  console.log(data);
 
   return (
-    <section className="bg-gray-2001 py-14 ">
-      <div className="container ">
-        <h3 className="text-center font-bold text-4xl text-black mb-20">
+    <section className='bg-gray-2001 py-14 '>
+      <div className='container '>
+        <h3 className='text-center font-bold text-4xl text-black mb-20'>
           Strategy is our Philosophy
         </h3>
 
-        <div className=" grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center ">
-          <Slide direction="up" triggerOnce duration={1500}>
+        <div className=' grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
+          <Slide direction='up' triggerOnce duration={1500}>
             {features.slice(0, 9).map((item) => {
               return (
                 <div
                   key={item.id}
-                  className="bg-white lg:h-[20rem] shadow-lg p-6 rounded-sm"
+                  className='bg-white lg:h-[20rem] shadow-lg p-6 rounded-sm'
                 >
                   <Image
                     src={item.image}
                     height={50}
                     width={50}
                     alt={item.title}
-                    className="grayscale"
+                    className='grayscale'
                   />
-                  <h3 className="font-bold text-2xl text-primary capitalize mb-5 mt-5">
+                  <h3 className='font-bold text-2xl text-primary capitalize mb-5 mt-5'>
                     {item.title}
                   </h3>
                   <p>{item.content}</p>
                 </div>
-              );
+              )
             })}
           </Slide>
         </div>
       </div>
 
-      <div className="bg-gray-200 py-3 ">
-        <div className="container ">
-          <h3 className="text-center font-bold text-4xl text-black mb-20 pt-14">
+      <div className='bg-gray-200 py-3 '>
+        <div className='container '>
+          <h3 className='text-center font-bold text-4xl text-black mb-20 pt-14'>
             An Overview of the Ministry of Health
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16'>
             {/* <Slide direction="up" duration={1500} triggerOnce> */}
             {data &&
               data.map((item) => {
-                const { fields } = item;
+                const { fields } = item
 
                 return (
                   <div
                     key={fields.title}
-                    className="bg-white px-2 py-3  text-center rounded"
+                    className='bg-white px-2 py-3  text-center rounded'
                   >
-                    <h3 className="font-bold mb-4 capitalize">
+                    <h3 className='font-bold mb-4 capitalize'>
                       {fields.title}
                     </h3>
 
@@ -100,14 +100,14 @@ const Features = function ({ data }: Props) {
                       SetModalWriteUp={setmodalWriteUp}
                     />
                   </div>
-                );
+                )
               })}
             {/* </Slide> */}
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Features;
+export default Features
