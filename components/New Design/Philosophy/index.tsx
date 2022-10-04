@@ -68,7 +68,7 @@ const features = [
   {
     id: 3,
     title: "core values",
-    content: "·Collaboration ·Integration ·Efficiency ·Sustainabitly.",
+    content: "·Collaboration ·Integration ·Efficiency ·Sustainability.",
     // items: ["Collaboration", "Integration", "Efficiency", "Sustainability"],
     image: "/svg/values.svg",
   },
