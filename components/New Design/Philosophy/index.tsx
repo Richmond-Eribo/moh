@@ -29,12 +29,16 @@ const Philosophy = () => {
               <h3 className='font-bold text-center text-3xl capitalize mb-5 mt-5'>
                 {item.title}
               </h3>
-              <p className='text-text text-lg'>{item.content}</p>
-              <ul className='list-disc text-text ml-5 text-lg'>
+              <p className='text-newgreen font-normal text-lg'>
+                {item.content}
+              </p>
+              {/* <ul className='  justify-betwen text-newgreen ml-5 text-lg'>
                 {item.items?.map((value) => (
-                  <li key={value}>{value}</li>
+                  <li className='mr-4' key={value}>
+                    {value}
+                  </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
           )
         })}
@@ -44,7 +48,6 @@ const Philosophy = () => {
     </div>
   )
 }
-
 export default Philosophy
 
 const features = [
@@ -65,8 +68,8 @@ const features = [
   {
     id: 3,
     title: "core values",
-    // content: "Collaboration, integration, efficiency and sustainabitly.",
-    items: ["Collaboration", "Integration", "Efficiency", "Sustainability"],
+    content: "·Collaboration ·Integration ·Efficiency ·Sustainabitly.",
+    // items: ["Collaboration", "Integration", "Efficiency", "Sustainability"],
     image: "/svg/values.svg",
   },
 ]
