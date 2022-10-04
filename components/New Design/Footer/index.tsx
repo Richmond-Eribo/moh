@@ -8,9 +8,9 @@ const Footer = () => {
     <footer className='lg:px-400 p-5 lg:pt-120half bg-newgreen'>
       <div className='bg-white rounded-[40px] py-3 px-2 lg:p-10  ju flex lg:flex-row flex-col justify-around'>
         <div className=' lg:w-1/3 w-full mb-16 lg:mb-0'>
-          <Link href='/'>
-            <Logo color='black' />
-          </Link>
+          {/* <Link href='/'> */}
+          <Logo color='black' />
+          {/* </Link> */}
           <h3 className='mt-10 mb-7 capitalize font-bold lg:text-3xl text-2xl  text-newgreen'>
             Contact Us
           </h3>

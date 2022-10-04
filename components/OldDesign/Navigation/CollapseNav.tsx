@@ -34,7 +34,7 @@ const CollapseNav = ({ title, items, url, setStatus, status }: Props) => {
             {items.map((item: any) => (
               <Link key={item.item} href={item.url}>
                 <li className='py-2 border-b-2'>
-                  <a>{item.item}</a>
+                  <a onClick={() => setStatus(!status)}>{item.item}</a>
                 </li>
               </Link>
             ))}

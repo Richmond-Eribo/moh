@@ -25,7 +25,7 @@ const Home: NextPage = () => {
 
   // you can console.log NewsFromContentful.data
   const NewsFromContentful = useGetNews(0, 5)
-  console.log(NewsFromContentful.data)
+  // console.log(NewsFromContentful.data)
   return (
     <div className=''>
       <MetaTagsWrapper tags={defaultMetaTags} />

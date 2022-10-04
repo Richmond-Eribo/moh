@@ -12,7 +12,7 @@ const queryClient = new QueryClient()
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   const pathname = router.pathname
-  const [textColor, setTextColor] = useState("white")
+  // const [textColor, setTextColor] = useState("white")
 
   const routePaths = [
     "/news",
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     "/mda/[slug]",
   ]
 
-  console.log(pathname, routePaths.indexOf(pathname))
+  // console.log(pathname, routePaths.indexOf(pathname))
   return (
     <div className='bg-[#F2F2F2] '>
       <QueryClientProvider client={queryClient}>

@@ -59,7 +59,7 @@ const HeroSlider = () => {
                   {mda.items.map((item, index) => (
                     <li key={index}>
                       <Link href={item.url}>
-                        <a>{item.item}</a>
+                        <p>{item.item}</p>
                       </Link>
                     </li>
                   ))}
