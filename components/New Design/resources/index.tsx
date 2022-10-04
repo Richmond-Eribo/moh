@@ -8,9 +8,8 @@ const Resource = () => {
         <h3 className=' lg:text-4xl text-2xl font-bold'>Resources</h3>
 
         <p className='my-5 lg:text-xl'>
-          Get information on the various registration process and the
-          <br className='hidden lg:block' /> minimum registration requirements
-          for the ministry.
+          Access resources and publications
+          <br className='hidden lg:block' /> on Ministry of Health
         </p>
         <div>
           <Link href='/resources'>
@@ -30,8 +29,8 @@ const Resource = () => {
             alt='image'
           />
         </div>
-        <div className='col-span-2 bg-red-400 h-48 rounded-bl-[40px]'>4 .</div>
-        <div className=' bg-green-500 h-48 rounded-br-[40px]'>4 .</div>
+        <div className='col-span-2 bg-red-400 h-48 rounded-bl-[40px]'></div>
+        <div className=' bg-green-500 h-48 rounded-br-[40px]'></div>
       </div>
     </section>
   )
