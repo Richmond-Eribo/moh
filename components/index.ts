@@ -14,3 +14,13 @@ export { default as Resources } from "./OldDesign/Resources"
 export { default as Reach } from "./OldDesign/Reach"
 export { default as Application } from "./OldDesign/Application"
 export { default as RegistrationModal } from "./OldDesign/Modals/RegistrationModal"
+
+// New design Export
+
+export { default as Philosophy } from "./New Design/Philosophy"
+export { default as PhcApplication } from "./New Design/PhcApplication"
+export { default as Qoute } from "./New Design/Qoute"
+export { default as Resource } from "./New Design/resources"
+export { default as NewsPreview } from "./New Design/News/Preview"
+export { default as NewFooter } from "./New Design/Footer"
+export { default as HeroSlider } from "./New Design/HeroSlider"

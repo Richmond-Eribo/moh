@@ -9,6 +9,12 @@ import {
   MetaTagsWrapper,
   Application,
   Resources,
+  Philosophy,
+  PhcApplication,
+  Qoute,
+  Resource,
+  NewsPreview,
+  HeroSlider,
 } from "components"
 import useGetOverview from "hooks/useGetOverview"
 import useGetNews from "hooks/useGetNews"
@@ -22,12 +28,19 @@ const Home: NextPage = () => {
   return (
     <div className=''>
       <MetaTagsWrapper tags={defaultMetaTags} />
-      <Hero />
-      <Features data={data!} />
+      <HeroSlider />
+      {/* <Hero /> */}
+      <Philosophy />
+      <PhcApplication />
+      <Qoute />
+      <Resource />
+      <NewsPreview />
+
+      {/* <Features data={data!} /> */}
       {/* <Highlights /> */}
-      <Application />
-      <Resources />
-      <News newsData={NewsFromContentful.data} />
+      {/* <Application /> */}
+      {/* <Resources /> */}
+      {/* <News newsData={NewsFromContentful.data} /> */}
     </div>
   )
 }
