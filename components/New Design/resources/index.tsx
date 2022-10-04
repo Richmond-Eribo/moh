@@ -9,8 +9,8 @@ const Resource = () => {
 
         <p className='my-5 lg:text-xl'>
           Get information on the various registration process and the
-          <br className='hidden lg:block' />
-          minimum registration requirements for the ministry.
+          <br className='hidden lg:block' /> minimum registration requirements
+          for the ministry.
         </p>
         <div>
           <Link href='/resources'>
@@ -23,7 +23,12 @@ const Resource = () => {
 
       <div className='flex-1 mt-10 lg:mt-0 lg:ml-20 grid grid-cols-3 gap-3 grid-rows-2'>
         <div className='col-span-3 relative bg-white h-48 rounded-t-[40px] overflow-clip'>
-          <Image src='/New/image30.png' layout='fill' alt='image' />
+          <Image
+            src='/New/image30.png'
+            layout='fill'
+            objectFit='cover'
+            alt='image'
+          />
         </div>
         <div className='col-span-2 bg-red-400 h-48 rounded-bl-[40px]'>4 .</div>
         <div className=' bg-green-500 h-48 rounded-br-[40px]'>4 .</div>

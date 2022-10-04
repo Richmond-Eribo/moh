@@ -17,7 +17,7 @@ const Philosophy = () => {
                 key={item.id}
                 className='bg-white w-full hover:shadow-2xl duration-500 lg:h-[20rem] shadow-6xl p-6 rounded-[40px] items-center'
               >
-                <figure className='mx-auto flex justify-center '>
+                {/* <figure className='mx-auto flex justify-center '>
                   <Image
                     src={item.image}
                     height={50}
@@ -25,11 +25,16 @@ const Philosophy = () => {
                     alt={item.title}
                     className='grayscale'
                   />
-                </figure>
-                <h3 className='font-bold text-center text-2xl text-primary capitalize mb-5 mt-5'>
+                </figure> */}
+                <h3 className='font-bold text-center text-3xl text-active capitalize mb-5 mt-5'>
                   {item.title}
                 </h3>
-                <p className='text-text'>{item.content}</p>
+                <p className='text-text text-lg'>{item.content}</p>
+                <ul className='list-disc text-text ml-5 text-lg'>
+                  {item.items?.map((value) => (
+                    <li key={value}>{value}</li>
+                  ))}
+                </ul>
               </div>
             )
           })}
@@ -54,13 +59,14 @@ const features = [
     id: 2,
     title: "mission",
     content:
-      "Working in motivated, goal-oreiented teams in collaboration with other government sectors, the private sector, non-governmental organizations and other partners, to improve health.",
+      "Working in motivated, goal-oriented teams in collaboration with other government sectors, the private sector, non-governmental organizations and other partners, to improve health.",
     image: "/svg/mission.svg",
   },
   {
     id: 3,
     title: "core values",
-    content: "Collaboration, integration, efficiency and sustainabitly.",
+    // content: "Collaboration, integration, efficiency and sustainabitly.",
+    items: ["Collaboration", "integration", "Efficiency", "sustainability"],
     image: "/svg/values.svg",
   },
 ]

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const PhcApplication = () => {
   return (
@@ -33,7 +34,9 @@ const PhcApplication = () => {
             Requirements for registration of <br /> Private Health Institutions
           </p>
           <div>
-            <button className='roundBtn my-5'>Download</button>
+            <Link href='/registration'>
+              <button className='roundBtn my-5'>View</button>
+            </Link>
           </div>
         </div>
       </div>
