@@ -24,7 +24,8 @@ const Home: NextPage = () => {
   const { data } = useGetOverview()
 
   // you can console.log NewsFromContentful.data
-  const NewsFromContentful = useGetNews(0, 3)
+  const NewsFromContentful = useGetNews(0, 5)
+  console.log(NewsFromContentful.data)
   return (
     <div className=''>
       <MetaTagsWrapper tags={defaultMetaTags} />
@@ -34,7 +35,7 @@ const Home: NextPage = () => {
       <PhcApplication />
       <Qoute />
       <Resource />
-      <NewsPreview />
+      {NewsFromContentful && <NewsPreview news={NewsFromContentful.data} />}
 
       {/* <Features data={data!} /> */}
       {/* <Highlights /> */}

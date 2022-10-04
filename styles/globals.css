@@ -3,7 +3,7 @@
 
 @layer components {
   .roundBtn {
-    @apply bg-active text-white rounded-full py-1 px-5 capitalize;
+    @apply bg-active text-white lg:text-xl text-lg rounded-full py-1 px-5 capitalize;
   }
   .sectionPadding {
     @apply lg:px-400 lg:py-120half;

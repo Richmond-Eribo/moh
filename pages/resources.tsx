@@ -9,18 +9,26 @@ const Resources = () => {
   const [skipQuery, setSkipQuery] = useState(0)
   const { data } = useGetDocuments(skipQuery)
   const [documentTitle, setDocumentTitle] = useState("")
+
+  console.log(data)
   return (
-    <div className=''>
+    <div className='pt-28'>
       <MetaTagsWrapper tags={resourcesPageMetaTags} />
-      <div className='bg-[#005410]'>
-        <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
+      <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
+        <h1 className='font-semibold text-3xl uppercase  container'>
           Resources
         </h1>
+        <p className='text-lg container'>
+          Get Publications from the Ministry of Health
+        </p>
+        {/* <p className='mb-4 text-lg lg:w-1/3 mx-auto text-white'>
+        
+        </p> */}
       </div>
       <div className='container'>
-        <h3 className=' font-bold text-4xl text-black mb-5'>
+        {/* <h3 className=' font-bold text-4xl text-black mb-5'>
           Ministry of Health Resources
-        </h3>
+        </h3> */}
         <div className=' border py-4 border-black mb-10 rounded-lg'>
           {/* <div className='flex flex-col lg:flex-row mb-5 text-xl px-4 justify-between items-center'>
             <h3>
@@ -49,7 +57,7 @@ const Resources = () => {
             <h3 className='col-span-3'>Title</h3>
             {/* <h3>Categories</h3> */}
             <h3>Update Date</h3>
-            <h3>Download Form</h3>
+            <h3>Download</h3>
           </div>
           {data &&
             data.map((data, index) => (
@@ -61,16 +69,17 @@ const Resources = () => {
                   <div className='flex gap-2 items-center '>
                     <Image src={pdf} width={30} height={30} alt='pdf image' />
                     <h3 className='capitalize '>
-                      {data.fields.documentName?.fields.title}
+                      {data.fields.publication?.fields.title}
                     </h3>
                   </div>
                 </div>
                 {/* <h3>Categories</h3> */}
                 <h3>June 7, 2022</h3>
+                {/* <p>{data.fields.documentName?.fields.file.url}</p> */}
                 <RegistrationModal
                   SetDocumentTitle={setDocumentTitle}
                   DocumentTitle={documentTitle}
-                  DownloadLink={data.fields.documentName?.fields.file.url}
+                  DownloadLink={data.fields.publication?.fields.file.url}
                 />
               </div>
             ))}

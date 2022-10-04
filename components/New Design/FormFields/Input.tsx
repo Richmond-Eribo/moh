@@ -27,7 +27,7 @@ const Input = ({ label, textColor, id, textarea }: props) => {
           type='email'
           name=''
           id={id}
-          className='bg-lightgray px-5 text-newgreen focus:outline-dotted rounded-full lg:h-10 lg:w-full '
+          className='bg-lightgray px-5 text-newgreen focus:outline-dotted rounded-full h-10 lg:w-full '
         />
       )}
     </div>

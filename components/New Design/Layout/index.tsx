@@ -3,11 +3,12 @@ import Navigation from "../Navigation"
 
 type Props = {
   children: React.ReactNode
+  navColor: string
 }
-const Layout = ({ children }: Props) => {
+const Layout = ({ children, navColor }: Props) => {
   return (
     <>
-      <Navigation />
+      <Navigation navColor={navColor} />
       {children}
       <NewFooter />
     </>

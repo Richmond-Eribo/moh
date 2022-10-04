@@ -4,7 +4,7 @@ import Image from "next/image"
 const Philosophy = () => {
   return (
     <div className='container '>
-      <h3 className='text-center font-bold text-4xl text-text py-120half'>
+      <h3 className='text-center font-bold text-4xl text-text  pb-120small lg:pb-120half'>
         Strategy is our Philosophy
       </h3>
 
@@ -14,7 +14,7 @@ const Philosophy = () => {
           return (
             <div
               key={item.id}
-              className='bg-white hover:shadow-2xl duration-500 lg:h-[20rem] shadow-6xl p-6 rounded-[40px] items-center'
+              className='bg-white w-full hover:shadow-2xl duration-500 lg:h-[20rem] shadow-6xl p-6 rounded-[40px] items-center'
             >
               <figure className='mx-auto flex justify-center '>
                 <Image

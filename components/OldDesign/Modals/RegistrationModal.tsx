@@ -1,4 +1,4 @@
-import RichTextWrapper from "components/OldDesign/RichTextWrapper"
+import RichTextWrapper from "components/New Design/RichTextWrapper"
 import { RichTextContent } from "contentful"
 import React, { useState } from "react"
 
@@ -17,14 +17,15 @@ const RegistrationModal = ({
   const [submitted, setSubmitted] = useState(false)
   return (
     <>
+      {/* {console.log(DownloadLink)} */}
       <label
         onClick={() => {
           SetDocumentTitle(DocumentTitle)
         }}
         htmlFor='my-modal-3'
-        className=' modal-button bg-[#005410]  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'
+        className=' modal-button bg-[#005410 py-2 text-center  roundBtn capitalize'
       >
-        Register
+        Download
       </label>
 
       <input type='checkbox' id='my-modal-3' className='modal-toggle' />
@@ -57,7 +58,6 @@ const RegistrationModal = ({
                   className='underline italic font-semibold text-primary'
                   href='https://eirs.gov.ng/'
                 >
-                  {" "}
                   here
                 </a>
               </p>

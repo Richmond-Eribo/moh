@@ -1,50 +1,30 @@
-import {MetaTagsWrapper} from 'components'
-import useGetNews from 'hooks/useGetNews'
-import Image from 'next/image'
-import Link from 'next/link'
-import {NewsPageMetaTags} from 'utils/metaTags'
+import { LargeNewsCard, MetaTagsWrapper, PageHeader } from "components"
+import useGetNews from "hooks/useGetNews"
+import Image from "next/image"
+import Link from "next/link"
+import { NewsPageMetaTags } from "utils/metaTags"
 const News = () => {
   const NewsFromContentful = useGetNews()
-  console.log(NewsFromContentful)
+  // console.log(NewsFromContentful.data)
   return (
-    <section>
+    <section className='pt-28'>
       <MetaTagsWrapper tags={NewsPageMetaTags} />
-      <div className='bg-[#005410]'>
+      <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
         <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
           news
         </h1>
       </div>
-      <div className='grid container mt-10 lg:mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-0 gap-x-14 pb-11 place-items-center '>
+      <div className='grid container mt-10 lg:mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-10 gap-x-14 pb-11 place-items-center '>
         {NewsFromContentful.data &&
-          NewsFromContentful.data.map((item: any) => (
-            <div
-              key={item.fields.title}
-              className=' h-[30rem] w-[25rem] overflow-clip  shadow-xl rounded-lg'
-            >
-              <div className='w-full '>
-                <Image
-                  src={`https:${item.fields.thumbnail.fields.file.url}`}
-                  // src='/Images/directorman.jpeg'
-                  //layout='fill'
-                  alt='application'
-                  height={500}
-                  width={700}
-                  className='  '
-                />
-              </div>
-              <div className='px-4'>
-                <h3 className='font-bold text-xl text-black h-[7rem] capitalize mb-5 mt-3'>
-                  {item.fields.title}
-                </h3>
-                {/* <p className='mb-5 h-[8rem]'>{writeUp}</p> */}
-                <Link href={`/SingleNews/${item.fields.slug}`}>
-                  <a className='bg-primary rounded-md text-white py-2 px-5  capitalize'>
-                    Read Post
-                  </a>
-                </Link>
-              </div>
-            </div>
-          ))}
+          NewsFromContentful.data.map(
+            (item, index) => {
+              console.log(item)
+              return <LargeNewsCard key={index} singleNews={item} />
+            }
+            // (
+            //
+            // )
+          )}
       </div>
       {/* <div className='text-center'>
         <button className='underline w-32 underline-offset-4 text-lg font-bold text-[#005410] py-2 px-4 rounded-sm capitalize'>

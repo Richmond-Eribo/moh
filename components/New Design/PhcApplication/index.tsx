@@ -2,9 +2,12 @@ import Image from "next/image"
 
 const PhcApplication = () => {
   return (
-    <section className='lg:px-400 lg:py-120half '>
-      <div className='flex bg-white rounded-[40px] shadow-5xl overflow-clip lg:h-[428px]'>
-        <figure className=' relative  bg-slate-400 lg:w-[40%] h-full'>
+    <section className='py-120small px-5 lg:px-400 lg:py-120half '>
+      <h3 className='text-center font-bold text-4xl text-text pb-120small lg:pb-120half'>
+        Registration
+      </h3>
+      <div className='flex lg:flex-row flex-col bg-white rounded-[40px] shadow-5xl overflow-clip lg:h-[428px]'>
+        <figure className=' relative w-full h-[300px]  bg-slate-400 lg:w-[40%] lg:h-full'>
           <div className='absolute inset-0 bg-newgreen/75 z-40'>
             <Image
               src='/New/file.png'
@@ -25,12 +28,12 @@ const PhcApplication = () => {
             />
           </div>
         </figure>
-        <div className='flex-1 flex flex-col justify-center lg:pl-12'>
-          <p className='text-newgreen font-bold lg:text-4xl lg:mb-5'>
-            Application form for <br /> Private Health Institution
+        <div className='flex-1  flex flex-col p-3  lg:justify-center lg:pl-12'>
+          <p className='text-newgreen font-bold text-2xl lg:text-4xl lg:mb-5'>
+            Requirements for registration of <br /> Private Health Institution
           </p>
           <div>
-            <button className='roundBtn'>Download</button>
+            <button className='roundBtn my-5'>Download</button>
           </div>
         </div>
       </div>

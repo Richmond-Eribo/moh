@@ -1,14 +1,14 @@
-import Link from 'next/link'
+import Link from "next/link"
 
 type Props = {
   title: string
-  items?: string[]
+  items?: any
   url: string
   status: boolean
   setStatus: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const CollapseNav = ({title, items, url, setStatus, status}: Props) => {
+const CollapseNav = ({ title, items, url, setStatus, status }: Props) => {
   return (
     <div>
       {/* checks if items is true */}
@@ -31,9 +31,11 @@ const CollapseNav = ({title, items, url, setStatus, status}: Props) => {
           </a>
           {/* </Link> */}
           <ol className='collapse-content'>
-            {items.map(item => (
-              <li className='py-2 border-b-2' key={item}>
-                {item}
+            {items.map((item: any) => (
+              <li key={item.item} className='py-2 border-b-2'>
+                <Link href={item.url}>
+                  <a>{item.item}</a>
+                </Link>
               </li>
             ))}
           </ol>

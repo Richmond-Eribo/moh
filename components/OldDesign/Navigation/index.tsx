@@ -93,7 +93,9 @@ const Navigation = function () {
             // <Link key={nav.name} href={nav.url ? "www.edohmb.org" : "/"}>
             <div
               key={nav.name}
-              className={`${nav.item && "dropdown dropdown-hover "}`}
+              className={`${
+                nav.item && "dropdown dropdown-hover dropdown-top "
+              }`}
             >
               <a
                 href={nav.url ? nav.url : "#"}

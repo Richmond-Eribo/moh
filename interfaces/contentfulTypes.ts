@@ -1,4 +1,4 @@
-import {Asset, Entry, EntryFields, RichTextContent} from 'contentful'
+import { Asset, Entry, EntryFields, RichTextContent } from "contentful"
 
 export interface OverviewField {
   title: string
@@ -15,7 +15,7 @@ export interface NewsField {
   date: Date
 }
 export interface ResourceDocument {
-  documentName: Asset
+  publication: Asset
 }
 
 export interface ContentfulRichText extends Document {}
