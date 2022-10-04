@@ -32,11 +32,11 @@ const CollapseNav = ({ title, items, url, setStatus, status }: Props) => {
           {/* </Link> */}
           <ol className='collapse-content'>
             {items.map((item: any) => (
-              <li key={item.item} className='py-2 border-b-2'>
-                <Link href={item.url}>
+              <Link key={item.item} href={item.url}>
+                <li className='py-2 border-b-2'>
                   <a>{item.item}</a>
-                </Link>
-              </li>
+                </li>
+              </Link>
             ))}
           </ol>
         </div>

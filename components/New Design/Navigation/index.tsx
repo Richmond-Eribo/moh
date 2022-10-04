@@ -17,6 +17,7 @@ const Navigation = ({ navColor }: Props) => {
   function handleChange() {
     setStatus(!status)
   }
+  console.log(status)
 
   return (
     <div className='absolute flex top-0 w-full z-50 lg:px-400 lg:py-[2rem]  justify-between text-white py-5 px-5'>
@@ -37,9 +38,7 @@ const Navigation = ({ navColor }: Props) => {
           </button>
         </label>
         <ul
-          className={`lg:hidden w-80 z-50 bg-gray-400 ${
-            status ? "dropdown-content" : "hidden"
-          }  menu p-2 shadow text-black rounded-box duration-100 ease-in-out mb-2  flex flex-col capitalize  gap-x-7`}
+          className={`lg:hidden w-80 z-50 bg-gray-400 dropdown-content  menu p-2 shadow text-black rounded-box duration-100 ease-in-out mb-2  flex flex-col capitalize  gap-x-7`}
         >
           {[
             { name: "news", url: "/news" },
