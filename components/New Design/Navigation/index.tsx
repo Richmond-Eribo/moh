@@ -21,7 +21,9 @@ const Navigation = ({ navColor }: Props) => {
 
   return (
     <div className='absolute flex top-0 w-full z-50 lg:px-400 lg:py-[2rem]  justify-between text-white py-5 px-5'>
-      <Logo color={navColor} />
+      <Link href='/'>
+        <Logo color={navColor} />
+      </Link>
 
       <div
         className={`dropdown lg:hidden dropdown-left ${
