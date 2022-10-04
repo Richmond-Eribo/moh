@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     "/news",
     "/about",
     "/resources",
+    "/registration",
     "/singleNews/[slug]",
     "/mda/[slug]",
   ]

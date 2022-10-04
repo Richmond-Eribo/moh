@@ -96,6 +96,7 @@ const Navigation = ({ navColor }: Props) => {
           { name: "news", url: "/news" },
           { name: "about", url: "/about" },
           { name: "resources", url: "/resources" },
+          { name: "registration", url: "/registration" },
         ].map((link) => (
           <Link key={link.name} href={link.url}>
             <a
