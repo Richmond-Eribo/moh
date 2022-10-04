@@ -59,6 +59,11 @@ const Qoute = () => {
                   {profile.prefix} <br />
                   <strong className='lg:text-xl'>{profile.name}</strong>,
                   <br />
+                  {profile.namePrefix && (
+                    <>
+                      {profile.namePrefix} <br />
+                    </>
+                  )}
                   {profile.title}
                 </p>
               </div>
@@ -88,6 +93,7 @@ const Profiles = [
       "When we all come to the realization that the next patient could be us, or someone closely related to us, the changes will be transformational.",
     title: "Commissioner of Health",
     prefix: "",
+    namePrefix: "Honourable",
     url: "/New/ObehiAvatar.png",
   },
 ]
