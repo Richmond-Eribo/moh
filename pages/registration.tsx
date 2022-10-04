@@ -34,7 +34,7 @@ const Registration = () => {
         </ul>
 
         <h1 className='font-semibold text-xl uppercase py-8 '>Documents </h1>
-        <ol className='list-disc lg:w-[600px] mb-12'>
+        <ol className='list-disc lg:w-[600px] md:w-[70%] w-11/12 mb-12'>
           <li>
             Certificate of full registration, certificate of annual practicing
             licence, degree certificate and other relevant credentials as

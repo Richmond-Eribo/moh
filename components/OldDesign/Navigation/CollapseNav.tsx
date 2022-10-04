@@ -15,7 +15,7 @@ const CollapseNav = ({ title, items, url, setStatus, status }: Props) => {
       {!items ? (
         <div className='collapse' onClick={() => setStatus(!status)}>
           <Link href={url}>
-            <a className='collapse-title cursor-pointer text-xl my-4 font-semibold hover:text-[#005410] duration-150 ease-in-out'>
+            <a className='collapse-title cursor-pointer text-xl my-2 font-semibold hover:text-[#005410] duration-150 ease-in-out'>
               {title}
             </a>
           </Link>
@@ -26,7 +26,7 @@ const CollapseNav = ({ title, items, url, setStatus, status }: Props) => {
           className='collapse collapse-arrow  bg-base-100 rounded-box'
         >
           {/* <Link href={url}> */}
-          <a className='collapse-title cursor-pointer text-xl mb-4 font-semibold hover:text-[#005410] duration-150 ease-in-out'>
+          <a className='collapse-title cursor-pointer text-xl mb-3 font-semibold hover:text-[#005410] duration-150 ease-in-out'>
             {title}
           </a>
           {/* </Link> */}
