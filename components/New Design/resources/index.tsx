@@ -9,7 +9,7 @@ const Resource = () => {
 
         <p className='my-5 lg:text-xl'>
           Access resources and publications
-          <br className='hidden lg:block' /> on Ministry of Health
+          <br className='hidden lg:block' /> on the Ministry of Health
         </p>
         <div>
           <Link href='/resources'>
