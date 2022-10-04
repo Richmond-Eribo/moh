@@ -29,7 +29,8 @@ module.exports = {
       backgroundImage: {
         slide1: "url('/New/slide1.png')",
         slide2: "url('/New/slide2.png')",
-        slide3: "url('/New/slide3.png')",
+        slide3: "url('/New/slide3.jpeg')",
+        slide4: "url('/New/slide4.jpeg')",
       },
     },
   },

@@ -22,7 +22,11 @@ const Navigation = ({ navColor }: Props) => {
     <div className='absolute flex top-0 w-full z-50 lg:px-400 lg:py-[2rem]  justify-between text-white py-5 px-5'>
       <Logo color={navColor} />
 
-      <div className='dropdown dropdown-left'>
+      <div
+        className={`dropdown lg:hidden dropdown-left ${
+          status ? "dropdown-open" : ""
+        }`}
+      >
         <label tabIndex={0} className='btn m-1'>
           <button onClick={handleChange} className='lg:hidden'>
             {status ? (
@@ -33,7 +37,9 @@ const Navigation = ({ navColor }: Props) => {
           </button>
         </label>
         <ul
-          className={`lg:hidden w-80 z-50 bg-gray-400 dropdown-content menu p-2 shadow text-black rounded-box duration-100 ease-in-out mb-2  flex flex-col capitalize  gap-x-7`}
+          className={`lg:hidden w-80 z-50 bg-gray-400 ${
+            status ? "dropdown-content" : "hidden"
+          }  menu p-2 shadow text-black rounded-box duration-100 ease-in-out mb-2  flex flex-col capitalize  gap-x-7`}
         >
           {[
             { name: "news", url: "/news" },

@@ -73,7 +73,7 @@ const HeroSlider = () => {
       <div>
         <p className='uppercase text-center text-white z-30 absolute translate-y-[50% translate-x-[50%] right-[50%] top-[40%] text-3xl lg:text-5xl w-full'>
           welcome to Edo State <br />{" "}
-          <strong className='lg:text-6xl text-4xl'>Ministry health</strong>
+          <strong className='lg:text-6xl text-4xl'>Ministry of health</strong>
         </p>
       </div>
       <SlideImage />

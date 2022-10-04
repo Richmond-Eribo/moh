@@ -8,32 +8,34 @@ const Philosophy = () => {
         Strategy is our Philosophy
       </h3>
 
-      <div className=' grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
-        {/* <Slide direction='up' triggerOnce duration={1500}> */}
-        {features.slice(0, 9).map((item) => {
-          return (
-            <div
-              key={item.id}
-              className='bg-white w-full hover:shadow-2xl duration-500 lg:h-[20rem] shadow-6xl p-6 rounded-[40px] items-center'
-            >
-              <figure className='mx-auto flex justify-center '>
-                <Image
-                  src={item.image}
-                  height={50}
-                  width={50}
-                  alt={item.title}
-                  className='grayscale'
-                />
-              </figure>
-              <h3 className='font-bold text-center text-2xl text-primary capitalize mb-5 mt-5'>
-                {item.title}
-              </h3>
-              <p className='text-text'>{item.content}</p>
-            </div>
-          )
-        })}
-        {/* </Slide> */}
-      </div>
+      <Slide direction='right' cascade triggerOnce duration={1000}>
+        <div className=' grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
+          {/* <Slide direction='up' triggerOnce duration={1500}> */}
+          {features.slice(0, 9).map((item) => {
+            return (
+              <div
+                key={item.id}
+                className='bg-white w-full hover:shadow-2xl duration-500 lg:h-[20rem] shadow-6xl p-6 rounded-[40px] items-center'
+              >
+                <figure className='mx-auto flex justify-center '>
+                  <Image
+                    src={item.image}
+                    height={50}
+                    width={50}
+                    alt={item.title}
+                    className='grayscale'
+                  />
+                </figure>
+                <h3 className='font-bold text-center text-2xl text-primary capitalize mb-5 mt-5'>
+                  {item.title}
+                </h3>
+                <p className='text-text'>{item.content}</p>
+              </div>
+            )
+          })}
+          {/* </Slide> */}
+        </div>
+      </Slide>
     </div>
   )
 }

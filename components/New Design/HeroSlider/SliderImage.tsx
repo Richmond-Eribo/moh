@@ -31,12 +31,14 @@ const SlideImage = () => {
         modules={[Autoplay, EffectFade, Pagination]}
         className='mySwiper'
       >
-        {["bg-slide1", "bg-slide2", "bg-slide3"].map((slide, index) => (
-          <SwiperSlide key={index}>
-            <Slides image={slide} />
-            {/* <img src='https://swiperjs.com/demos/images/nature-1.jpg' /> */}
-          </SwiperSlide>
-        ))}
+        {["bg-slide1", "bg-slide2", "bg-slide3", "bg-slide4"].map(
+          (slide, index) => (
+            <SwiperSlide key={index}>
+              <Slides image={slide} />
+              {/* <img src='https://swiperjs.com/demos/images/nature-1.jpg' /> */}
+            </SwiperSlide>
+          )
+        )}
       </Swiper>
     </>
   )

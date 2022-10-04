@@ -30,7 +30,7 @@ const PhcApplication = () => {
         </figure>
         <div className='flex-1  flex flex-col p-3  lg:justify-center lg:pl-12'>
           <p className='text-newgreen font-bold text-2xl lg:text-4xl lg:mb-5'>
-            Requirements for registration of <br /> Private Health Institution
+            Requirements for registration of <br /> Private Health Institutions
           </p>
           <div>
             <button className='roundBtn my-5'>Download</button>

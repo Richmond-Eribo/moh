@@ -13,6 +13,16 @@ const Registration = () => {
           Registration
         </h1>
       </div>
+      <main>
+        <h3>Intructions for registration</h3>
+
+        <ul className='steps steps-vertical'>
+          <li className='step step-primary'>Register</li>
+          <li className='step step-primary'>Choose plan</li>
+          <li className='step'>Purchase</li>
+          <li className='step'>Receive Product</li>
+        </ul>
+      </main>
     </section>
   )
 }
