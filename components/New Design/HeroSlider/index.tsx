@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { useRouter } from "next/router"
+import AnimatedTitle from "../Animations/AnimatedTitle"
 import SlideImage from "./SliderImage"
 
 const HeroSlider = () => {
@@ -8,6 +9,7 @@ const HeroSlider = () => {
 
   return (
     <section className='lg:h-[108vh] h-[90vh] overflow-clip relative bg-zinc-800 '>
+      {/* START - MDA's for the ministry of health - START */}
       <div className='absolute hidden lg:flex w-full bottom-16  text-white bg-slate-900 flex-row  justify-between sectionPadding'>
         {/* <div className=''> */}
         {[
@@ -70,12 +72,16 @@ const HeroSlider = () => {
         ))}
         {/* </div> */}
       </div>
+      {/* END - MDA's for the ministry of health - END */}
+
+      {/* START - welcome - START */}
       <div>
         <p className='uppercase text-center text-white z-30 absolute translate-y-[50% translate-x-[50%] right-[50%] top-[40%] text-3xl lg:text-5xl w-full'>
-          welcome to Edo State <br />{" "}
-          <strong className='lg:text-6xl text-4xl'>Ministry of health</strong>
+          welcome to Edo State <br /> <AnimatedTitle />
         </p>
       </div>
+      {/* END - welcome - END */}
+
       <SlideImage />
       <div className='absolute translate-y-2 lg:translate-y-0 bottom-0 w-full z-30'>
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 223.82'>

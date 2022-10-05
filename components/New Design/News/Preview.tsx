@@ -1,4 +1,5 @@
 import Link from "next/link"
+import AnimatedHeading from "../Animations/AnimateHeading"
 import LargeCard from "./LargeCard"
 import SmallCard from "./SmallCard"
 
@@ -8,9 +9,11 @@ type Props = {
 const Preview = ({ news }: Props) => {
   return (
     <section className=' px-5 py-120half lg:px-400 '>
-      <h3 className='pb-120small font-bold  text-4xl text-text '>
-        Latest News
-      </h3>
+      <AnimatedHeading
+        text='Latest News'
+        ClassNames='pb-120small font-bold  text-4xl text-text'
+      />
+
       <div className='grid gap-4 grid-cols-1    lg:grid-cols-3 lg:grid-rows-3 '>
         {news?.slice(0, 2).map((news: any, index: any) => (
           <div key={index} className='row-span-3 mx-auto '>

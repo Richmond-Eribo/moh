@@ -1,12 +1,17 @@
 import Image from "next/image"
 import Link from "next/link"
+import AnimatedHeading from "../Animations/AnimateHeading"
 
 const PhcApplication = () => {
   return (
     <section className='py-120small px-5 lg:px-400 lg:py-120half '>
-      <h3 className='text-center font-bold text-4xl text-text pb-120small lg:pb-120half'>
-        Registration
-      </h3>
+      {/* <h3 className='text-center font-bold text-4xl text-text pb-120small lg:pb-120half'> */}
+      <AnimatedHeading
+        ClassNames='text-center font-bold text-4xl text-text  pb-120small lg:pb-120half'
+        text='Registration'
+      />
+      {/* Registration
+      </h3> */}
       <div className='flex lg:flex-row flex-col bg-white rounded-[40px] shadow-5xl overflow-clip lg:h-[428px]'>
         <figure className=' relative w-full h-[300px]  bg-slate-400 lg:w-[40%] lg:h-full'>
           <div className='absolute inset-0 bg-newgreen/75 z-40'>

@@ -1,11 +1,16 @@
 import Image from "next/image"
 import Link from "next/link"
+import AnimatedHeading from "../Animations/AnimateHeading"
 
 const Resource = () => {
   return (
     <section className='lg:px-400 py-120half px-5 bg-dullgreen flex flex-col lg:flex-row justify-between'>
       <div className='text-white lg:mr-20 flex flex-col justify-center'>
-        <h3 className=' lg:text-4xl text-2xl font-bold'>Resources</h3>
+        <AnimatedHeading
+          ClassNames='lg:text-4xl text-2xl font-bold'
+          text='Resources'
+        />
+        {/* <h3 className=' lg:text-4xl text-2xl font-bold'>Resources</h3> */}
 
         <p className='my-5 lg:text-xl'>
           Access resources and publications

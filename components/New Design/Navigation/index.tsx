@@ -19,17 +19,6 @@ const Navigation = ({ navColor }: Props) => {
     setStatus((current) => !current)
   }
 
-  const isFirstRender = useRef(true)
-
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false
-      return // 👈️ return early if first render
-    }
-
-    console.log("isLoading is: ", status)
-  }, [status])
-
   return (
     <div className='absolute flex top-0 w-full z-50 lg:px-400 lg:py-[2rem]  justify-between text-white py-5 px-5'>
       <Logo color={navColor} />

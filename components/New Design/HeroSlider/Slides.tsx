@@ -6,7 +6,7 @@ const Slides = ({ image }: Props) => {
     <div
       className={`relative ${image} bg-cover w-screen h-screen bg-center bg-no-repeat`}
     >
-      <div className='absolute inset-0 bg-black/25'></div>
+      <div className='absolute inset-0 bg-black/50'></div>
     </div>
   )
 }

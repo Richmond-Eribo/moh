@@ -1,12 +1,16 @@
 import { Slide } from "react-awesome-reveal"
 import Image from "next/image"
+import AnimatedHeading from "../Animations/AnimateHeading"
 
 const Philosophy = () => {
   return (
     <div className='container '>
-      <h3 className='text-center font-bold text-4xl text-text  pb-120small lg:pb-120half'>
-        Strategy is our Philosophy
-      </h3>
+      {/* <h3 className='text-center font-bold text-4xl text-text  pb-120small lg:pb-120half'> */}
+      <AnimatedHeading
+        ClassNames='text-center font-bold text-4xl text-text  pb-120small lg:pb-120half'
+        text='Strategy is our Philosophy'
+      />
+      {/* </h3> */}
 
       {/* <Slide direction='right' cascade triggerOnce duration={1000}> */}
       <div className=' grid  mb-16  grid-cols-1 gap-y-5 lg:gap-y-0 lg:grid-cols-3 gap-x-10 place-items-center '>
