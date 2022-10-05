@@ -2,6 +2,7 @@ import { MetaTagsWrapper } from "components"
 import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
 import { NewsPageMetaTags } from "utils/metaTags"
 
 // This page is not in use
@@ -38,7 +39,10 @@ const Registration = () => {
                 Read GuideLines
               </a>
             </Link>
-            <a className='roundBtn text-center block w-full py-3 font-semibold tracking-wider text-xl'>
+            <a
+              data-tip='under development'
+              className={`roundBtn tooltip  text-center block w-full py-3 font-semibold tracking-wider text-xl`}
+            >
               Fill Form
             </a>
           </div>
