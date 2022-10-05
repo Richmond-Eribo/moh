@@ -43,7 +43,7 @@ const Footer = () => {
               </li>
               <li className='flex items-center gap-x-2 my-4'>
                 <FaPhoneAlt className=' w-5 text-newgreen-5 place-content-start' />
-                +1230 000000000
+                +1239 0348 12675
               </li>
               <li className='flex items-center gap-x-2'>
                 <FaMailBulk className=' w-5 text-newgreen-5' />

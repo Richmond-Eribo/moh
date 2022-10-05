@@ -2,6 +2,7 @@ import { MetaTagsWrapper, RegistrationModal } from "components"
 import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
 import useGetDocuments from "hooks/useGetDocuments"
 import Image from "next/image"
+import { useRouter } from "next/router"
 import { useState } from "react"
 import { resourcesPageMetaTags } from "utils/metaTags"
 import pdf from "../public/Images/pdf image.png"
@@ -11,7 +12,10 @@ const Resources = () => {
   const { data } = useGetDocuments(skipQuery)
   const [documentTitle, setDocumentTitle] = useState("")
 
-  console.log(data)
+  const router = useRouter()
+  const { res } = router.query
+
+  // console.log(res)
   return (
     <div className='pt-28'>
       <MetaTagsWrapper tags={resourcesPageMetaTags} />
@@ -24,7 +28,7 @@ const Resources = () => {
           ClassNames='font-semibold text-3xl uppercase  container'
         />
         <p className='text-lg container'>
-          Get Publications from the Ministry of Health
+          Access health related resources and publications.
         </p>
         {/* <p className='mb-4 text-lg lg:w-1/3 mx-auto text-white'>
         

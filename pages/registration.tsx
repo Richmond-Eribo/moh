@@ -24,23 +24,30 @@ const Registration = () => {
             Steps to follow for a PHC registration
           </h1>
 
-          <ul className='steps steps-vertical shadow-xl lg:w-[500px] p-5 rounded-[20px]'>
-            <li className='step   text-xl capitalize '>
-              Read the guidelines for registration
-              {/* <Link href='/'>
-              <a>here</a>
-            </Link>
-            to read guidelines */}
-            </li>
+          <ul className='steps steps-vertical w-full shadow-xl lg:w-[500px] p-5 rounded-[20px]'>
+            <li className='step text-xl capitalize '>Read guidelines</li>
             <li className='step   text-xl capitalize'>
               Complete registration form
             </li>
             <li className='step   text-xl capitalize '>Upload documents</li>
             {/* <li className='step'>Receive Product</li> */}
           </ul>
+          <div>
+            <Link href='/resources?res=guidelines'>
+              <a className='roundBtn text-center block w-full my-5 py-3 font-semibold tracking-wider text-xl'>
+                Read GuideLines
+              </a>
+            </Link>
+            <a className='roundBtn text-center block w-full py-3 font-semibold tracking-wider text-xl'>
+              Fill Form
+            </a>
+          </div>
+          {/* <button>Register</button> */}
         </div>
         <div>
-          <h1 className='font-semibold text-xl uppercase  '>Documents </h1>
+          <h1 className='font-semibold text-xl uppercase lg:mt-0 mt-20 '>
+            Documents Needed
+          </h1>
           <ol className='list-disc shadow-xl  p-10 rounded-[20px] text-xl lg:w-[600px] md:w-[70%] w-11/12 mb-12'>
             <li>
               Certificate of full registration, certificate of annual practicing

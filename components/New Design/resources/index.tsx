@@ -13,8 +13,8 @@ const Resource = () => {
         {/* <h3 className=' lg:text-4xl text-2xl font-bold'>Resources</h3> */}
 
         <p className='my-5 lg:text-xl'>
-          Access resources and publications
-          <br className='hidden lg:block' /> on the Ministry of Health
+          Access health related resources and publications.
+          {/* <br className='hidden lg:block' /> on the Ministry of Health */}
         </p>
         <div>
           <Link href='/resources'>
