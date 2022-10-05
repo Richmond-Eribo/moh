@@ -1,3 +1,4 @@
+import { Input } from "components"
 import RichTextWrapper from "components/New Design/RichTextWrapper"
 import { RichTextContent } from "contentful"
 import React, { useState } from "react"
@@ -34,7 +35,7 @@ const RegistrationModal = ({
           <label
             onClick={() => setSubmitted(false)}
             htmlFor='my-modal-3'
-            className='btn  btn-sm btn-circle bg-primary absolute right-2 top-2'
+            className='btn  btn-sm btn-circle bg-active absolute right-2 top-2'
           >
             ✕
           </label>
@@ -46,7 +47,7 @@ const RegistrationModal = ({
               <a
                 download
                 href={`https:${DownloadLink}`}
-                className='  bg-[#005410]  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'
+                className='  bg-active  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'
               >
                 DOWNLOAD YOUR FORM
               </a>
@@ -55,7 +56,7 @@ const RegistrationModal = ({
                 After downloading your form go to the IGR for payment <br /> or
                 click
                 <a
-                  className='underline italic font-semibold text-primary'
+                  className='underline italic font-semibold text-newgreen'
                   href='https://eirs.gov.ng/'
                 >
                   here
@@ -68,22 +69,11 @@ const RegistrationModal = ({
                 Kindly, fill in your details
               </h3>
               <div className=' h-[130px] flex flex-col items-center'>
-                <input
-                  id='name'
-                  type='name'
-                  required
-                  placeholder='Name'
-                  className='mb-2 px-3 border  focus:outline-primary  w-full focus:border-primary active:border-primary   p-1  rounded h-[2rem] text-sm'
-                />
-                <input
-                  id='email'
-                  type='email'
-                  required
-                  placeholder='Email'
-                  className='mb-2 px-3 border  focus:outline-primary  w-full focus:border-primary active:border-primary   p-1  rounded h-[2rem] text-sm'
-                />
+                <Input textColor='newgreen' id='name' label='your name' />
+                <Input textColor='newgreen' id='email' label='your email' />
+
                 <button
-                  className='bg-[#005410] w-full  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'
+                  className='bg-active w-full  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'
                   type='submit'
                   onClick={() => setSubmitted(true)}
                 >
