@@ -1,4 +1,5 @@
 import { MetaTagsWrapper } from "components"
+import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
 import Image from "next/image"
 import Link from "next/link"
 import { NewsPageMetaTags } from "utils/metaTags"
@@ -9,9 +10,13 @@ const Registration = () => {
     <section className='pt-28 '>
       <MetaTagsWrapper tags={NewsPageMetaTags} />
       <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
-        <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
+        {/* <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
           Registration
-        </h1>
+        </h1> */}
+        <AnimatedHeading
+          text='Registration'
+          ClassNames='text-[#fff] font-semibold text-3xl uppercase py-8 container'
+        />
       </div>
       <main className='flex flex-col items-center'>
         <h1 className=' font-semibold text-3xl uppercase py-8 '>

@@ -4,6 +4,7 @@ import React from "react"
 import Image from "next/image"
 import { NewsField } from "interfaces/contentfulTypes"
 import { PageHeader, RichTextWrapper } from "components"
+import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
 
 type Props = {
   News: NewsField
@@ -21,9 +22,13 @@ const SingleNews = ({ News }: Props) => {
       {/* this is a single news post */}
       <div>
         <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
-          <h1 className='text-[#fff] font-semibold text-xl  container'>
+          {/* <h1 className='text-[#fff] font-semibold text-xl container'>
             {News.title}
-          </h1>
+          </h1> */}
+          <AnimatedHeading
+            text={News.title}
+            ClassNames='text-[#fff] font-semibold text-xl container'
+          />
         </div>
         <div>
           <div className='text-center lg:w-[60%] relative lg:h-[35vw] mt-10  mx-auto'>

@@ -1,4 +1,5 @@
 import { MetaTagsWrapper, RegistrationModal } from "components"
+import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
 import useGetDocuments from "hooks/useGetDocuments"
 import Image from "next/image"
 import { useState } from "react"
@@ -15,9 +16,13 @@ const Resources = () => {
     <div className='pt-28'>
       <MetaTagsWrapper tags={resourcesPageMetaTags} />
       <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
-        <h1 className='font-semibold text-3xl uppercase  container'>
+        {/* <h1 className='font-semibold text-3xl uppercase  container'>
           Resources
-        </h1>
+        </h1> */}
+        <AnimatedHeading
+          text='Resources'
+          ClassNames='font-semibold text-3xl uppercase  container'
+        />
         <p className='text-lg container'>
           Get Publications from the Ministry of Health
         </p>

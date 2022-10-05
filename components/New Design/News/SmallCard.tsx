@@ -10,7 +10,7 @@ const SmallCard = ({ singleNews, show }: Props) => {
   const imageUrl = fields.thumbnail?.fields.file.url
   return (
     <div
-      className={`rounded-[40px] bg-white p-6 shadow-5xl relative overflow-clip ${
+      className={`rounded-[20px] bg-white p-6 shadow-5xl relative overflow-clip ${
         show ? "" : "lg:block hidden"
       }`}
     >

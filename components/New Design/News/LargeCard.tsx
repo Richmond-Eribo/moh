@@ -10,8 +10,8 @@ const LargeCard = ({ singleNews }: Props) => {
   const slug = fields.slug
   const imageUrl = fields.thumbnail?.fields.file.url
   return (
-    <div className='bg-text rounded-[40px]   max-w-[360px] h-[26rem] lg:h-[31.25rem] text-white tracking-wide relative p-4 overflow-clip'>
-      <figure className='h-64 overflow-clip mb-5 w-full relative rounded-[40px] bg-white'>
+    <div className='bg-text rounded-[20px]   max-w-[360px] h-[26rem] lg:h-[31.25rem] text-white tracking-wide relative p-4 overflow-clip'>
+      <figure className='h-64 overflow-clip mb-5 w-full relative rounded-[20px] bg-white'>
         <Image
           src={`https:${imageUrl}`}
           layout='fill'

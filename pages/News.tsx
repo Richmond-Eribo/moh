@@ -1,4 +1,5 @@
 import { LargeNewsCard, MetaTagsWrapper, PageHeader } from "components"
+import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
 import useGetNews from "hooks/useGetNews"
 import Image from "next/image"
 import Link from "next/link"
@@ -10,9 +11,13 @@ const News = () => {
     <section className='pt-28'>
       <MetaTagsWrapper tags={NewsPageMetaTags} />
       <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
-        <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
-          news
-        </h1>
+        {/* <h1 className=''> */}
+        <AnimatedHeading
+          text='news'
+          ClassNames='text-[#fff] font-semibold text-3xl uppercase py-8 container'
+        />
+        {/* news */}
+        {/* </h1> */}
       </div>
       <div className='grid container mt-10 lg:mt-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-7 lg:gap-y-10 gap-x-14 pb-11 place-items-center '>
         {NewsFromContentful.data &&

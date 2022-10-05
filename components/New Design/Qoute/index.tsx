@@ -1,5 +1,7 @@
 import Image from "next/image"
 import { Slide } from "react-awesome-reveal"
+import AnimatedHeading from "../Animations/AnimateHeading"
+import AnimatedText from "../Animations/AnimateText"
 
 const Qoute = () => {
   return (
@@ -24,7 +26,7 @@ const Qoute = () => {
                   className='z-10 '
                 />
               </div>
-              <div className='w-full lg:hidden h-[130px]  overflow-clip  bg-yellow-500 rounded-[40px]'>
+              <div className='w-full lg:hidden h-[130px]  overflow-clip  bg-yellow-500 rounded-[20px]'>
                 <Image
                   src={profile.url}
                   width={130}
@@ -54,8 +56,9 @@ const Qoute = () => {
             </div>
 
             <div className='flex-1 ml-3   lg:py-4 lg:ml-5  flex flex-col justify-between'>
-              <p className='lg:text-base'>{profile.qoute}</p>
-              <p className='lg:text-right'>
+              {/* <p className='lg:text-base'>{profile.qoute}</p> */}
+              <AnimatedText text={profile.qoute} ClassNames='lg:text-base ' />
+              <p className='lg:text-right -translate-y-2 lg'>
                 {profile.prefix} <br />
                 <strong className='lg:text-xl'>{profile.name}</strong>,
                 <br />

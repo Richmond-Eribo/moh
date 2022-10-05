@@ -5,6 +5,7 @@ import Image from "next/image"
 import { NewsField } from "interfaces/contentfulTypes"
 import { PageHeader, RichTextWrapper } from "components"
 import { getMda, getSingleMda } from "hooks/useGetMDAs"
+import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
 
 type Props = {
   Mda: NewsField
@@ -22,9 +23,13 @@ const Mda = ({ Mda }: Props) => {
       {/* this is a single news post */}
       <div>
         <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
-          <h1 className='text-[#fff] font-semibold text-xl  container'>
+          {/* <h1 className='text-[#fff] font-semibold text-xl  container'>
             {Mda.title}
-          </h1>
+          </h1> */}
+          <AnimatedHeading
+            text={Mda.title}
+            ClassNames='text-[#fff] font-semibold text-xl  container'
+          />
         </div>
         <div>
           {imageUrl ? (
