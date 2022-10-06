@@ -31,7 +31,7 @@ const RegistrationModal = ({
 
       <input type='checkbox' id='my-modal-3' className='modal-toggle' />
       <div className='modal '>
-        <div className='modal-box rounded-md relative'>
+        <div className='modal-box py-5 rounded-md relative'>
           <label
             onClick={() => setSubmitted(false)}
             htmlFor='my-modal-3'
@@ -40,7 +40,7 @@ const RegistrationModal = ({
             ✕
           </label>
           {submitted ? (
-            <div className='h-[130px] flex flex-col items-center'>
+            <div className=' py-10 flex flex-col items-center'>
               <h3 className='text-lg text-center tracking-wide font-bold mb-5'>
                 Thanks for filling your details
               </h3>
@@ -51,36 +51,26 @@ const RegistrationModal = ({
               >
                 DOWNLOAD YOUR FORM
               </a>
-
-              <p className='text-center mt-3 text-sm'>
-                After downloading your form go to the IGR for payment <br /> or
-                click
-                <a
-                  className='underline italic font-semibold text-newgreen'
-                  href='https://eirs.gov.ng/'
-                >
-                  here
-                </a>
-              </p>
             </div>
           ) : (
-            <>
+            <div className='py-5'>
               <h3 className='text-lg text-center tracking-wide font-bold mb-5'>
                 Kindly, fill in your details
               </h3>
-              <div className=' h-[130px] flex flex-col items-center'>
+              <div className='  grid grid-cols-1 gap-5'>
                 <Input textColor='newgreen' id='name' label='your name' />
                 <Input textColor='newgreen' id='email' label='your email' />
-
+                {/* <div> */}
                 <button
-                  className='bg-active w-full  text-center cursor-pointer rounded-md text-white py-2 px-4 lg:px-4 capitalize'
+                  className='bg-active w-full roundBtn text-center  capitalize'
                   type='submit'
                   onClick={() => setSubmitted(true)}
                 >
-                  SUBMIT
+                  Submit
                 </button>
+                {/* </div> */}
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>
