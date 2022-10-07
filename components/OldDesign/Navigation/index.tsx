@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"
 import React, { useState } from "react"
-import CollapseNav from "./CollapseNav"
+// import CollapseNav from "../../New Design/Navigation/CollapseNav"
 const Navigation = function () {
   const [status, setStatus] = useState(false)
   function handleChange() {
@@ -131,66 +131,65 @@ const Navigation = function () {
 
       {/* Nav links for mobile */}
       {
-        <ul
-          className={`lg:hidden duration-100 ease-in-out mb-2 z-50 ${
-            status ? "h-screen " : "invisible h-0 "
-          } container flex flex-col capitalize  gap-x-7`}
-        >
-          {[
-            {
-              name: "ministry of health",
-              url: "/ministryOfHealth",
-              items: [
-                "Public health",
-                "Regulation and monitoring",
-                "Health planning, policy, research and statistics",
-              ],
-            },
-            {
-              name: "primary health care",
-              url: "/primaryHealthCare",
-              items: [
-                "Diseases Control and Immunization",
-                "Community and Family Health Services",
-                "Planning, monitoring and evaluation",
-              ],
-            },
-
-            {
-              name: "hospital management",
-              url: "/specialistCare",
-              items: [
-                "Hospitals ",
-                "Essential Drugs Programme",
-                "Sickle cell centre",
-                " Integrated services",
-              ],
-            },
-            {
-              name: "health insurance",
-              // url: '/primaryHealthCare',
-              url: "/",
-            },
-            {
-              name: "traditional medicine",
-              //  url: '/traditionalMedicine',
-              url: "/",
-            },
-            { name: "news", url: "/News" },
-            { name: "about", url: "/AboutUs" },
-            { name: "resources", url: "/resources" },
-          ].map((nav) => (
-            <div key={nav.name} className={` ${status ? "" : "hidden"} `}>
-              <CollapseNav
-                setStatus={setStatus}
-                status={status}
-                title={nav.name}
-                url={nav.url}
-                items={nav.items}
-              />
-            </div>
-          ))}
-        </ul>
+        // <ul
+        //   className={`lg:hidden duration-100 ease-in-out mb-2 z-50 ${
+        //     status ? "h-screen " : "invisible h-0 "
+        //   } container flex flex-col capitalize  gap-x-7`}
+        // >
+        //   {[
+        //     {
+        //       name: "ministry of health",
+        //       url: "/ministryOfHealth",
+        //       items: [
+        //         "Public health",
+        //         "Regulation and monitoring",
+        //         "Health planning, policy, research and statistics",
+        //       ],
+        //     },
+        //     {
+        //       name: "primary health care",
+        //       url: "/primaryHealthCare",
+        //       items: [
+        //         "Diseases Control and Immunization",
+        //         "Community and Family Health Services",
+        //         "Planning, monitoring and evaluation",
+        //       ],
+        //     },
+        //     {
+        //       name: "hospital management",
+        //       url: "/specialistCare",
+        //       items: [
+        //         "Hospitals ",
+        //         "Essential Drugs Programme",
+        //         "Sickle cell centre",
+        //         " Integrated services",
+        //       ],
+        //     },
+        //     {
+        //       name: "health insurance",
+        //       // url: '/primaryHealthCare',
+        //       url: "/",
+        //     },
+        //     {
+        //       name: "traditional medicine",
+        //       //  url: '/traditionalMedicine',
+        //       url: "/",
+        //     },
+        //     { name: "news", url: "/News" },
+        //     { name: "about", url: "/AboutUs" },
+        //     { name: "resources", url: "/resources" },
+        //   ].map((nav) => (
+        //     <div key={nav.name} className={` ${status ? "" : "hidden"} `}>
+        //       <CollapseNav
+        //         setStatus={setStatus}
+        //         status={status}
+        //         title={nav.name}
+        //         url={nav.url}
+        //         items={nav.items}
+        //       />
+        //     </div>
+        //   ))}
+        // </ul>
       }
     </section>
   )

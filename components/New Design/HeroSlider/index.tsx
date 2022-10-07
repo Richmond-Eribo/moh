@@ -38,7 +38,7 @@ const HeroSlider = () => {
           },
           { name: "Primary Health Care", url: "/phc" },
           { name: "Hospitals Management", url: "https://www.edohmb.org" },
-          { name: "Health Insurance", url: "https://edhic@edostate.gov.ng" },
+          { name: "Health Insurance", url: "https://edhic.edostate.gov.ng" },
           { name: "Traditional Medicine", url: "/tr" },
         ].map((mda) => (
           <Link key={mda.name} href={mda.url}>

@@ -1,4 +1,4 @@
-import CollapseNav from "components/OldDesign/Navigation/CollapseNav"
+import CollapseNav from "./CollapseNav"
 import Image from "next/image"
 import Link from "next/link"
 import { useRouter } from "next/router"
@@ -43,7 +43,7 @@ const Navigation = ({ navColor }: Props) => {
           { name: "news", url: "/news" },
           { name: "about", url: "/about" },
           { name: "resources", url: "/resources" },
-          { name: "registration", url: "/registration" },
+          // { name: "registration", url: "/registration" },
 
           {
             name: "Ministry of Health",
@@ -72,7 +72,7 @@ const Navigation = ({ navColor }: Props) => {
           { name: "Hospitals Management", url: "https://www.edohmb.org" },
           {
             name: "Health Insurance",
-            url: "https://edhic@edostate.gov.ng",
+            url: "https://edhic.edostate.gov.ng",
           },
           { name: "Traditional Medicine", url: "/tr" },
         ].map((nav) => (
@@ -95,7 +95,7 @@ const Navigation = ({ navColor }: Props) => {
           { name: "news", url: "/news" },
           { name: "about", url: "/about" },
           { name: "resources", url: "/resources" },
-          { name: "registration", url: "/registration" },
+          // { name: "registration", url: "/registration" },
         ].map((link) => (
           <Link key={link.name} href={link.url}>
             <a

@@ -15,6 +15,8 @@ export interface NewsField {
   date: Date
 }
 export interface ResourceDocument {
+  name: string
+  tag: string
   publication: Asset
 }
 
