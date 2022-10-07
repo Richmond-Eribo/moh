@@ -5,6 +5,8 @@ import Image from "next/image"
 import { NewsField } from "interfaces/contentfulTypes"
 import { PageHeader, RichTextWrapper } from "components"
 import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
+import { MetaTags, PageType, RobotsContent } from "interfaces/metaTagsTypes"
+import { concatenateStrings, url } from "utils/metaTags"
 
 type Props = {
   News: NewsField
@@ -15,6 +17,14 @@ const SingleNews = ({ News }: Props) => {
 
   // console.log(News.writeUp)
   const { content } = News.writeUp
+  const MetaTags: MetaTags = {
+    canonical: url,
+    description: "",
+    image: imageUrl ? `https:${imageUrl}` : "/metaImage.png",
+    robots: concatenateStrings(RobotsContent.index, RobotsContent.follow),
+    title: News.title,
+    type: PageType.article,
+  }
 
   //console.log(imageUrl);
   return (
