@@ -20,7 +20,7 @@ const SingleNews = ({ News }: Props) => {
   const MetaTags: MetaTags = {
     canonical: url,
     description: "",
-    image: imageUrl ? `https:${imageUrl}` : "/metaImage.png",
+    image: imageUrl ? `https:${imageUrl}` : `${url}/metaImage.png`,
     robots: concatenateStrings(RobotsContent.index, RobotsContent.follow),
     title: News.title,
     type: PageType.article,
