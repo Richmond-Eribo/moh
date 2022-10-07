@@ -3,9 +3,11 @@ import { GetStaticPaths, GetStaticProps } from "next"
 import React from "react"
 import Image from "next/image"
 import { NewsField } from "interfaces/contentfulTypes"
-import { PageHeader, RichTextWrapper } from "components"
+import { MetaTagsWrapper, PageHeader, RichTextWrapper } from "components"
 import { getMda, getSingleMda } from "hooks/useGetMDAs"
 import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
+import { MetaTags, PageType, RobotsContent } from "interfaces/metaTagsTypes"
+import { concatenateStrings, url } from "utils/metaTags"
 
 type Props = {
   Mda: NewsField
@@ -14,12 +16,21 @@ type Props = {
 const Mda = ({ Mda }: Props) => {
   const imageUrl = Mda.thumbnail?.fields.file.url
 
+  const MetaTags: MetaTags = {
+    canonical: url,
+    description: "",
+    image: imageUrl ? `https:${imageUrl}` : `${url}/metaImage.png`,
+    robots: concatenateStrings(RobotsContent.index, RobotsContent.follow),
+    title: Mda.title,
+    type: PageType.article,
+  }
   // console.log(Mda)
   // const { content } = Mda.writeUp
 
   //console.log(imageUrl);
   return (
     <section className='pt-28'>
+      <MetaTagsWrapper tags={MetaTags} />
       {/* this is a single news post */}
       <div>
         <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>

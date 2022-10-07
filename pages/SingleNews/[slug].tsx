@@ -3,7 +3,7 @@ import { GetStaticPaths, GetStaticProps } from "next"
 import React from "react"
 import Image from "next/image"
 import { NewsField } from "interfaces/contentfulTypes"
-import { PageHeader, RichTextWrapper } from "components"
+import { MetaTagsWrapper, PageHeader, RichTextWrapper } from "components"
 import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
 import { MetaTags, PageType, RobotsContent } from "interfaces/metaTagsTypes"
 import { concatenateStrings, url } from "utils/metaTags"
@@ -30,6 +30,7 @@ const SingleNews = ({ News }: Props) => {
   return (
     <section className='pt-28'>
       {/* this is a single news post */}
+      <MetaTagsWrapper tags={MetaTags} />
       <div>
         <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
           {/* <h1 className='text-[#fff] font-semibold text-xl container'>
