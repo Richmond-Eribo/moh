@@ -1,8 +1,8 @@
-import {RichTextContent} from 'contentful'
-import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
-import {BLOCKS, INLINES, MARKS} from '@contentful/rich-text-types'
-import {FC, ReactNode} from 'react'
-import Image from 'next/image'
+import { RichTextContent } from "contentful"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types"
+import { FC, ReactNode } from "react"
+import Image from "next/image"
 
 type WrapperProps = {
   RichText: any
@@ -12,7 +12,7 @@ type Props = {
   children: ReactNode
 }
 
-const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
+const RichTextWrapper: FC<WrapperProps> = ({ RichText }) => {
   const options = {
     renderMark: {
       [MARKS.BOLD]: (text: any) => <span className='font-bold'>{text} </span>,
@@ -28,7 +28,7 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
         <Paragraph>{children}</Paragraph>
       ),
       [BLOCKS.UL_LIST]: (node: any, children: ReactNode) => (
-        <OrderedList>{children}</OrderedList>
+        <UnOrderedList>{children}</UnOrderedList>
       ),
       [BLOCKS.OL_LIST]: (node: any, children: ReactNode) => (
         <OrderedList>{children}</OrderedList>
@@ -37,14 +37,14 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
         <HeadingThree>{children}</HeadingThree>
       ),
       [BLOCKS.EMBEDDED_ASSET]: (node: any) => {
-        const {url} = node.data.target.fields.file
-        const {height, width} = node.data.target.fields.file.details.image
+        const { url } = node.data.target.fields.file
+        const { height, width } = node.data.target.fields.file.details.image
 
         return (
           <Figure>
             <Image
               className='mb-4'
-              src={'https:' + url}
+              src={"https:" + url}
               alt='Image'
               width={width}
               height={height}
@@ -60,20 +60,24 @@ const RichTextWrapper: FC<WrapperProps> = ({RichText}) => {
 
 export default RichTextWrapper
 
-const HyperLink = ({children}: Props) => (
+const HyperLink = ({ children }: Props) => (
   <a className='text-blue-500'>{children} </a>
 )
-const Paragraph = ({children}: Props) => (
+const Paragraph = ({ children }: Props) => (
   <p className='mb-4 text-lg '>{children}</p>
 )
-const Figure = ({children}: Props) => <p className='d'>{children} </p>
-const OrderedList = ({children}: Props) => (
-  <ol className='list-decimal'>{children}</ol>
+const Figure = ({ children }: Props) => <p className='d'>{children} </p>
+const OrderedList = ({ children }: Props) => (
+  <ol className='list-decimal'>
+    <li>{children}</li>
+  </ol>
 )
-const UnOrderedList = ({children}: Props) => (
-  <ul className='list-disc'>{children}</ul>
+const UnOrderedList = ({ children }: Props) => (
+  <ul className='list-disc'>
+    <li>{children}</li>
+  </ul>
 )
-const HeadingThree = ({children}: Props) => (
+const HeadingThree = ({ children }: Props) => (
   <h3 className='text-lg capitalize underline font-bold'>{children} </h3>
 )
-const HyperList = ({children}: Props) => <span className='s'>{children}</span>
+const HyperList = ({ children }: Props) => <span className='s'>{children}</span>
