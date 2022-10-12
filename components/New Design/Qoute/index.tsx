@@ -17,7 +17,7 @@ const Qoute = () => {
             className='flex h-[200px] border-b-4 lg:border-b-0 my-3 lg:m-0 lg:w-[550px]'
           >
             <div className='relative '>
-              <div className='w-full hidden lg:block h-[180px]  overflow-clip  bg-yellow-500 rounded-[40px]'>
+              <div className='w-full hidden lg:block h-[180px]  overflow-hidden  bg-yellow-500 rounded-[40px]'>
                 <Image
                   src={profile.url}
                   width={180}
@@ -26,7 +26,7 @@ const Qoute = () => {
                   className='z-10 '
                 />
               </div>
-              <div className='w-full lg:hidden h-[130px]  overflow-clip  bg-yellow-500 rounded-[20px]'>
+              <div className='w-full lg:hidden h-[130px]  overflow-hidden  bg-yellow-500 rounded-[20px]'>
                 <Image
                   src={profile.url}
                   width={130}

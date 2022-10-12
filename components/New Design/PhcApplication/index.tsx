@@ -12,7 +12,7 @@ const PhcApplication = () => {
       />
       {/* Registration
       </h3> */}
-      <div className='flex lg:flex-row flex-col bg-white rounded-[20px] shadow-5xl overflow-clip lg:h-[428px]'>
+      <div className='flex lg:flex-row overflow-hidden flex-col bg-white rounded-[20px] shadow-5xl lg:h-[428px]'>
         <figure className=' relative w-full h-[300px]  bg-slate-400 lg:w-[40%] lg:h-full'>
           <div className='absolute inset-0 bg-newgreen/75 z-40'>
             <Image

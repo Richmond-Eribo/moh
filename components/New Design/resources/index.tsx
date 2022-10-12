@@ -26,7 +26,7 @@ const Resource = () => {
       </div>
 
       <div className='flex-1 mt-10 lg:mt-0 lg:ml-20 grid grid-cols-3 gap-3 grid-rows-2'>
-        <div className='col-span-3 relative bg-white h-48 rounded-t-[20px] overflow-clip'>
+        <div className='col-span-3 relative bg-white h-48 rounded-t-[20px] overflow-hidden'>
           <Image
             src='/New/image30.png'
             layout='fill'
@@ -34,8 +34,8 @@ const Resource = () => {
             alt='image'
           />
         </div>
-        <div className='col-span-2 bg-white h-48 rounded-bl-[20px]'></div>
-        <div className=' bg-white h-48 rounded-br-[20px]'></div>
+        <div className='col-span-2 bg-white h-48 overflow-hidden rounded-bl-[20px]'></div>
+        <div className=' bg-white h-48 overflow-hidden rounded-br-[20px]'></div>
       </div>
     </section>
   )
