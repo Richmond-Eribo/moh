@@ -25,9 +25,9 @@ const SlideImage = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
+        // pagination={{
+        //   clickable: true,
+        // }}
         modules={[Autoplay, EffectFade, Pagination]}
         className='mySwiper'
       >
