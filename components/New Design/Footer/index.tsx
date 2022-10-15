@@ -38,7 +38,7 @@ const Footer = () => {
             <ul className='font-medium'>
               <li className='flex items-center gap-x-2'>
                 <FaRegAddressCard className='text-newgreen w-10 h-10 lg:w-6 lg:h-6' />
-                3rd and 4th floor, Block D, Behind Palm House, Sapele Road
+                2nd and 3rd floor, Block D, Behind Palm House, Sapele Road
                 <br /> Benin City.
               </li>
               <li className='flex items-center gap-x-2 my-4'>
