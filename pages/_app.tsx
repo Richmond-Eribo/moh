@@ -44,16 +44,18 @@ function MyApp({ Component, pageProps }: AppProps) {
           .hide {
             opacity: 0;
             animation-name: white;
-            animation-duration: 10s;
+            animation-duration: 7s;
             animation-delay: 2s;
-            animation-fill-mode: forwards;
+            // animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
           }
 
           @keyframes white {
-            from {
+            0%,
+            100% {
               opacity: 0;
             }
-            to {
+            50% {
               opacity: 1;
             }
           }
