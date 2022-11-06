@@ -31,19 +31,30 @@ const Home: NextPage = () => {
       <MetaTagsWrapper tags={defaultMetaTags} />
       <HeroSlider />
       {/* <Hero /> */}
+
       <Philosophy />
       <PhcApplication />
       <Qoute />
       <Resource />
       {NewsFromContentful && <NewsPreview news={NewsFromContentful.data} />}
-
-      {/* <Features data={data!} /> */}
-      {/* <Highlights /> */}
-      {/* <Application /> */}
-      {/* <Resources /> */}
-      {/* <News newsData={NewsFromContentful.data} /> */}
     </div>
   )
 }
 
 export default Home
+
+{
+  /* <Features data={data!} /> */
+}
+{
+  /* <Highlights /> */
+}
+{
+  /* <Application /> */
+}
+{
+  /* <Resources /> */
+}
+{
+  /* <News newsData={NewsFromContentful.data} /> */
+}

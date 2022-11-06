@@ -25,17 +25,40 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   // console.log(pathname, routePaths.indexOf(pathname))
   return (
-    <div className='bg-[#F2F2F2] '>
+    <div className='bg-[#F2F2F2] relative'>
       <QueryClientProvider client={queryClient}>
         <Layout
           navColor={routePaths.indexOf(pathname) !== -1 ? "black" : "white"}
         >
           <>
             <Component {...pageProps} />
-            <HelpLine />
+            <div className='absolute w-screen bg-white  hide z-[9999] inset-0 bg'></div>
+
+            {/* <HelpLine /> */}
           </>
         </Layout>
       </QueryClientProvider>
+
+      <style jsx>
+        {`
+          .hide {
+            opacity: 0;
+            animation-name: white;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+          }
+
+          @keyframes white {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+        `}
+      </style>
     </div>
   )
 }
