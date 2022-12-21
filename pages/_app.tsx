@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         >
           <>
             <Component {...pageProps} />
-            <div className='absolute w-screen bg-white  hide z-[9999] inset-0 bg'></div>
+            {/* <div className='absolute w-screen bg-white  hide z-[9999] inset-0 bg'></div> */}
 
             {/* <HelpLine /> */}
           </>
@@ -41,14 +41,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       <style jsx>
         {`
-          .hide {
-            opacity: 0;
-            animation-name: white;
-            animation-duration: 7s;
-            animation-delay: 2s;
-            // animation-fill-mode: forwards;
-            animation-iteration-count: infinite;
-          }
+          // .hide {
+          //   opacity: 0;
+          //   animation-name: white;
+          //   animation-duration: 7s;
+          //   animation-delay: 2s;
+          //   // animation-fill-mode: forwards;
+          //   animation-iteration-count: infinite;
+          // }
 
           @keyframes white {
             0%,
