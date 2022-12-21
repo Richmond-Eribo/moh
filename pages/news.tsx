@@ -1,8 +1,8 @@
 import { LargeNewsCard, MetaTagsWrapper, PageHeader } from "components"
 import AnimatedHeading from "components/New Design/Animations/AnimateHeading"
 import useGetNews from "hooks/useGetNews"
-import Image from "next/image"
-import Link from "next/link"
+// import Image from "next/image"
+// import Link from "next/link"
 import { NewsPageMetaTags } from "utils/metaTags"
 const News = () => {
   const NewsFromContentful = useGetNews()
@@ -23,7 +23,7 @@ const News = () => {
         {NewsFromContentful.data &&
           NewsFromContentful.data.map(
             (item, index) => {
-              console.log(item)
+              // console.log(item)
               return <LargeNewsCard key={index} singleNews={item} />
             }
             // (
