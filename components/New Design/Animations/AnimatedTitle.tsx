@@ -2,9 +2,10 @@ import { useEffect } from "react"
 import { useAnimation, motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
-export default function AnimatedTitle() {
-  const text = "Ministry of Health" // This would normally be passed into this component as a prop!
-
+type Props = {
+  text: string
+}
+export default function AnimatedTitle({ text }: Props) {
   const ctrls = useAnimation()
 
   const { ref, inView } = useInView({
@@ -44,6 +45,7 @@ export default function AnimatedTitle() {
   return (
     <strong
       className='lg:text-6xl text-4xl tracking-wider'
+      aria-level={2}
       aria-label={text}
       role='heading'
     >

@@ -77,7 +77,8 @@ const HeroSlider = () => {
       {/* START - welcome - START */}
       <div>
         <p className='uppercase text-center text-white z-30 absolute translate-y-[50% translate-x-[50%] right-[50%] top-[40%] text-3xl lg:text-5xl w-full'>
-          welcome to Edo State <br /> <AnimatedTitle />
+          welcome to Edo State <br />{" "}
+          <AnimatedTitle text='Ministry of Health' />
         </p>
       </div>
       {/* END - welcome - END */}
