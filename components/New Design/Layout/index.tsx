@@ -1,4 +1,4 @@
-import { NewFooter } from "components"
+import { Footer } from "components"
 import Navigation from "../Navigation"
 
 type Props = {
@@ -10,7 +10,7 @@ const Layout = ({ children, navColor }: Props) => {
     <>
       <Navigation navColor={navColor} />
       {children}
-      <NewFooter />
+      <Footer />
     </>
   )
 }

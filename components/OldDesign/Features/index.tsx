@@ -1,4 +1,4 @@
-import OverviewModal from "components/OldDesign/Modals/OverviewModal"
+import OverviewModal from "components/New Design/Modals/OverviewModal"
 import { Entry } from "contentful"
 import { OverviewField } from "interfaces/contentfulTypes"
 import Image from "next/image"
