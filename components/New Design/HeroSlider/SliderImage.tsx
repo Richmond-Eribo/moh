@@ -7,14 +7,17 @@ import "swiper/css"
 import "swiper/css/effect-fade"
 import "swiper/css/navigation"
 import "swiper/css/pagination"
-
-// import "./styles.css"
+// import "./styles.css
 
 // import required modules
 import { Autoplay, EffectFade, Pagination } from "swiper"
 import Slides from "./Slides"
+import { picturesField } from "interfaces/contentfulTypes"
 
-const SlideImage = () => {
+type Props = {
+  homepageSlidesUrl: picturesField
+}
+const SlideImage = ({ homepageSlidesUrl }: Props) => {
   return (
     <>
       <Swiper
@@ -31,7 +34,7 @@ const SlideImage = () => {
         modules={[Autoplay, EffectFade, Pagination]}
         className='mySwiper'
       >
-        {["bg-slide1", "bg-slide2", "bg-slide4"].map((slide, index) => (
+        {homepageSlidesUrl.picturesField.map((slide, index) => (
           <SwiperSlide key={index}>
             <Slides image={slide} />
             {/* <img src='https://swiperjs.com/demos/images/nature-1.jpg' /> */}

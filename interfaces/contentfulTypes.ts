@@ -20,4 +20,14 @@ export interface ResourceDocument {
   publication: Asset
 }
 
+export interface ImageField {
+  title: string
+  pictures: Asset[]
+}
+
+export interface picturesField {
+  title: string
+  picturesField: string[]
+}
+
 export interface ContentfulRichText extends Document {}

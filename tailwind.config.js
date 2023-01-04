@@ -26,12 +26,6 @@ module.exports = {
         "5xl": "0px 8px 8px #00000029",
         "6xl": "7px 7px 14px #0000004A",
       },
-      backgroundImage: {
-        slide1: "url('/New/slide1.png')",
-        slide2: "url('/New/slide2.png')",
-        slide3: "url('/New/slide3.jpeg')",
-        slide4: "url('/New/slide4.jpeg')",
-      },
     },
   },
   plugins: [require("daisyui"), require("@tailwindcss/line-clamp")],

@@ -1,9 +1,13 @@
+import { picturesField } from "interfaces/contentfulTypes"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import AnimatedTitle from "../Animations/AnimatedTitle"
 import SlideImage from "./SliderImage"
 
-const HeroSlider = () => {
+type Props = {
+  homepageSlidesUrl: picturesField
+}
+const HeroSlider = ({ homepageSlidesUrl }: Props) => {
   const router = useRouter()
   const pathname = router.pathname
 
@@ -83,7 +87,7 @@ const HeroSlider = () => {
       </div>
       {/* END - welcome - END */}
 
-      <SlideImage />
+      <SlideImage homepageSlidesUrl={homepageSlidesUrl} />
       <div className='absolute translate-y-2 lg:translate-y-0 bottom-0 w-full z-30'>
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 223.82'>
           {/* <defs></defs> */}

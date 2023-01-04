@@ -3,12 +3,7 @@ import Head from "next/head"
 import Image from "next/image"
 
 import {
-  // News,
-  // Features,
-  // Hero,
   MetaTagsWrapper,
-  // Application,
-  // Resources,
   Philosophy,
   PhcApplication,
   Qoute,
@@ -16,20 +11,19 @@ import {
   NewsPreview,
   HeroSlider,
 } from "components"
-import useGetOverview from "hooks/useGetOverview"
+
 import useGetNews from "hooks/useGetNews"
 import defaultMetaTags from "utils/metaTags"
+import useGetHomepageSlides from "hooks/getImages"
 
 const Home: NextPage = () => {
-  const { data } = useGetOverview()
+  const { data } = useGetHomepageSlides("7gTsj0Yt2sRxuODAJKW3sd")
 
-  // you can console.log NewsFromContentful.data
   const NewsFromContentful = useGetNews(0, 5)
-  // console.log(NewsFromContentful.data)
   return (
     <div className=''>
       <MetaTagsWrapper tags={defaultMetaTags} />
-      <HeroSlider />
+      {data ? <HeroSlider homepageSlidesUrl={data} /> : ""}
       {/* <Hero /> */}
 
       <Philosophy />
