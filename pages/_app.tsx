@@ -1,6 +1,6 @@
 import "../styles/globals.css"
 import type { AppProps } from "next/app"
-import { DemoModal, Footer, Navigation } from "components"
+// import { DemoModal, Footer, Navigation } from "components"
 import HelpLine from "components/OldDesign/HelpLine"
 import { QueryClient, QueryClientProvider } from "react-query"
 import Layout from "components/New Design/Layout"

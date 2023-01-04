@@ -3,12 +3,12 @@ import Head from "next/head"
 import Image from "next/image"
 
 import {
-  News,
-  Features,
-  Hero,
+  // News,
+  // Features,
+  // Hero,
   MetaTagsWrapper,
-  Application,
-  Resources,
+  // Application,
+  // Resources,
   Philosophy,
   PhcApplication,
   Qoute,

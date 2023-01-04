@@ -6,14 +6,14 @@
 // export { default as Highlights } from "./OldDesign/Highlights"
 // export { default as Hero } from "./OldDesign/Hero"
 // export { default as Features } from "./OldDesign/Features"
-// export { default as DemoModal } from "./New Design/Modals/DemoModal"
-// export { default as OverviewModal } from "./New Design/Modals/OverviewModal"
 // export { default as Resources } from "./OldDesign/Resources"
 // export { default as Reach } from "./OldDesign/Reach"
 // export { default as Application } from "./OldDesign/Application"
 
 // New design Export
 
+export { default as OverviewModal } from "./New Design/Modals/OverviewModal"
+export { default as DemoModal } from "./New Design/Modals/DemoModal"
 export { default as MetaTagsWrapper } from "./New Design/MetaTag"
 export { default as RegistrationModal } from "./New Design/Modals/RegistrationModal"
 export { default as Philosophy } from "./New Design/Philosophy"
