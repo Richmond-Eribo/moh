@@ -61,7 +61,7 @@ body {
       rgba(34, 34, 34, 0.6),
       rgba(34, 34, 34, 0.6)
     ),
-    url(../public/Images/resourcebg.jpg);
+    /* url(../public/Images/resourcebg.jpg) */;
   /* background-repeat: no-repeat;
   background-attachment: fixed; */
   background-size: cover;
