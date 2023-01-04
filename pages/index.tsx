@@ -22,6 +22,18 @@ const Home: NextPage = () => {
   const NewsFromContentful = useGetNews(0, 5)
   return (
     <div className=''>
+      {data ? (
+        ""
+      ) : (
+        <div className='absolute flex justify-center items-center z-[9999] inset-0 bg-white h-screen  w-screen '>
+          <Image
+            src='/New/medical-insurance.gif'
+            height={80}
+            width={80}
+            alt='medical insurance gif'
+          />
+        </div>
+      )}
       <MetaTagsWrapper tags={defaultMetaTags} />
       {data ? <HeroSlider homepageSlidesUrl={data} /> : ""}
       {/* <Hero /> */}
