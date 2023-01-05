@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <div className='pt-28'>
       <MetaTagsWrapper tags={AboutPageMetaTags} />
-      <div className=' text-center w-full lg:h-72 bg-[url("/New/image31.png")] bg-cover'>
+      <div className=' text-center w-full lg:h-72 bg-[url("/New/image31.webp")] bg-cover'>
         <h1 className='text-[#fff] font-semibold text-3xl uppercase py-8 container'>
           about us
         </h1>

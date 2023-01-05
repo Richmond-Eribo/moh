@@ -10,7 +10,7 @@ const News = () => {
   return (
     <section className='pt-28'>
       <MetaTagsWrapper tags={NewsPageMetaTags} />
-      <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
+      <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.webp")] bg-cover'>
         {/* <h1 className=''> */}
         <AnimatedHeading
           text='news'

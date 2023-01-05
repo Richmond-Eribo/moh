@@ -16,6 +16,7 @@ const Slides = ({ image }: Props) => {
         layout='fill'
         objectFit='cover'
         alt='homepage slider'
+        priority
       />
       <div className='absolute inset-0 bg-black/50'></div>
     </div>

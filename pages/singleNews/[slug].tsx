@@ -32,7 +32,7 @@ const SingleNews = ({ News }: Props) => {
       {/* this is a single news post */}
       <MetaTagsWrapper tags={MetaTags} />
       <div>
-        <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
+        <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.webp")] bg-cover'>
           {/* <h1 className='text-[#fff] font-semibold text-xl container'>
             {News.title}
           </h1> */}

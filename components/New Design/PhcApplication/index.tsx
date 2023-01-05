@@ -29,7 +29,7 @@ const PhcApplication = () => {
               // height={500}
               objectFit='cover'
               layout='fill'
-              src='/New/resourcebg.jpg'
+              src='/New/resourcebg.webp'
               alt='Album'
             />
           </div>

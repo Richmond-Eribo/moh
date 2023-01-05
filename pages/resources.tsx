@@ -14,12 +14,12 @@ const Resources = () => {
 
   // const router = useRouter()
   // const { res } = router.query
-  // console.log(data)
+  console.log(data)
 
   return (
     <div className='pt-28'>
       <MetaTagsWrapper tags={resourcesPageMetaTags} />
-      <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.png")] bg-cover'>
+      <div className=' text-white flex flex-col justify-center w-full lg:h-40 bg-[url("/New/image31.webp")] bg-cover'>
         {/* <h1 className='font-semibold text-3xl uppercase  container'>
           Resources
         </h1> */}
