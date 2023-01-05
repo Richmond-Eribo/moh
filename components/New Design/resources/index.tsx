@@ -28,7 +28,7 @@ const Resource = () => {
       <div className='flex-1 mt-10 lg:mt-0 lg:ml-20 grid grid-cols-3 gap-3 grid-rows-2'>
         <div className='col-span-3 relative bg-white h-48 rounded-t-[20px] overflow-hidden'>
           <Image
-            src='/New/image30.png'
+            src='/New/image30.webp'
             layout='fill'
             objectFit='cover'
             alt='image'

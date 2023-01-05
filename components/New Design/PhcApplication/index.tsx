@@ -16,7 +16,7 @@ const PhcApplication = () => {
         <figure className=' relative w-full h-[300px]  bg-slate-400 lg:w-[40%] lg:h-full'>
           <div className='absolute inset-0 bg-newgreen/75 z-40'>
             <Image
-              src='/New/file.png'
+              src='/New/file.webp'
               width={4000}
               height={4000}
               alt='file'

@@ -46,7 +46,7 @@ const Qoute = () => {
               </div>
               <div className='absolute  lg:hidden qoute -top-3 -right-3   text-white '>
                 <Image
-                  src='/New/qoute.png'
+                  src='/New/qoute.webp'
                   width={40}
                   height={40}
                   alt='qoute'
@@ -87,7 +87,7 @@ const Profiles = [
       "If it is not good enough for me, it cannot be good enough for Edo people.",
     title: "Governor, Edo State",
     prefix: "His Excellency,",
-    url: "/New/ObasekiAvatar.png",
+    url: "/New/ObasekiAvatar.webp",
   },
 
   {
@@ -97,6 +97,6 @@ const Profiles = [
     title: "Commissioner of Health",
     prefix: "",
     namePrefix: "Honourable",
-    url: "/New/ObehiAvatar.png",
+    url: "/New/ObehiAvatar.webp",
   },
 ]
