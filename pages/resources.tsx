@@ -14,7 +14,7 @@ const Resources = () => {
 
   // const router = useRouter()
   // const { res } = router.query
-  console.log(data)
+  // console.log(data)
 
   return (
     <div className='pt-28'>

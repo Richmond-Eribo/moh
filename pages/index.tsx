@@ -17,13 +17,14 @@ import defaultMetaTags from "utils/metaTags"
 import useGetHomepageSlides from "hooks/getImages"
 
 const Home: NextPage = () => {
-  const { data } = useGetHomepageSlides("7gTsj0Yt2sRxuODAJKW3sd")
+  const slides = useGetHomepageSlides("7gTsj0Yt2sRxuODAJKW3sd")
 
   const NewsFromContentful = useGetNews(0, 5)
   return (
     <div className=''>
-      {data ? (
-        ""
+      <MetaTagsWrapper tags={defaultMetaTags} />
+      {slides.data ? (
+        <HeroSlider homepageSlidesUrl={slides.data!} />
       ) : (
         <div className='absolute flex justify-center items-center z-[9999] inset-0 bg-white h-screen  w-screen '>
           <Image
@@ -34,9 +35,6 @@ const Home: NextPage = () => {
           />
         </div>
       )}
-      <MetaTagsWrapper tags={defaultMetaTags} />
-      {data ? <HeroSlider homepageSlidesUrl={data} /> : ""}
-      {/* <Hero /> */}
 
       <Philosophy />
       <PhcApplication />
