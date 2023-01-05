@@ -19,5 +19,5 @@ async function getImages(entryID: string) {
 
 // The hook to get all news post with useQuery
 export default function useGetHomepageSlides(entryID: string) {
-  return useQuery("Resources", () => getImages(entryID))
+  return useQuery("Slides", () => getImages(entryID))
 }
