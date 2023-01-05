@@ -37,7 +37,7 @@ const Qoute = () => {
               </div>
               <div className='absolute hidden lg:block qoute -top-4 -right-4   text-white '>
                 <Image
-                  src='/New/qoute.png'
+                  src='/New/qoute.webp'
                   width={50}
                   height={50}
                   alt='qoute'
