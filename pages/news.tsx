@@ -23,7 +23,6 @@ const News = () => {
         {NewsFromContentful.data &&
           NewsFromContentful.data.map(
             (item, index) => {
-              // console.log(item)
               return <LargeNewsCard key={index} singleNews={item} />
             }
             // (

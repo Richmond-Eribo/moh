@@ -32,6 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         >
           <>
             <Component {...pageProps} />
+
             {/* <div className='absolute w-screen bg-white  hide z-[9999] inset-0 bg'></div> */}
 
             {/* <HelpLine /> */}
