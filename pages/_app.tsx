@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           navColor={routePaths.indexOf(pathname) !== -1 ? "black" : "white"}
         >
           <>
-            <Component {...pageProps} />
+            {/* <Component {...pageProps} /> */}
 
             {/* <div className='absolute w-screen bg-white  hide z-[9999] inset-0 bg'></div> */}
 
