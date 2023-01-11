@@ -17,13 +17,13 @@ import defaultMetaTags from "utils/metaTags"
 import useGetHomepageSlides from "hooks/getImages"
 
 const Home: NextPage = () => {
-  // const slides = useGetHomepageSlides("7gTsj0Yt2sRxuODAJKW3sd")
+  const slides = useGetHomepageSlides("7gTsj0Yt2sRxuODAJKW3sd")
 
-  // const NewsFromContentful = useGetNews(0, 5)
+  const NewsFromContentful = useGetNews(0, 5)
   return (
     <div className=''>
       <MetaTagsWrapper tags={defaultMetaTags} />
-      {/* {slides.data ? (
+      {slides.data ? (
         <HeroSlider homepageSlidesUrl={slides.data!} />
       ) : (
         <div className='absolute flex justify-center items-center z-[9999] inset-0 bg-white h-screen  w-screen '>
@@ -34,22 +34,13 @@ const Home: NextPage = () => {
             alt='medical insurance gif'
           />
         </div>
-        
-      )} */}
-        <div className='absolute flex justify-center items-center z-[9999] inset-0 bg-white h-screen  w-screen '>
-          <Image
-            src='/New/medical-insurance.gif'
-            height={80}
-            width={80}
-            alt='medical insurance gif'
-          />
-        </div>
+      )}
 
-      {/* <Philosophy />
+      <Philosophy />
       <PhcApplication />
       <Qoute />
       <Resource />
-      {NewsFromContentful && <NewsPreview news={NewsFromContentful.data} />} */}
+      {NewsFromContentful && <NewsPreview news={NewsFromContentful.data} />}
     </div>
   )
 }
